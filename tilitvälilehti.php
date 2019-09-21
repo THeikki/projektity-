@@ -2,7 +2,7 @@
 <html lang="en" dir="ltr">
   <head>
     <meta charset="utf-8">
-    <title>Käyttäjävälilehti</title>
+    <title>Tilitvälilehti</title>
   </head>
   <style>
   table, th {
@@ -19,26 +19,20 @@
   <body>
   <table>
     <tr>
-      <th>Etunimi</th>
+      <th>Tilin nimi</th>
     </tr>
     <tr>
-      <td>Janne</td>
+      <td>Säästötili</td>
     </tr>
     <tr>
-      <th>Sukunimi</th>
+      <th>Summa</th>
     </tr>
-    <td>Karhumaa</td>
+    <td>2,000,000€</td>
     <tr>
-      <th>Osoite</th>
-    </tr>
-    <tr>
-      <td>Louhikkotie 5</td>
+      <th>Korko</th>
     </tr>
     <tr>
-      <th>Puhelinnumero</th>
-    </tr>
-    <tr>
-      <td>0401234567</td>
+      <td>1.06%</td>
     </tr>
   </table>
   <body>
