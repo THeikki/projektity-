@@ -5,6 +5,12 @@
     <title>Pääsivu</title>
   </head>
   <body>
+    <button>VERKKOPANKKI</button><br><br>
+
+    <button>Käyttäjä</button>
+    <button>Tilit</button>
+    <button>Sijoitukset</button>
+    <button>Lainat</button>
 
   </body>
 </html>
