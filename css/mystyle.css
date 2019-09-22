@@ -8,6 +8,7 @@
   margin-top: 15px;
   text-align: center;
   font-size: 14px;
+  font-family: "proxima nova";
   cursor: pointer;
 }
 .button1 {
@@ -20,7 +21,7 @@
   margin-top: 19px;
   text-align: center;
   font-size: 17px;
-  font-style: bold;
+  font-family: "proxima nova";
   cursor: pointer;
 }
 .button2 {
@@ -33,6 +34,7 @@
   margin-top: 40px;
   text-align: center;
   font-size: 14px;
+  font-family: "proxima nova";
   cursor: pointer;
 }
 #button3 {
@@ -44,6 +46,7 @@
   margin-left: 71px;
   text-align: center;
   font-size: 14px;
+  font-family: "proxima nova";
   cursor: pointer;
 }
 #new1 {
@@ -54,8 +57,10 @@
   margin-left: 822px;
   margin-bottom: 15px;
   margin-top: 8px;
+  font-family: "proxima nova";
 }
 #s_sana {
   margin-left: 822px;
   margin-top: 8px;
+  font-family: "proxima nova";
 }

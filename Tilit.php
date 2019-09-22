@@ -15,8 +15,8 @@
 </style>
   <body>
     <button class="button1">VERKKOPANKKI</button><br>
-    <button class="button2">Käyttäjä</button>
-    <button id="button3">Tilit</button>
+    <button id="button3">Käyttäjä</button>
+    <button class="button2">Tilit</button>
     <button class="button2">Sijoitukset</button>
     <button class="button2">Lainat</button>
     <hr id="new1">
