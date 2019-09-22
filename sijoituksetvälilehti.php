@@ -3,6 +3,7 @@
   <head>
     <meta charset="utf-8">
     <title>Sijoituksetvälilehti</title>
+    <link rel="stylesheet" href="css/Pääsivu.css">
   </head>
   <style>
   table, th {
@@ -10,11 +11,11 @@
   }
 </style>
   <body>
-    <button>VERKKOPANKKI</button><br><br>
-    <button>Käyttäjä</button>
-    <button>Tilit</button>
-    <button>Sijoitukset</button>
-    <button>Lainat</button>
+    <button class="button">VERKKOPANKKI</button><br>
+    <button class="button">Käyttäjä</button>
+    <button class="button">Tilit</button>
+    <button class="button">Sijoitukset</button>
+    <button class="button">Lainat</button>
   </body>
   <body>
   <table>
