@@ -2,20 +2,24 @@
 <html lang="en" dir="ltr">
   <head>
     <meta charset="utf-8">
-    <title>Sijoituksetvälilehti</title>
-    <link rel="stylesheet" href="css/Pääsivu.css">
+    <title>Sijoitukset</title>
+    <link rel="stylesheet" href="css/mystyle.css">
   </head>
   <style>
   table, th {
-    border: 1px solid black;
+    border: 2px solid #797979;
+    width: 142px;
+    margin-left: 505px;
+    margin-top: 15px;
   }
 </style>
   <body>
-    <button class="button">VERKKOPANKKI</button><br>
-    <button class="button">Käyttäjä</button>
-    <button class="button">Tilit</button>
-    <button class="button">Sijoitukset</button>
-    <button class="button">Lainat</button>
+    <button class="button1">VERKKOPANKKI</button><br>
+    <button class="button2">Käyttäjä</button>
+    <button class="button2">Tilit</button>
+    <button id="button3">Sijoitukset</button>
+    <button class="button2">Lainat</button>
+    <hr id="new1">
   </body>
   <body>
   <table>
