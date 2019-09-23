@@ -6,19 +6,14 @@
     <link rel="stylesheet" href="css/mystyle.css">
   </head>
   <style>
-  table, th {
-    border: 2px solid #797979;
-    width: 142px;
-    margin-left: 288px;
-    margin-top: 15px;
-  }
-</style>
+  </style>
   <body>
-    <button class="button1">VERKKOPANKKI</button><br>
-    <button id="button3">Käyttäjä</button>
-    <button class="button2">Tilit</button>
-    <button class="button2">Sijoitukset</button>
-    <button class="button2">Lainat</button>
+    <a href="Pääsivu.php" class="button2">VERKKOPANKKI</a>
+    <a href="Kirjautumissivu.php" class="button1">LOPETA</a><br>
+    <a href="Käyttäjä.php" class="button3">Käyttäjä</a>
+    <a href="Tilit.php" class="button4">Tilit</a>
+    <a href="Sijoitukset.php" class="button3">Sijoitukset</a>
+    <a href="Lainat.php" class="button3">Lainat</a>
     <hr id="new1">
   </body>
   <body>
@@ -32,7 +27,7 @@
     <tr>
       <th>Summa</th>
     </tr>
-    <td>2,000,000€</td>
+    <td>2.000.000,00€</td>
     <tr>
       <th>Korko</th>
     </tr>
@@ -41,5 +36,4 @@
     </tr>
   </table>
   <body>
-
 </html>
