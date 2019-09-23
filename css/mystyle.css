@@ -1,0 +1,118 @@
+.button0 {
+ background-color: #FFFFFF;
+ border: 2px solid #797979;
+ border-radius: 5px;
+ color: black;
+ padding: 20px 34px;
+ width: 102px;
+ margin-top: 15px;
+ margin-bottom: 15px;
+ text-align: center;
+ text-decoration: none;
+ display: inline-block;
+ font-size: 20px;
+ font-family: "proxima nova";
+ cursor: pointer;
+}
+.button0:hover {
+  background-color: #FFFF80;
+}
+.button1 {
+ background-color: #333333;
+ border: 2px solid #797979;
+ border-radius: 5px;
+ color: white;
+ padding: 20px 34px;
+ width: 102px;
+ text-align: center;
+ text-decoration: none;
+ display: inline-block;
+ font-size: 20px;
+ font-family: "proxima nova";
+ margin-left: 822px;
+ margin-top: 15px;
+ cursor: pointer;
+}
+.button1:hover {
+  background-color: #FFFFFF;
+  color: black;
+}
+.button2 {
+  background-color: #FFFF80;
+  border: 2px solid #797979;
+  color: black;
+  padding: 20px 20px;
+  width: 160px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 20px;
+  font-family: "proxima nova";
+  margin-left: 40px;
+  margin-top: 15px;
+  cursor: pointer;
+}
+.button3 {
+  background-color: #FFFFFF;
+  border: 2px solid #797979;
+  color: black;
+  width: 142px;
+  height: 25px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  font-family: "proxima nova";
+  margin-left: 40px;
+  margin-top: 15px;
+  cursor: pointer;
+}
+.button4 {
+  background-color: #FFFF80;
+  border: 2px solid #797979;
+  color: black;
+  width: 142px;
+  height: 25px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  font-family: "proxima nova";
+  margin-left: 40px;
+  margin-top: 15px;
+  cursor: pointer;
+}
+#new1 {
+    border: 5px solid #797979;
+    border-radius: 5px;
+}
+#k_tunnus {
+  margin-bottom: 15px;
+  margin-top: 15px;
+  font-family: "proxima nova";
+}
+#s_sana {
+  margin-top: 8px;
+  font-family: "proxima nova";
+}
+table, th{
+  border: 2px solid #797979;
+  width: 180px;
+  text-align: left;
+  margin-left: 40px;
+  margin-top: 15px;
+  font-family: "proxima nova";
+}
+th, td {
+  padding: 10px;
+}
+th {
+  background-color: lightgrey;
+}
+.boxed {
+  border: 2px solid #797979 ;
+  padding: 10px;
+  width: 400px;
+  text-align: center;
+  margin-left: 522px;
+}
