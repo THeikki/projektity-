@@ -6,11 +6,11 @@
     <link rel="stylesheet" href="css/mystyle.css">
   </head>
   <body>
-    <a href="Pääsivu.php" class="button2">VERKKOPANKKI</a>
-    <a href="Kirjautumissivu.php" class="button1">LOPETA</a><br>
-    <a href="Käyttäjä.php" class="button3">Käyttäjä</a>
-    <a href="Tilit.php" class="button3">Tilit</a>
-    <a href="Sijoitukset.php" class="button3">Sijoitukset</a>
-    <a href="Lainat.php" class="button3">Lainat</a>
-    <hr id="new1">
+    <a href="Pääsivu.php" class="main_button">VERKKOPANKKI</a>
+    <a href="Kirjautumissivu.php" class="logout">LOPETA</a><br>
+    <a href="Käyttäjä.php" class="button1">Käyttäjä</a>
+    <a href="Tilit.php" class="button1">Tilit</a>
+    <a href="Sijoitukset.php" class="button1">Sijoitukset</a>
+    <a href="Lainat.php" class="button1">Lainat</a>
+    <hr class="line">
 </html>

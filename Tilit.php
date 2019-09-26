@@ -8,31 +8,25 @@
   <style>
   </style>
   <body>
-    <a href="Pääsivu.php" class="button2">VERKKOPANKKI</a>
-    <a href="Kirjautumissivu.php" class="button1">LOPETA</a><br>
-    <a href="Käyttäjä.php" class="button3">Käyttäjä</a>
-    <a href="Tilit.php" class="button4">Tilit</a>
-    <a href="Sijoitukset.php" class="button3">Sijoitukset</a>
-    <a href="Lainat.php" class="button3">Lainat</a>
-    <hr id="new1">
+    <a href="Pääsivu.php" class="main_button">VERKKOPANKKI</a>
+    <a href="Kirjautumissivu.php" class="logout">LOPETA</a><br>
+    <a href="Käyttäjä.php" class="button1">Käyttäjä</a>
+    <a href="Tilit.php" class="button2">Tilit</a>
+    <a href="Sijoitukset.php" class="button1">Sijoitukset</a>
+    <a href="Lainat.php" class="button1">Lainat</a>
+    <hr class="line">
   </body>
   <body>
   <table>
     <tr>
       <th>Tilin nimi</th>
+      <th>Summa €</th>
+      <th>Korko %</th>
     </tr>
     <tr>
       <td>Säästötili</td>
-    </tr>
-    <tr>
-      <th>Summa</th>
-    </tr>
-    <td>2.000.000,00€</td>
-    <tr>
-      <th>Korko</th>
-    </tr>
-    <tr>
-      <td>1.06%</td>
+      <td>200.000,00</td>
+      <td>0,5</td>
     </tr>
   </table>
   <body>
