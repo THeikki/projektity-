@@ -8,31 +8,25 @@
   <style>
   </style>
   <body>
-    <a href="Pääsivu.php" class="button2">VERKKOPANKKI</a>
-    <a href="Kirjautumissivu.php" class="button1">LOPETA</a><br>
-    <a href="Käyttäjä.php" class="button3">Käyttäjä</a>
-    <a href="Tilit.php" class="button3">Tilit</a>
-    <a href="Sijoitukset.php" class="button4">Sijoitukset</a>
-    <a href="Lainat.php" class="button3">Lainat</a>
-    <hr id="new1">
+    <a href="Pääsivu.php" class="main_button">VERKKOPANKKI</a>
+    <a href="Kirjautumissivu.php" class="logout">LOPETA</a><br>
+    <a href="Käyttäjä.php" class="button1">Käyttäjä</a>
+    <a href="Tilit.php" class="button1">Tilit</a>
+    <a href="Sijoitukset.php" class="button2">Sijoitukset</a>
+    <a href="Lainat.php" class="button1">Lainat</a>
+    <hr class="line">
   </body>
   <body>
   <table>
     <tr>
       <th>Sijoituksen nimi</th>
+      <th>Osakkeiden määrä kpl</th>
+      <th>Osakkeiden arvo €</th>
     </tr>
     <tr>
       <td>Microsoft Oy</td>
-    </tr>
-    <tr>
-      <th>Osakkeiden määrä</th>
-    </tr>
-    <td>20.000 kpl</td>
-    <tr>
-      <th>Arvo</th>
-    </tr>
-    <tr>
-      <td>1.000,00€</td>
+      <td>20.000</td>
+      <td>1.000,00</td>
     </tr>
   </table>
   <body>

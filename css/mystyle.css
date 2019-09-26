@@ -1,4 +1,4 @@
-.button0 {
+.login {
  background-color: #FFFFFF;
  border: 2px solid #797979;
  border-radius: 5px;
@@ -14,10 +14,10 @@
  font-family: "proxima nova";
  cursor: pointer;
 }
-.button0:hover {
+.login:hover {
   background-color: #FFFF80;
 }
-.button1 {
+.logout {
  background-color: #333333;
  border: 2px solid #797979;
  border-radius: 5px;
@@ -33,11 +33,11 @@
  margin-top: 15px;
  cursor: pointer;
 }
-.button1:hover {
+.logout:hover {
   background-color: #FFFFFF;
   color: black;
 }
-.button2 {
+.main_button {
   background-color: #FFFF80;
   border: 2px solid #797979;
   color: black;
@@ -52,7 +52,7 @@
   margin-top: 15px;
   cursor: pointer;
 }
-.button3 {
+.button1 {
   background-color: #FFFFFF;
   border: 2px solid #797979;
   color: black;
@@ -67,7 +67,7 @@
   margin-top: 15px;
   cursor: pointer;
 }
-.button4 {
+.button2 {
   background-color: #FFFF80;
   border: 2px solid #797979;
   color: black;
@@ -82,36 +82,43 @@
   margin-top: 15px;
   cursor: pointer;
 }
-#new1 {
+.line {
     border: 5px solid #797979;
     border-radius: 5px;
 }
 #k_tunnus {
-  margin-bottom: 15px;
-  margin-top: 15px;
   font-family: "proxima nova";
 }
 #s_sana {
-  margin-top: 8px;
   font-family: "proxima nova";
 }
-table, th{
+#input1 {
+  margin-top: 20px;
+  margin-left: 30px;
+  margin-bottom: 20px;
   border: 2px solid #797979;
-  width: 180px;
-  text-align: left;
+}
+#input2 {
+  margin-left: 70px;
+  border: 2px solid #797979;
+}
+table{
+  margin-top: 20px;
   margin-left: 40px;
-  margin-top: 15px;
-  font-family: "proxima nova";
 }
-th, td {
-  padding: 10px;
-}
-th {
+
+th{
+  border: 2px solid #797979;
   background-color: lightgrey;
 }
-.boxed {
+td {
+  border: 2px solid #797979;
+}
+.box {
   border: 2px solid #797979 ;
+  margin-top: 30px;
   padding: 10px;
+  height: 300px;
   width: 400px;
   text-align: center;
   margin-left: 522px;
