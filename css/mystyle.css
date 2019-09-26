@@ -18,6 +18,8 @@
   background-color: #FFFF80;
 }
 .logout {
+ float: right;
+ margin-right:40px;
  background-color: #333333;
  border: 2px solid #797979;
  border-radius: 5px;
@@ -29,9 +31,8 @@
  display: inline-block;
  font-size: 20px;
  font-family: "proxima nova";
- margin-left: 822px;
  margin-top: 15px;
- cursor: pointer;
+ align-items:center;
 }
 .logout:hover {
   background-color: #FFFFFF;
@@ -74,7 +75,7 @@
   width: 142px;
   height: 25px;
   text-align: center;
-  text-decoration: none;
+  text-decoration: inherit;
   display: inline-block;
   font-size: 16px;
   font-family: "proxima nova";
@@ -83,8 +84,8 @@
   cursor: pointer;
 }
 .line {
-    border: 5px solid #797979;
-    border-radius: 5px;
+  border: 5px solid #797979;
+  border-radius: 5px;
 }
 #k_tunnus {
   font-family: "proxima nova";
@@ -115,11 +116,12 @@ td {
   border: 2px solid #797979;
 }
 .box {
-  border: 2px solid #797979 ;
+  margin:auto;
   margin-top: 30px;
+  display:block;
+  border: 2px solid #797979 ;
   padding: 10px;
   height: 300px;
   width: 400px;
   text-align: center;
-  margin-left: 522px;
 }
