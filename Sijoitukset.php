@@ -22,7 +22,7 @@
       <th>Sijoituskohde</th>
       <th>Sijoituksen määrä €</th>
       <th>Osakkeiden lukumäärä kpl</th>
-      <th>Osakken arvo €</th>
+      <th>Osakkeen arvo €/kpl</th>
       <th>Tuotto €</th>
 
     </tr>
