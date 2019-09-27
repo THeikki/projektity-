@@ -19,7 +19,7 @@
     <table>
       <tr>
         <th>Lainan nimi</th>
-        <th>Lainan ottopäivä</th>
+        <th>Lainanottopäivä</th>
         <th>Lainan määrä</th>
         <th>Kuukausierä €</th>
         <th>Takaisinmaksuaika v</th>
