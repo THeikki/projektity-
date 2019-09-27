@@ -5,12 +5,11 @@
     <title>Pääsivu</title>
   </head>
   <body>
-    <button>VERKKOPANKKI</button><br><br>
-
-    <button>Käyttäjä</button>
-    <button>Tilit</button>
-    <button>Sijoitukset</button>
-    <button>Lainat</button>
-
-  </body>
+    <a class="main_button">VERKKOPANKKI</a>
+    <a class="logout">LOPETA</a><br>
+    <a class="button1">Käyttäjä</a>
+    <a class="button1">Tilit</a>
+    <a class="button1">Sijoitukset</a>
+    <a class="button1">Lainat</a>
+    <hr class="line">
 </html>

@@ -2,39 +2,36 @@
 <html lang="en" dir="ltr">
   <head>
     <meta charset="utf-8">
-    <title>Sijoituksetvälilehti</title>
+    <title>Sijoitukset</title>
   </head>
   <style>
-  table, th {
-    border: 1px solid black;
-  }
-</style>
+  </style>
   <body>
-    <button>VERKKOPANKKI</button><br><br>
-    <button>Käyttäjä</button>
-    <button>Tilit</button>
-    <button>Sijoitukset</button>
-    <button>Lainat</button>
+    <a class="main_button">VERKKOPANKKI</a>
+    <a class="logout">LOPETA</a><br>
+    <a class="button1">Käyttäjä</a>
+    <a class="button1">Tilit</a>
+    <a class="button2">Sijoitukset</a>
+    <a class="button1">Lainat</a>
+    <hr class="line">
   </body>
   <body>
   <table>
     <tr>
-      <th>Sijoituksen nimi</th>
+      <th>Sijoituskohde</th>
+      <th>Sijoituksen määrä €</th>
+      <th>Osakkeiden lukumäärä kpl</th>
+      <th>Osakken arvo €</th>
+      <th>Tuotto €</th>
+
     </tr>
     <tr>
       <td>Microsoft Oy</td>
-    </tr>
-    <tr>
-      <th>Osakkeiden määrä</th>
-    </tr>
-    <td>20,000 kpl</td>
-    <tr>
-      <th>Arvo</th>
-    </tr>
-    <tr>
-      <td>1000€</td>
+      <td>15.000,00</td>
+      <td>2.000</td>
+      <td>10,00</td>
+      <td>5.000,00</td>
     </tr>
   </table>
   <body>
-
 </html>

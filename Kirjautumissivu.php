@@ -4,11 +4,16 @@
     <meta charset="utf-8">
     <title>Kirjautumissivu</title>
   </head>
+  <style>
+  </style>
   <body>
-    <label for="k_tunnus">Käyttäjätunnus</label><br>
-    <input type="text" id="k_tunnus" name="k_tunnus" value=""><br>
-    <label for="s_sana">Salasana</label><br>
-    <input type="password" id="s_sana" name="s_sana" value=""><br>
-    <button>Kirjaudu</button>
+    <hr class="line">
+    <div class="box">
+      <label >Käyttäjätunnus</label>
+      <input type="text" name="k_tunnus" value=""><br>
+      <label >Salasana</label>
+      <input type="password" name="s_sana" value=""><br>
+      <a class="login">Kirjaudu</a>
+    </div>
   </body>
 </html>

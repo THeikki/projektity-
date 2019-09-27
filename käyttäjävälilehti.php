@@ -2,43 +2,36 @@
 <html lang="en" dir="ltr">
   <head>
     <meta charset="utf-8">
-    <title>Käyttäjävälilehti</title>
+    <title>Käyttäjä</title>
   </head>
   <style>
-  table, th {
-    border: 1px solid black;
-  }
-</style>
+  </style>
   <body>
-    <button>VERKKOPANKKI</button><br><br>
-    <button>Käyttäjä</button>
-    <button>Tilit</button>
-    <button>Sijoitukset</button>
-    <button>Lainat</button>
+    <a class="main_button">VERKKOPANKKI</a>
+    <a class="logout">LOPETA</a><br>
+    <a class="button2">Käyttäjä</a>
+    <a class="button1">Tilit</a>
+    <a class="button1">Sijoitukset</a>
+    <a class="button1">Lainat</a>
+    <hr class="line">
   </body>
   <body>
   <table>
     <tr>
       <th>Etunimi</th>
-    </tr>
-    <tr>
-      <td>Janne</td>
-    </tr>
-    <tr>
       <th>Sukunimi</th>
-    </tr>
-    <td>Karhumaa</td>
-    <tr>
       <th>Osoite</th>
-    </tr>
-    <tr>
-      <td>Louhikkotie 5</td>
-    </tr>
-    <tr>
+      <th>Postinumero</th>
+      <th>Paikkakunta</th>
       <th>Puhelinnumero</th>
     </tr>
     <tr>
-      <td>0401234567</td>
+      <td>Janne</td>
+      <td>Virtanen</td>
+      <td>Nopantie 20</td>
+      <td>20345</td>
+      <td>Ivalo</td>
+      <td>0508976553</td>
     </tr>
   </table>
   <body>
