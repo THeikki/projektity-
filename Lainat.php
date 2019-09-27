@@ -20,12 +20,18 @@
     <table>
       <tr>
         <th>Lainan nimi</th>
+        <th>Lainan ottopäivä</th>
         <th>Lainan määrä</th>
-        <th>Korko %</th>
+        <th>Kuukausierä €</th>
+        <th>Takaisinmaksuaika v</th>
+        <th>Lainan korko %</th>
       </tr>
       <tr>
         <td>Asuntolaina</td>
+        <td>2016-01-01</td>
         <td>200.00,00€</td>
+        <td>666,66</td>
+        <td>25</td>
         <td>2,0</td>
       </tr>
     </table>

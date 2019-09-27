@@ -17,24 +17,24 @@
     <hr class="line">
   </body>
   <body>
-  <table>
-    <tr>
-      <th>Etunimi</th>
-      <th>Sukunimi</th>
-      <th>Osoite</th>
-      <th>Postinumero</th>
-      <th>Paikkakunta</th>
-      <th>Puhelinnumero</th>
-    </tr>
-    <tr>
-      <td>Janne</td>
-      <td>Virtanen</td>
-      <td>Nopantie 20</td>
-      <td>20345</td>
-      <td>Ivalo</td>
-      <td>0508976553</td>
-    </tr>
-  </table>
+    <table>
+      <tr>
+        <th>Etunimi</th>
+        <th>Sukunimi</th>
+        <th>Osoite</th>
+        <th>Postinumero</th>
+        <th>Paikkakunta</th>
+        <th>Puhelinnumero</th>
+      </tr>
+      <tr>
+        <td>Janne</td>
+        <td>Virtanen</td>
+        <td>Nopantie 20</td>
+        <td>20345</td>
+        <td>Ivalo</td>
+        <td>0508976553</td>
+      </tr>
+    </table>
   <body>
 
 </html>

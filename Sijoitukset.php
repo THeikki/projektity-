@@ -19,14 +19,19 @@
   <body>
   <table>
     <tr>
-      <th>Sijoituksen nimi</th>
-      <th>Osakkeiden määrä kpl</th>
-      <th>Osakkeiden arvo €</th>
+      <th>Sijoituskohde</th>
+      <th>Sijoituksen määrä €</th>
+      <th>Osakkeiden lukumäärä kpl</th>
+      <th>Osakken arvo €</th>
+      <th>Tuotto €</th>
+
     </tr>
     <tr>
       <td>Microsoft Oy</td>
-      <td>20.000</td>
-      <td>1.000,00</td>
+      <td>15.000,00</td>
+      <td>2.000</td>
+      <td>10,00</td>
+      <td>5.000,00</td>
     </tr>
   </table>
   <body>
