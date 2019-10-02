@@ -19,6 +19,7 @@
   <body>
   <table>
     <tr>
+      <th>id_Sijoitus</th>
       <th>Sijoituskohde</th>
       <th>Sijoituksen määrä €</th>
       <th>Osakkeiden lukumäärä kpl</th>
@@ -27,6 +28,7 @@
 
     </tr>
     <tr>
+      <td>1</td>
       <td>Microsoft Oy</td>
       <td>15.000,00</td>
       <td>2.000</td>

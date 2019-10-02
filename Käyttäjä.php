@@ -19,6 +19,7 @@
   <body>
     <table>
       <tr>
+        <th>id_Käyttäjä</th>
         <th>Etunimi</th>
         <th>Sukunimi</th>
         <th>Osoite</th>
@@ -27,6 +28,7 @@
         <th>Puhelinnumero</th>
       </tr>
       <tr>
+        <td>1</td>
         <td>Janne</td>
         <td>Virtanen</td>
         <td>Nopantie 20</td>

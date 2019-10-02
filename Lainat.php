@@ -19,6 +19,7 @@
   <body>
     <table>
       <tr>
+        <th>id_Laina</th>
         <th>Lainan nimi</th>
         <th>Lainan ottopäivä</th>
         <th>Lainan määrä</th>
@@ -27,6 +28,7 @@
         <th>Lainan korko %</th>
       </tr>
       <tr>
+        <td>1</td>
         <td>Asuntolaina</td>
         <td>2016-01-01</td>
         <td>200.00,00€</td>
