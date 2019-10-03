@@ -17,37 +17,41 @@
       <div class="box" id="box1">
         <h2>Käyttäjätiedot</h2>
         <form class="" action="" methot="post">
+          <input type="text" name="id" value="" placeholder="id_käyttäjä"> <br><br>
           <input type="text" name="en" value="" placeholder="Etunimi"> <br><br>
           <input type="text" name="sn" value="" placeholder="Sukunimi"> <br><br>
           <input type="text" name="os" value="" placeholder="Osoite"> <br><br>
-          <input type="text" name="puh" value="" placeholder="Puhelinnumero"> <br><br>
+          <input type="text" name="pn" value="" placeholder="Puhelinnumero"> <br><br>
           <input type="submit" name="" value="Aseta">
       </div>
       <div class="box" id="box2">
         <h2>Tilitiedot</h2>
         <form class="" action="" methot="post">
+          <input type="text" name="id" value="" placeholder="id_Tilit"> <br><br>
           <input type="text" name="tn" value="" placeholder="Tilin nimi"> <br><br>
           <input type="text" name="ta" value="" placeholder="Tilin aloituspäivä"> <br><br>
-          <input type="text" name="ts" value="" placeholder="Tilin saldo"> <br><br>
-          <input type="text" name="tk" value="" placeholder="Tilin korko"> <br><br>
+          <input type="text" name="ts" value="" placeholder="Tilin saldo €"> <br><br>
+          <input type="text" name="tk" value="" placeholder="Tilin korko %"> <br><br>
           <input type="submit" name="" value="Aseta">
       </div>
       <div class="box" id="box3">
         <h2>Sijoitustiedot</h2>
         <form class="" action="" methot="post">
+          <input type="text" name="id" value="" placeholder="id_Sijoitukset"> <br><br>
           <input type="text" name="sk" value="" placeholder="Sijoituskohde"> <br><br>
-          <input type="text" name="sm" value="" placeholder="Sijoituksen määrä"> <br><br>
-          <input type="text" name="ol" value="" placeholder="Osakkeiden lukumäärä"> <br><br>
-          <input type="text" name="oa" value="" placeholder="Osakkeen arvo"> <br><br>
+          <input type="text" name="sm" value="" placeholder="Sijoituksen määrä €"> <br><br>
+          <input type="text" name="ol" value="" placeholder="Osakkeiden lukumäärä kpl"> <br><br>
+          <input type="text" name="oa" value="" placeholder="Osakkeen arvo €"> <br><br>
           <input type="submit" name="" value="Aseta">
       </div>
       <div class="box" id="box4">
         <h2>Lainatiedot</h2>
         <form class="" action="" methot="post">
-          <input type="text" name="ln" value="" placeholder="Lainan nimi"> <br><br>
+          <input type="text" name="id" value="" placeholder="id_Lainat"> <br><br>
+          <input type="text" name="li" value="" placeholder="Lainan nimi"> <br><br>
           <input type="text" name="lo" value="" placeholder="Lainan ottopäivä"> <br><br>
-          <input type="text" name="lm" value="" placeholder="Lainan määrä"> <br><br>
-          <input type="text" name="lk" value="" placeholder="Lainan korko"> <br><br>
+          <input type="text" name="lm" value="" placeholder="Lainan määrä €"> <br><br>
+          <input type="text" name="lk" value="" placeholder="Lainan korko %"> <br><br>
           <input type="submit" name="" value="Aseta">
       </div>
     </div>
