@@ -2,41 +2,41 @@
 <html lang="en" dir="ltr">
   <head>
     <meta charset="utf-8">
-    <title>Käyttäjä</title>
+    <title>käyttäjä</title>
     <link rel="stylesheet" href="css/mystyle.css">
   </head>
   <style>
   </style>
   <body>
-    <a href="Pääsivu.php" class="main_button">VERKKOPANKKI</a>
-    <a href="Kirjautumissivu.php" class="logout">LOPETA</a><br>
-    <a href="Käyttäjä.php" class="button2">Käyttäjä</a>
-    <a href="Tilit.php" class="button1">Tilit</a>
-    <a href="Sijoitukset.php" class="button1">Sijoitukset</a>
-    <a href="Lainat.php" class="button1">Lainat</a>
+    <a href="pääsivu.php" class="main_button">VERKKOPANKKI</a>
+    <a href="kirjautumissivu.php" class="logout">LOPETA</a><br>
+    <a href="käyttäjä.php" class="button2">Käyttäjä</a>
+    <a href="tilit.php" class="button1">Tilit</a>
+    <a href="sijoitukset.php" class="button1">Sijoitukset</a>
+    <a href="lainat.php" class="button1">Lainat</a>
     <hr class="line">
   </body>
-  <body>
-    <table>
+  <table>
+    <thead>
       <tr>
         <th>id_Käyttäjä</th>
         <th>Etunimi</th>
         <th>Sukunimi</th>
         <th>Osoite</th>
-        <th>Postinumero</th>
-        <th>Paikkakunta</th>
         <th>Puhelinnumero</th>
       </tr>
-      <tr>
-        <td>1</td>
-        <td>Janne</td>
-        <td>Virtanen</td>
-        <td>Nopantie 20</td>
-        <td>20345</td>
-        <td>Ivalo</td>
-        <td>0508976553</td>
-      </tr>
-    </table>
-  <body>
-
+    </thead>
+    <tbody>
+      <?php
+      foreach ($käyttäjä as $row) {
+        echo '<tr>';
+        echo '<td>' .$row['id_Käyttäjä'].'>/td>';
+        echo '<td>' .$row['Etunimi'].'>/td>';
+        echo '<td>' .$row['Sukunimi'].'>/td>';
+        echo '<td>' .$row['Osoite'].'>/td>';
+        echo '<td>' .$row['Puhelinnumero'].'>/td>';
+      }
+      ?>
+    </tbody>
+  </table>
 </html>
