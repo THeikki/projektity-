@@ -5,4 +5,6 @@ $stmt->bindParam(': sk', $_POST['sk']);
 $stmt->bindParam(': sm', $_POST['sm']);
 $stmt->bindParam(': ol', $_POST['ol']);
 $stmt->bindParam(': oa', $_POST['oa']);
+
+$stmt->execute();
 ?>
