@@ -2,7 +2,7 @@
 	try
 	{
 	 $dsn = "mysql:host=jukkajauhiainen.ipt.oamk.fi;dbname=t9tohe00";
-	 $db = new PDO ($dsn, "phpuser", "phpPass");
+	 $db = new PDO ($dsn, "t9tohe00", "Zakkeus1984");
 	 print ("Connected\n");
 	}
 	catch (PDOException $e)
