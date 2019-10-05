@@ -14,12 +14,12 @@
   <body>
     <hr class="line">
     <div class="box">
-        <form
+      <form
       <label>Käyttäjätunnus</label>
       <input type="text" id="input1" name="k_tunnus" value=""><br><br>
       <label>Salasana</label>
       <input type="password" id="input2">
-      <input class="login" onclick="checkPswd()"
+      <input class="login" type="button" onclick="checkPswd()" value="Kirjaudu" />
       </form>
     </div>
       <script type="text/javascript">
