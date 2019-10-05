@@ -2,38 +2,41 @@
 <html lang="en" dir="ltr">
   <head>
     <meta charset="utf-8">
-    <title>Lainat</title>
+    <title>lainat</title>
     <link rel="stylesheet" href="css/mystyle.css">
   </head>
   <style>
   </style>
   <body>
-    <a href="Pääsivu.php" class="main_button">VERKKOPANKKI</a>
-    <a href="Kirjautumissivu.php" class="logout">LOPETA</a><br>
-    <a href="Käyttäjä.php" class="button1">Käyttäjä</a>
-    <a href="Tilit.php" class="button1">Tilit</a>
-    <a href="Sijoitukset.php" class="button1">Sijoitukset</a>
-    <a href="Lainat.php" class="button2">Lainat</a>
+    <a href="pääsivu.php" class="main_button">VERKKOPANKKI</a>
+    <a href="kirjautumissivu.php" class="logout">LOPETA</a><br>
+    <a href="käyttäjä.php" class="button1">Käyttäjä</a>
+    <a href="tilit.php" class="button1">Tilit</a>
+    <a href="sijoitukset.php" class="button1">Sijoitukset</a>
+    <a href="lainat.php" class="button2">Lainat</a>
     <hr class="line">
   </body>
-  <body>
-    <table>
+  <table>
+    <thead>
       <tr>
+        <th>id_Lainat</th>
         <th>Lainan nimi</th>
         <th>Lainan ottopäivä</th>
         <th>Lainan määrä</th>
-        <th>Kuukausierä €</th>
-        <th>Takaisinmaksuaika v</th>
-        <th>Lainan korko %</th>
+        <th>Lainan korko</th>
       </tr>
-      <tr>
-        <td>Asuntolaina</td>
-        <td>2016-01-01</td>
-        <td>200.00,00€</td>
-        <td>666,66</td>
-        <td>25</td>
-        <td>2,0</td>
-      </tr>
-    </table>
-  <body>
+    </thead>
+    <tbody>
+      <?php
+      foreach ($käyttäjä as $row) {
+        echo '<tr>';
+        echo '<td>' .$row['id_Lainat'].'>/td>';
+        echo '<td>' .$row['Lainan nimi'].'>/td>';
+        echo '<td>' .$row['Lainan ottopäivä'].'>/td>';
+        echo '<td>' .$row['Lainan määrä'].'>/td>';
+        echo '<td>' .$row['Lainan korko'].'>/td>';
+      }
+      ?>
+    </tbody>
+  </table>
 </html>
