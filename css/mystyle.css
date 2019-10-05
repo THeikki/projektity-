@@ -1,12 +1,11 @@
-.login {
+.login{
  background-color: #FFFFFF;
  border: 2px solid #797979;
  border-radius: 5px;
  color: black;
  padding: 20px 34px;
- width: 102px;
- margin-top: 15px;
- margin-bottom: 15px;
+ width: 200px;
+ margin-top: 20px;
  text-align: center;
  text-decoration: none;
  display: inline-block;

@@ -5,4 +5,6 @@ $stmt->bindParam(': en', $_POST['en']);
 $stmt->bindParam(': sn', $_POST['sn']);
 $stmt->bindParam(': os', $_POST['os']);
 $stmt->bindParam(': pn', $_POST['pn']);
+
+$stmt->execute();
 ?>

@@ -28,7 +28,7 @@
     </thead>
     <tbody>
       <?php
-      foreach ($käyttäjä as $row) {
+      foreach ($Käyttäjä as $row) {
         echo '<tr>';
         echo '<td>' .$row['id_Käyttäjä'].'>/td>';
         echo '<td>' .$row['Etunimi'].'>/td>';
