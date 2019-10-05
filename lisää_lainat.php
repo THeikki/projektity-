@@ -5,4 +5,6 @@ $stmt->bindParam(': li', $_POST['li']);
 $stmt->bindParam(': lo', $_POST['lo']);
 $stmt->bindParam(': lm', $_POST['lm']);
 $stmt->bindParam(': lk', $_POST['lk']);
+
+$stmt->execute();
 ?>
