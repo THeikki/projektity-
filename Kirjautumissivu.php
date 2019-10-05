@@ -19,7 +19,7 @@
       <form>
       <label>Salasana</label>
       <input type="password" id="input2">
-      <a href="Pääsivu.php"class="login">Kirjaudu</a>
+      <a href="Pääsivu.php"class="login">Kirjaudu< onclick="checkPswd();"/a>
 
   </form>
   <!--Function to check password the already set password is admin-->
