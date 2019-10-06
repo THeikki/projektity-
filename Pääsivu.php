@@ -1,4 +1,6 @@
 <!DOCTYPE html>
+<?php include "yhteys.php"
+ ?>
 <html lang="en" dir="ltr">
   <head>
     <meta charset="utf-8">
@@ -24,6 +26,16 @@
           <input type="text" name="pn" value="" placeholder="Puhelinnumero"> <br><br>
           <input type="submit" name="" value="Aseta">
       </div>
+      <?php
+      $stmt=$db->prepare ("INSERT INTO käyttäjä VALUES(:id, :en, :sn, :os, :pn)");
+      $stmt->bindParam(': id', $_POST['id']);
+      $stmt->bindParam(': en', $_POST['en']);
+      $stmt->bindParam(': sn', $_POST['sn']);
+      $stmt->bindParam(': os', $_POST['os']);
+      $stmt->bindParam(': pn', $_POST['pn']);
+
+      $stmt->execute();
+      ?>
       <div class="box" id="box2">
         <h2>Tilitiedot</h2>
         <form class="" action="" methot="post">
@@ -34,6 +46,16 @@
           <input type="text" name="tk" value="" placeholder="Tilin korko %"> <br><br>
           <input type="submit" name="" value="Aseta">
       </div>
+      <?php
+      $stmt=$db->prepare ("INSERT INTO tilit VALUES(:id, :tn, :ta, :ts, :tk)");
+      $stmt->bindParam(': id', $_POST['id']);
+      $stmt->bindParam(': tn', $_POST['tn']);
+      $stmt->bindParam(': ta', $_POST['ta']);
+      $stmt->bindParam(': ts', $_POST['ts']);
+      $stmt->bindParam(': tk', $_POST['tk']);
+
+      $stmt->execute();
+      ?>
       <div class="box" id="box3">
         <h2>Sijoitustiedot</h2>
         <form class="" action="" methot="post">
@@ -44,6 +66,16 @@
           <input type="text" name="oa" value="" placeholder="Osakkeen arvo €"> <br><br>
           <input type="submit" name="" value="Aseta">
       </div>
+      <?php
+      $stmt=$db->prepare ("INSERT INTO sijoitukset VALUES(:id, :sk, :sm, :ol, :oa)");
+      $stmt->bindParam(': id', $_POST['id']);
+      $stmt->bindParam(': sk', $_POST['sk']);
+      $stmt->bindParam(': sm', $_POST['sm']);
+      $stmt->bindParam(': ol', $_POST['ol']);
+      $stmt->bindParam(': oa', $_POST['oa']);
+
+      $stmt->execute();
+      ?>
       <div class="box" id="box4">
         <h2>Lainatiedot</h2>
         <form class="" action="" methot="post">
@@ -54,6 +86,16 @@
           <input type="text" name="lk" value="" placeholder="Lainan korko %"> <br><br>
           <input type="submit" name="" value="Aseta">
       </div>
+      <?php
+      $stmt=$db->prepare ("INSERT INTO käyttäjä VALUES(:id, :li, :lo, :lm, :lk)");
+      $stmt->bindParam(': id', $_POST['id']);
+      $stmt->bindParam(': li', $_POST['li']);
+      $stmt->bindParam(': lo', $_POST['lo']);
+      $stmt->bindParam(': lm', $_POST['lm']);
+      $stmt->bindParam(': lk', $_POST['lk']);
+
+      $stmt->execute();
+      ?>
     </div>
   </body>
 </html>
