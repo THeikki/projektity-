@@ -1,14 +1,24 @@
+<!DOCTYPE html>
+<html>
+<body>
+
 <?php
-	try
-	{
-	 $dsn = "mysql:host=jukkajauhiainen.ipt.oamk.fi;dbname=t9tohe00";
-	 $db = new PDO ($dsn, "t9tohe00", "Zakkeus1984");
-	 print ("Connected\n");
-	}
-	catch (PDOException $e)
-	{
-	 print ("Cannot connect to server\n");
-	 print ("Error code: " . $e->getCode () . "\n");
-	 print ("Error message: " . $e->getMessage () . "\n");
-	}
-	?>
+
+$host='jukkajauhiainen.ipt.oamk.fi';
+$dbname='t9tohe00';
+$username='t9tohe00';
+$password='Zakkeus1984';
+
+$con=mysqli_connect($host,$username,$password,$dbname);
+if (mysqli_connect_errno()) {
+echo "Fail !";
+}
+else {
+echo "OK";
+}
+mysqli_close($con);
+
+?>
+<p>
+</body>
+</html>
