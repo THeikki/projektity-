@@ -8,12 +8,12 @@
     <link rel="stylesheet" href="css/mystyle.css">
   </head>
   <body>
-    <a href="pääsivu.php" class="main_button">VERKKOPANKKI</a>
-    <a href="kirjautumissivu.php" class="logout">LOPETA</a><br>
-    <a href="käyttäjä.php" class="button1">Käyttäjä</a>
-    <a href="tilit.php" class="button1">Tilit</a>
-    <a href="sijoitukset.php" class="button1">Sijoitukset</a>
-    <a href="lainat.php" class="button1">Lainat</a>
+    <a href="Pääsivu.php" class="main_button">VERKKOPANKKI</a>
+    <a href="Kirjautumissivu.php" class="logout">LOPETA</a><br>
+    <a href="Kayttaja.php" class="button1">Käyttäjä</a>
+    <a href="Tilit.php" class="button1">Tilit</a>
+    <a href="Sijoitukset.php" class="button1">Sijoitukset</a>
+    <a href="Lainat.php" class="button1">Lainat</a>
     <hr class="line">
     <div id="box5">
       <div class="box" id="box1">
@@ -25,6 +25,7 @@
           <input type="text" name="os" value="" placeholder="Osoite"> <br><br>
           <input type="text" name="pn" value="" placeholder="Puhelinnumero"> <br><br>
           <input type="submit" name="" value="Aseta">
+        <form/>
       </div>
       <?php
       $stmt=$db->prepare ("INSERT INTO käyttäjä VALUES(:id, :en, :sn, :os, :pn)");
@@ -45,6 +46,7 @@
           <input type="text" name="ts" value="" placeholder="Tilin saldo €"> <br><br>
           <input type="text" name="tk" value="" placeholder="Tilin korko %"> <br><br>
           <input type="submit" name="" value="Aseta">
+        </form>
       </div>
       <?php
       $stmt=$db->prepare ("INSERT INTO tilit VALUES(:id, :tn, :ta, :ts, :tk)");
@@ -65,6 +67,7 @@
           <input type="text" name="ol" value="" placeholder="Osakkeiden lukumäärä kpl"> <br><br>
           <input type="text" name="oa" value="" placeholder="Osakkeen arvo €"> <br><br>
           <input type="submit" name="" value="Aseta">
+        </form>
       </div>
       <?php
       $stmt=$db->prepare ("INSERT INTO sijoitukset VALUES(:id, :sk, :sm, :ol, :oa)");
@@ -85,6 +88,7 @@
           <input type="text" name="lm" value="" placeholder="Lainan määrä €"> <br><br>
           <input type="text" name="lk" value="" placeholder="Lainan korko %"> <br><br>
           <input type="submit" name="" value="Aseta">
+        </form>
       </div>
       <?php
       $stmt=$db->prepare ("INSERT INTO käyttäjä VALUES(:id, :li, :lo, :lm, :lk)");
