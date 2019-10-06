@@ -1,6 +1,5 @@
 <!DOCTYPE html>
-<?php include "yhteys.php"
- ?>
+<?php include "yhteys.php"?>
 <html lang="en" dir="ltr">
   <head>
     <meta charset="utf-8">
