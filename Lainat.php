@@ -26,17 +26,5 @@
         <th>Lainan korko</th>
       </tr>
     </thead>
-    <tbody>
-      <?php
-      foreach ($Lainat as $row) {
-        echo '<tr>';
-        echo '<td>' .$row['id_Lainat'].'>/td>';
-        echo '<td>' .$row['Lainan nimi'].'>/td>';
-        echo '<td>' .$row['Lainan ottopäivä'].'>/td>';
-        echo '<td>' .$row['Lainan määrä'].'>/td>';
-        echo '<td>' .$row['Lainan korko'].'>/td>';
-      }
-      ?>
-    </tbody>
   </table>
 </html>

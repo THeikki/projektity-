@@ -15,7 +15,6 @@
     <a href="sijoitukset.php" class="button1">Sijoitukset</a>
     <a href="lainat.php" class="button1">Lainat</a>
     <hr class="line">
-  </body>
   <table>
     <thead>
       <tr>
@@ -25,20 +24,6 @@
         <th>Osoite</th>
         <th>Puhelinnumero</th>
       </tr>
-    </thead>
-    <tbody>
-      <?php
-      $Tilit=$db->query('SELECT * FROM Tilit');
-
-      foreach ($Käyttäjä as $row) {
-        echo '<tr>';
-        echo '<td>' .$row['id_Käyttäjä'].'>/td>';
-        echo '<td>' .$row['Etunimi'].'>/td>';
-        echo '<td>' .$row['Sukunimi'].'>/td>';
-        echo '<td>' .$row['Osoite'].'>/td>';
-        echo '<td>' .$row['Puhelinnumero'].'>/td>';
-      }
-      ?>
-    </tbody>
+    </thead>  
   </table>
 </html>
