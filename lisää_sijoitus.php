@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8">
     <title>lisää_sijoitus</title>
-    <link rel="stylesheet" href="css/mystyle.css">
+    <link rel="stylesheet" href="includes/mystyle.css">
   </head>
   <body>
     <hr class="line">
@@ -17,6 +17,7 @@
           <input type="text" name="ol" value="" placeholder="Osakkeiden lukumäärä kpl"> <br><br>
           <input type="text" name="oa" value="" placeholder="Osakkeen arvo €"> <br><br>
           <input type="submit" name="" value="Aseta">
-      </div>
-    </body>
+        </form>
+    </div>
+  </body>
 </html>

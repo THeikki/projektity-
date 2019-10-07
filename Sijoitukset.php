@@ -1,9 +1,11 @@
+<?php include_once 'includes/yhteys.php';
+?>
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
   <head>
     <meta charset="utf-8">
     <title>sijoitukset</title>
-    <link rel="stylesheet" href="css/mystyle.css">
+    <link rel="stylesheet" href="includes/mystyle.css">
   </head>
   <style>
   </style>
@@ -16,15 +18,30 @@
     <a href="Lainat.php" class="button1">Lainat</a>
     <hr class="line">
   </body>
-  <table>
-    <thead>
-      <tr>
-        <th>id_Sijoitukset</th>
+  <body>
+    <?php
+      $sql = "SELECT * FROM Sijoitukset;";
+      $result = mysqli_query($conn, $sql);
+
+      echo "<table border='1'>
+        <tr>
+        <th>idSijoitukset</th>
         <th>Sijoituskohde</th>
-        <th>Sijoituksen summa</th>
-        <th>Osakkeiden lukumäärä</th>
+        <th>Sijoituksen maara</th>
+        <th>Osakkeiden lukumaara</th>
         <th>Osakkeen arvo</th>
-      </tr>
-    </thead>
-  </table>
+        </tr>";
+
+      while($row = mysqli_fetch_array($result)) {
+        echo "<tr>";
+        echo "<td>" . $row['idTilit'] . "</td>";
+        echo "<td>" . $row['Tilin nimi'] . "</td>";
+        echo "<td>" . $row['Tilin aloituspaiva'] . "</td>";
+        echo "<td>" . $row['Tilin saldo'] . "</td>";
+        echo "<td>" . $row['Tilin korko'] . "</td>";
+        echo "</tr>";
+        }
+        echo "</table>";
+    ?>
+  </body>
 </html>
