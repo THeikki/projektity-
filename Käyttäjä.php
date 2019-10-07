@@ -30,6 +30,7 @@
         <th>Sukunimi</th>
         <th>Osoite</th>
         <th>Puhelinnumero</th>
+        <th>idKayttaja</th>
         </tr>";
 
       while($row = mysqli_fetch_array($result)) {
@@ -39,6 +40,7 @@
         echo "<td>" . $row['Sukunimi'] . "</td>";
         echo "<td>" . $row['Osoite'] . "</td>";
         echo "<td>" . $row['Puhelinnumero'] . "</td>";
+        echo "<td>" . $row['idKayttaja'] . "</td>";
         echo "</tr>";
         }
         echo "</table>";
