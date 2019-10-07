@@ -1,9 +1,11 @@
+<?php include_once 'includes/yhteys.php';
+?>
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
   <head>
     <meta charset="utf-8">
     <title>käyttäjä</title>
-    <link rel="stylesheet" href="css/mystyle.css">
+    <link rel="stylesheet" href="includes/mystyle.css">
   </head>
   <style>
   </style>
@@ -15,15 +17,31 @@
     <a href="Sijoitukset.php" class="button1">Sijoitukset</a>
     <a href="Lainat.php" class="button1">Lainat</a>
     <hr class="line">
-  <table>
-    <thead>
-      <tr>
-        <th>id_Käyttäjä</th>
+  </body>
+  <body>
+    <?php
+      $sql = "SELECT * FROM Kayttaja;";
+      $result = mysqli_query($conn, $sql);
+
+      echo "<table border='1'>
+        <tr>
+        <th>idKayttaja</th>
         <th>Etunimi</th>
         <th>Sukunimi</th>
         <th>Osoite</th>
         <th>Puhelinnumero</th>
-      </tr>
-    </thead>  
-  </table>
+        </tr>";
+
+      while($row = mysqli_fetch_array($result)) {
+        echo "<tr>";
+        echo "<td>" . $row['idKayttaja'] . "</td>";
+        echo "<td>" . $row['Etunimi'] . "</td>";
+        echo "<td>" . $row['Sukunimi'] . "</td>";
+        echo "<td>" . $row['Osoite'] . "</td>";
+        echo "<td>" . $row['Puhelinnumero'] . "</td>";
+        echo "</tr>";
+        }
+        echo "</table>";
+    ?>
+  </body>
 </html>

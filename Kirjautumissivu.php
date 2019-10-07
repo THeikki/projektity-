@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8">
     <title>kirjautumissivu</title>
-    <link rel="stylesheet" href="css/mystyle.css">
+    <link rel="stylesheet" href="includes/mystyle.css">
   </head>
   <style>
   .login

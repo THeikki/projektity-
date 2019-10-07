@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8">
     <title>lisää_käyttäjä</title>
-    <link rel="stylesheet" href="css/mystyle.css">
+    <link rel="stylesheet" href="includes/mystyle.css">
   </head>
   <body>
     <hr class="line">
@@ -17,6 +17,7 @@
           <input type="text" name="os" value="" placeholder="Osoite"> <br><br>
           <input type="text" name="pn" value="" placeholder="Puhelinnumero"> <br><br>
           <input type="submit" name="" value="Aseta"> <br>
-      </div>
+        </form>
+    </div>
   </body>
 </html>

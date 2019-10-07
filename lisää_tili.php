@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8">
     <title>lisää_tili</title>
-    <link rel="stylesheet" href="css/mystyle.css">
+    <link rel="stylesheet" href="includes/mystyle.css">
   </head>
   <body>
     <hr class="line">
@@ -17,6 +17,7 @@
           <input type="text" name="ts" value="" placeholder="Tilin saldo €"> <br><br>
           <input type="text" name="tk" value="" placeholder="Tilin korko %"> <br><br>
           <input type="submit" name="" value="Aseta">
-      </div>
+        </form>
+    </div>
   </body>
 </html>
