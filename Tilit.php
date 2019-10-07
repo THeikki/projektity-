@@ -26,17 +26,6 @@
         <th>Tilin korko</th>
       </tr>
     </thead>
-    <tbody>
-      <?php
-      foreach ($Tilit as $row) {
-        echo '<tr>';
-        echo '<td>' .$row['id_Tilit'].'>/td>';
-        echo '<td>' .$row['Tilin nimi'].'>/td>';
-        echo '<td>' .$row['Tilin aloituspäivä'].'>/td>';
-        echo '<td>' .$row['Tilin saldo'].'>/td>';
-        echo '<td>' .$row['Tilin korko'].'>/td>';
-      }
-      ?>
     </tbody>
   </table>
 </html>

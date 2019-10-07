@@ -26,17 +26,5 @@
         <th>Osakkeen arvo</th>
       </tr>
     </thead>
-    <tbody>
-      <?php
-      foreach ($Sijoitukset as $row) {
-        echo '<tr>';
-        echo '<td>' .$row['id_Sijoitukset'].'>/td>';
-        echo '<td>' .$row['Sijoituskohde'].'>/td>';
-        echo '<td>' .$row['Sijoituksen summa'].'>/td>';
-        echo '<td>' .$row['Osakkeiden lukumäärä'].'>/td>';
-        echo '<td>' .$row['Osakkeen arvo'].'>/td>';
-      }
-      ?>
-    </tbody>
   </table>
 </html>
