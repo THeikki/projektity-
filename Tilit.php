@@ -30,18 +30,20 @@
         <th>Tilin aloituspaiva</th>
         <th>Tilin saldo</th>
         <th>Tilin korko</th>
+        <th>idKayttaja</th>
         </tr>";
 
       while($row = mysqli_fetch_array($result)) {
-         echo "<tr>";
-         echo "<td>" . $row['idTilit'] . "</td>";
-         echo "<td>" . $row['Tilin nimi'] . "</td>";
-         echo "<td>" . $row['Tilin aloituspaiva'] . "</td>";
-         echo "<td>" . $row['Tilin saldo'] . "</td>";
-         echo "<td>" . $row['Tilin korko'] . "</td>";
-         echo "</tr>";
-         }
-         echo "</table>";
+        echo "<tr>";
+        echo "<td>" . $row['idTilit'] . "</td>";
+        echo "<td>" . $row['Tilin nimi'] . "</td>";
+        echo "<td>" . $row['Tilin aloituspaiva'] . "</td>";
+        echo "<td>" . $row['Tilin saldo'] . "</td>";
+        echo "<td>" . $row['Tilin korko'] . "</td>";
+        echo "<td>" . $row['idKayttaja'] . "</td>";
+        echo "</tr>";
+        }
+        echo "</table>";
     ?>
   </body>
 </html>

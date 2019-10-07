@@ -27,18 +27,20 @@
         <tr>
         <th>idSijoitukset</th>
         <th>Sijoituskohde</th>
-        <th>Sijoituksen maara</th>
+        <th>Sijoituksen summa</th>
         <th>Osakkeiden lukumaara</th>
         <th>Osakkeen arvo</th>
+        <th>idKayttaja</th>
         </tr>";
 
       while($row = mysqli_fetch_array($result)) {
         echo "<tr>";
-        echo "<td>" . $row['idTilit'] . "</td>";
-        echo "<td>" . $row['Tilin nimi'] . "</td>";
-        echo "<td>" . $row['Tilin aloituspaiva'] . "</td>";
-        echo "<td>" . $row['Tilin saldo'] . "</td>";
-        echo "<td>" . $row['Tilin korko'] . "</td>";
+        echo "<td>" . $row['idSijoitukset'] . "</td>";
+        echo "<td>" . $row['Sijoituskohde'] . "</td>";
+        echo "<td>" . $row['Sijoituksen summa'] . "</td>";
+        echo "<td>" . $row['Osakkeiden lukumaara'] . "</td>";
+        echo "<td>" . $row['Osakkeen arvo'] . "</td>";
+        echo "<td>" . $row['idKayttaja'] . "</td>";
         echo "</tr>";
         }
         echo "</table>";
