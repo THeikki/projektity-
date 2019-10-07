@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
-<?php include "yhteys.php" ?>
   <head>
     <meta charset="utf-8">
     <title>tilit</title>
