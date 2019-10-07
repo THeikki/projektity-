@@ -8,12 +8,12 @@
   <style>
   </style>
   <body>
-    <a href="pääsivu.php" class="main_button">VERKKOPANKKI</a>
-    <a href="kirjautumissivu.php" class="logout">LOPETA</a><br>
-    <a href="käyttäjä.php" class="button1">Käyttäjä</a>
-    <a href="tilit.php" class="button1">Tilit</a>
-    <a href="sijoitukset.php" class="button1">Sijoitukset</a>
-    <a href="lainat.php" class="button2">Lainat</a>
+    <a href="Pääsivu.php" class="main_button">VERKKOPANKKI</a>
+    <a href="Kirjautumissivu.php" class="logout">LOPETA</a><br>
+    <a href="Käyttäjä.php" class="button1">Käyttäjä</a>
+    <a href="Tilit.php" class="button1">Tilit</a>
+    <a href="Sijoitukset.php" class="button1">Sijoitukset</a>
+    <a href="Lainat.php" class="button2">Lainat</a>
     <hr class="line">
   </body>
   <table>
