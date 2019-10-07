@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
-<?php include "yhteys.php"?>
   <head>
     <meta charset="utf-8">
     <title>käyttäjä</title>
@@ -29,6 +28,8 @@
     </thead>
     <tbody>
       <?php
+      $Tilit=$db->query('SELECT * FROM Tilit');
+
       foreach ($Käyttäjä as $row) {
         echo '<tr>';
         echo '<td>' .$row['id_Käyttäjä'].'>/td>';
