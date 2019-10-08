@@ -9,9 +9,9 @@
 
   $sqlinsert = "INSERT INTO Kayttaja (idKayttaja, Etunimi, Sukunimi, Osoite, Puhelinnumero)
   VALUES ('$idK', '$etunimi', '$sukunimi', '$osoite','$puhelinnumero')";
-  if (!mysqli_query($con, $sql)) {
-    die('Error: ' . mysqli_error($con));
+  if (!mysqli_query($conn, $sqlinsert)) {
+    die('Error: ' . mysqli_error($conn));
   }
   echo "1 record added";
-  
+
 ?>
