@@ -7,8 +7,8 @@
   $osoite = mysqli_real_escape_string($conn, $_POST['osoite']);
   $puhelinnumero = mysqli_real_escape_string($conn, $_POST['puhelinnumero']);
 
-  $sql = "INSERT INTO Kayttaja (idKayttaja, Etunimi, Sukunimi, Osoite, Puhelinnumero)
-  VALUES ('$idK', '$etunimi', '$sukunimi', '$osoite','$puhelinnumero')";
+  $sql = "INSERT INTO Kayttaja (Etunimi, Sukunimi, Osoite, Puhelinnumero)
+  VALUES ($etunimi', '$sukunimi', '$osoite','$puhelinnumero')";
   mysqli_query($conn, $sql);
 
   header("Location: ../lisää_käyttäjä.php?tallenna=success");
