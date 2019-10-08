@@ -20,8 +20,6 @@
           <input type="submit" name="" value="Tallenna">
         </form>
     </div>
-  </body>
-  <body>
     <?php
       $idL = mysqli_real_escape_string($conn, $_POST['idL']);
       $lainan_nimi = mysqli_real_escape_string($conn, $_POST['lai_n']);
@@ -31,10 +29,7 @@
 
       $sqlinsert = "INSERT INTO Lainat (idLainat, Lainan nimi, Lainan maara, Lainan korko, idKayttaja)
       VALUES ('$idL', '$lainan_nimi', '$lainan_maara', '$lainan_korko', '$idK')";
-      if (!mysqli_query($con, $sql)) {
-        die('Error: ' . mysqli_error($con));
-      }
-      echo "1 record added";
+      mysqli_query($conn, $sql)
      ?>
   </body>
 </html>

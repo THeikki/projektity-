@@ -1,20 +1,5 @@
 <?php include 'includes/yhteys.php'; ?>
-<?php
-
-  $idK = mysqli_real_escape_string($conn, $_POST['idK']);
-  $etunimi = mysqli_real_escape_string($conn, $_POST['etun']);
-  $sukunimi = mysqli_real_escape_string($conn, $_POST['sukun']);
-  $osoite = mysqli_real_escape_string($conn, $_POST['oso']);
-  $puhelinnumero = mysqli_real_escape_string($conn, $_POST['puh']);
-
-  $sqlinsert = "INSERT INTO Kayttaja (idKayttaja, Etunimi, Sukunimi, Osoite, Puhelinnumero)
-  VALUES ('$idK', '$etunimi', '$sukunimi', '$osoite','$puhelinnumero')";
-  if (!mysqli_query($con, $sql)) {
-    die('Error: ' . mysqli_error($con));
-  }
-  echo "1 record added";
-
-?>
+<!DOCTYPE html>
 <html lang="en" dir="ltr">
   <head>
     <meta charset="utf-8">
@@ -35,5 +20,16 @@
           <input type="submit" name="" value="Tallenna"> <br>
         </form>
     </div>
+    <?php
+      $idK = mysqli_real_escape_string($conn, $_POST['idK']);
+      $etunimi = mysqli_real_escape_string($conn, $_POST['etun']);
+      $sukunimi = mysqli_real_escape_string($conn, $_POST['sukun']);
+      $osoite = mysqli_real_escape_string($conn, $_POST['oso']);
+      $puhelinnumero = mysqli_real_escape_string($conn, $_POST['puh']);
+
+      $sqlinsert = "INSERT INTO Kayttaja (idKayttaja, Etunimi, Sukunimi, Osoite, Puhelinnumero)
+      VALUES ('$idK', '$etunimi', '$sukunimi', '$osoite','$puhelinnumero')";
+      mysqli_query($conn, $sql)
+    ?>
   </body>
 </html>

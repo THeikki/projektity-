@@ -1,5 +1,5 @@
 <?php include 'includes/yhteys.php';?>
-
+<!DOCTYPE html>
 <html lang="en" dir="ltr">
   <head>
     <meta charset="utf-8">
@@ -31,10 +31,7 @@
 
       $sqlinsert = "INSERT INTO Sijoitukset (idSijoitukset, Sijoituskohde, Sijoituksen maara, Osakkeiden lukumaara, Osakkeen arvo)
       VALUES ('$idL', '$sijoituskohde', '$sijoituksen_maara', '$osakkeiden_lukumaara','$osakkeen_arvo', '$idK')";
-      if (!mysqli_query($con, $sql)) {
-        die('Error: ' . mysqli_error($con));
-      }
-      echo "1 record added";
+      mysqli_query($conn, $sql)
     ?>
   </body>
 </html>
