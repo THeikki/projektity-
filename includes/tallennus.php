@@ -7,9 +7,9 @@
   $osoite = mysqli_real_escape_string($conn, $_POST['oso']);
   $puhelinnumero = mysqli_real_escape_string($conn, $_POST['puh']);
 
-  $sql = "INSERT INTO Kayttaja (idKayttaja, Etunimi, Sukunimi, Osoite, Puhelinnumero)
+  $Sql = "INSERT INTO Kayttaja (idKayttaja, Etunimi, Sukunimi, Osoite, Puhelinnumero)
   VALUES ('$idK', '$etunimi', '$sukunimi', '$osoite','$puhelinnumero')";
-  mysqli_query($conn, $sql);
+  mysqli_query($conn, $Sql);
 
   header("Location: ../Pääsivu.php?tallennus=succes");
 ?>
