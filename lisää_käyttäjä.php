@@ -1,5 +1,5 @@
 <?php
-  include 'yhteys.php';
+  include 'includes/yhteys.php';
 
   $idK = mysqli_real_escape_string($conn, $_POST['idK']);
   $etunimi = mysqli_real_escape_string($conn, $_POST['etun']);
@@ -13,7 +13,7 @@
 
   header("Location: ../Pääsivu.php?tallennus=succes");
 ?>
-<!DOCTYPE html>
+
 <html lang="en" dir="ltr">
   <head>
     <meta charset="utf-8">
