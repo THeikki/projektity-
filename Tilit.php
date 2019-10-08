@@ -27,7 +27,6 @@
         <tr>
         <th>idTilit</th>
         <th>Tilin nimi</th>
-        <th>Tilin aloituspaiva</th>
         <th>Tilin saldo</th>
         <th>Tilin korko</th>
         <th>idKayttaja</th>
@@ -37,7 +36,6 @@
         echo "<tr>";
         echo "<td>" . $row['idTilit'] . "</td>";
         echo "<td>" . $row['Tilin nimi'] . "</td>";
-        echo "<td>" . $row['Tilin aloituspaiva'] . "</td>";
         echo "<td>" . $row['Tilin saldo'] . "</td>";
         echo "<td>" . $row['Tilin korko'] . "</td>";
         echo "<td>" . $row['idKayttaja'] . "</td>";

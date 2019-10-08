@@ -11,7 +11,7 @@
     <a href="Pääsivu.php" class="back">Takaisin</a>
     <div class="box" id="box1">
         <h2>Sijoitustiedot</h2>
-        <form methot="POST">
+        <form action"lisää_sijoitus.php"methot="POST">
           <input type="number" name="idS" value="" placeholder="id Sijoitukset"> <br><br>
           <input type="text" name="sijk" value="" placeholder="Sijoituskohde"> <br><br>
           <input type="text" name="sij_m" value="" placeholder="Sijoituksen määrä"> <br><br>
