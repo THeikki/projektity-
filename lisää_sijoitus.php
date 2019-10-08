@@ -1,5 +1,5 @@
-<?php include_once 'includes/yhteys.php';
-?>
+<?php include 'Sijoitukset.php';?>
+<?php include_once 'includes/yhteys.php';?>
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
   <head>
