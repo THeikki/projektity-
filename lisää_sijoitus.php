@@ -1,4 +1,3 @@
-<?php include 'includes/yhteys.php';?>
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
   <head>
@@ -11,7 +10,7 @@
     <a href="Pääsivu.php" class="back">Takaisin</a>
     <div class="box" id="box1">
         <h2>Sijoitustiedot</h2>
-        <form methot="POST" action"lisää_sijoitus.php">
+        <form methot="POST" action"tallenna_sijoitus.php">
           <input type="number" name="idS" value="" placeholder="id Sijoitus"> <br><br>
           <input type="text" name="sijk" value="" placeholder="Sijoituskohde"> <br><br>
           <input type="text" name="sij_m" value="" placeholder="Sijoituksen määrä"> <br><br>
@@ -21,17 +20,5 @@
           <input type="submit" name="" value="Tallenna">
         </form>
     </div>
-    <?php
-      $idS = mysqli_real_escape_string($conn, $_POST['idS']);
-      $sijoituskohde = mysqli_real_escape_string($conn, $_POST['sijk']);
-      $sijoituksen_maara = mysqli_real_escape_string($conn, $_POST['sij_m']);
-      $osakkeiden_lukumaara = mysqli_real_escape_string($conn, $_POST['osa_l']);
-      $osakkeen_arvo = mysqli_real_escape_string($conn, $_POST['osa_a']);
-      $idK = mysqli_real_escape_string($conn, $_POST['idK']);
-
-      $sqlinsert = "INSERT INTO Sijoitukset (idSijoitukset, Sijoituskohde, Sijoituksen maara, Osakkeiden lukumaara, Osakkeen arvo)
-      VALUES ('$idL', '$sijoituskohde', '$sijoituksen_maara', '$osakkeiden_lukumaara','$osakkeen_arvo', '$idK')";
-      mysqli_query($conn, $sqlinsert)
-    ?>
   </body>
 </html>
