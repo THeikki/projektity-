@@ -12,9 +12,9 @@
         <h2>Lainatiedot</h2>
         <form methot="POST" action"tallenna_laina.php">
           <input type="number" name="idL" value="" placeholder="id Laina"> <br><br>
-          <input type="text" name="lai_n" value="" placeholder="Lainan nimi"> <br><br>
-          <input type="number" name="lai_m" value="" placeholder="Lainan määrä"> <br><br>
-          <input type="number" name="lai_k" value="" placeholder="Lainan korko"> <br><br>
+          <input type="text" name="lainan_nimi" value="" placeholder="Lainan nimi"> <br><br>
+          <input type="number" name="lainan_maara" value="" placeholder="Lainan määrä"> <br><br>
+          <input type="number" name="lainan_korko" value="" placeholder="Lainan korko"> <br><br>
           <input type="text" name="idK" value="" placeholder="id Käyttäjä"> <br><br>
           <input type="submit" name="" value="Tallenna">
         </form>
