@@ -27,7 +27,6 @@
         <tr>
         <th>idLainat</th>
         <th>Lainan nimi</th>
-        <th>Lainan ottopaiva</th>
         <th>Lainan maara</th>
         <th>Lainan korko</th>
         <th>idKayttaja</th>
@@ -37,7 +36,6 @@
         echo "<tr>";
         echo "<td>" . $row['idLainat'] . "</td>";
         echo "<td>" . $row['Lainan nimi'] . "</td>";
-        echo "<td>" . $row['Lainan ottopaiva'] . "</td>";
         echo "<td>" . $row['Lainan maara'] . "</td>";
         echo "<td>" . $row['Lainan korko'] . "</td>";
         echo "<td>" . $row['idKayttaja'] . "</td>";
