@@ -1,3 +1,5 @@
+<?php include_once 'includes/yhteys.php';
+?>
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
   <head>
@@ -11,13 +13,27 @@
     <div class="box" id="box1">
         <h2>Sijoitustiedot</h2>
         <form class="" action="" methot="post">
-          <input type="text" name="id" value="" placeholder="id_Sijoitukset"> <br><br>
-          <input type="text" name="sk" value="" placeholder="Sijoituskohde"> <br><br>
-          <input type="text" name="sm" value="" placeholder="Sijoituksen määrä €"> <br><br>
-          <input type="text" name="ol" value="" placeholder="Osakkeiden lukumäärä kpl"> <br><br>
-          <input type="text" name="oa" value="" placeholder="Osakkeen arvo €"> <br><br>
-          <input type="submit" name="" value="Aseta">
+          <input type="number" name="idS" value="" placeholder="id Sijoitukset"> <br><br>
+          <input type="text" name="sijk" value="" placeholder="Sijoituskohde"> <br><br>
+          <input type="text" name="sij_m" value="" placeholder="Sijoituksen määrä"> <br><br>
+          <input type="text" name="osa_l" value="" placeholder="Osakkeiden lukumäärä"> <br><br>
+          <input type="text" name="osa_a" value="" placeholder="Osakkeen arvo"> <br><br>
+          <input type="text" name="idK" value="" placeholder="id Käyttäjä"> <br><br>
+          <input type="submit" name="" value="Tallenna">
         </form>
     </div>
+  </body>
+  <body>
+    <?php
+      $idS = mysqli_real_escape_string($con, $_POST['idS']);
+      $sijoituskohde = mysqli_real_escape_string($con, $_POST['sijk']);
+      $sijoituksen_maara = mysqli_real_escape_string($con, $_POST['sij_m']);
+      $osakkeiden_lukumaara = mysqli_real_escape_string($con, $_POST['osa_l']);
+      $osakkeen_arvo = mysqli_real_escape_string($con, $_POST['osa_a']);
+      $idK = mysqli_real_escape_string($con, $_POST['idK']);
+
+      $sql = "INSERT INTO Sijoitukset (idSijoitukset, Sijoituskohde, Sijoituksen maara, Osakkeiden lukumaara, Osakkeen arvo)
+      VALUES ('$idL', '$sijoituskohde', '$sijoituksen_maara', '$osakkeiden_lukumaara','$osakkeen_arvo', '$idK')";
+    ?>
   </body>
 </html>
