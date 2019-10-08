@@ -11,7 +11,6 @@
   VALUES ('$idK', '$etunimi', '$sukunimi', '$osoite','$puhelinnumero')";
   mysqli_query($conn, $Sql);
 
-  header("Location: ../Pääsivu.php?tallennus=succes");
 ?>
 
 <html lang="en" dir="ltr">
