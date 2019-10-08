@@ -1,4 +1,3 @@
-<?php include 'Lainat.php';?>
 <?php include_once 'includes/yhteys.php';?>
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
