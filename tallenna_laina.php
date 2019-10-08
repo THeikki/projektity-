@@ -14,5 +14,5 @@
     die('Error: ' . mysqli_error($conn));
   }
   echo "1 record added";
-  mysqli_close($conn);
+  header("Location: ..lisää_laina.php?tallenna_laina=onnistui");
 ?>

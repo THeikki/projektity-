@@ -16,7 +16,7 @@
           <input type="text" name=sijoituksen_maara"" value="" placeholder="Sijoituksen määrä"> <br><br>
           <input type="text" name="osakkeiden_lukumaara" value="" placeholder="Osakkeiden lukumäärä"> <br><br>
           <input type="text" name="osakkeen_arvo" value="" placeholder="Osakkeen arvo"> <br><br>
-          <input type="text" name="idK" value="" placeholder="id Käyttäjä"> <br><br>
+          <input type="number" name="idK" value="" placeholder="id Käyttäjä"> <br><br>
           <input type="submit" name="" value="Tallenna">
         </form>
     </div>

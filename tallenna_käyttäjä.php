@@ -13,5 +13,5 @@
     die('Error: ' . mysqli_error($conn));
   }
   echo "1 record added";
-
+  header("Location: ..lisää_käyttäjä.php?tallenna_käyttäjä=onnistui");
 ?>

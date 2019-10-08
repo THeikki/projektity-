@@ -13,5 +13,5 @@
     die('Error: ' . mysqli_error($con));
   }
   echo "1 record added";
-  mysqli_close($conn);
+  header("Location: ..lisää_tili.php?tallenna_tili=onnistui");
 ?>
