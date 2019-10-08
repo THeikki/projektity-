@@ -11,11 +11,11 @@
     <div class="box" id="box1">
         <h2>Käyttäjätiedot</h2>
         <form methot="POST" action="tallenna_käyttäjä.php">
-          <input type="number" name="" value="" placeholder="id Käyttäjä"> <br><br>
-          <input type="text" name="" value="" placeholder="Etunimi"> <br><br>
-          <input type="text" name="" value="" placeholder="Sukunimi"> <br><br>
-          <input type="text" name="" value="" placeholder="Osoite"> <br><br>
-          <input type="text" name="" value="" placeholder="Puhelinnumero"> <br><br>
+          <input type="number" name="idK" value="" placeholder="id Käyttäjä"> <br><br>
+          <input type="text" name="etunimi" value="" placeholder="Etunimi"> <br><br>
+          <input type="text" name="sukunimi" value="" placeholder="Sukunimi"> <br><br>
+          <input type="text" name="osoite" value="" placeholder="Osoite"> <br><br>
+          <input type="text" name="puhelinnumero" value="" placeholder="Puhelinnumero"> <br><br>
           <input type="submit" name="" value="Tallenna"> <br>
         </form>
     </div>

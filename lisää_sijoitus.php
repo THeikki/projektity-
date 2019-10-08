@@ -11,12 +11,12 @@
     <div class="box" id="box1">
         <h2>Sijoitustiedot</h2>
         <form methot="POST" action"tallenna_sijoitus.php">
-          <input type="number" name="" value="" placeholder="id Sijoitus"> <br><br>
-          <input type="text" name="" value="" placeholder="Sijoituskohde"> <br><br>
-          <input type="text" name="" value="" placeholder="Sijoituksen määrä"> <br><br>
-          <input type="text" name="" value="" placeholder="Osakkeiden lukumäärä"> <br><br>
-          <input type="text" name="" value="" placeholder="Osakkeen arvo"> <br><br>
-          <input type="text" name="" value="" placeholder="id Käyttäjä"> <br><br>
+          <input type="number" name="idS" value="" placeholder="id Sijoitus"> <br><br>
+          <input type="text" name="sijoituskohde" value="" placeholder="Sijoituskohde"> <br><br>
+          <input type="text" name=sijoituksen_maara"" value="" placeholder="Sijoituksen määrä"> <br><br>
+          <input type="text" name="osakkeiden_lukumaara" value="" placeholder="Osakkeiden lukumäärä"> <br><br>
+          <input type="text" name="osakkeen_arvo" value="" placeholder="Osakkeen arvo"> <br><br>
+          <input type="text" name="idK" value="" placeholder="id Käyttäjä"> <br><br>
           <input type="submit" name="" value="Tallenna">
         </form>
     </div>
