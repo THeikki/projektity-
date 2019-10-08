@@ -10,7 +10,7 @@
     <a href="Pääsivu.php" class="back">Takaisin</a>
     <div class="box" id="box1">
         <h2>Käyttäjätiedot</h2>
-        <form methot="POST" action="tallenna_käyttäjä.php">
+        <form methot="POST" action="includes/tallenna_käyttäjä.php">
           <input type="number" name="idK" value="" placeholder="id Käyttäjä"> <br><br>
           <input type="text" name="etunimi" value="" placeholder="Etunimi"> <br><br>
           <input type="text" name="sukunimi" value="" placeholder="Sukunimi"> <br><br>
