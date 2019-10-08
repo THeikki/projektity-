@@ -1,5 +1,5 @@
 <?php include 'includes/yhteys.php';?>
-<!DOCTYPE html>
+
 <html lang="en" dir="ltr">
   <head>
     <meta charset="utf-8">
@@ -20,8 +20,6 @@
           <input type="submit" name="" value="Tallenna">
         </form>
     </div>
-  </body>
-  <body>
     <?php
       $idT = mysqli_real_escape_string ($conn, $_POST['idS']);
       $tilin_nimi = mysqli_real_escape_string ($conn, $_POST['t_n']);
@@ -29,7 +27,7 @@
       $tilin_korko = mysqli_real_escape_string ($conn, $_POST['t_k']);
       $idK = mysqli_real_escape_string ($conn, $_POST['idK']);
 
-      $sql = "INSERT INTO Tilit (idTilit, Tilin nimi, Tilin aloituspaiva, Tilin saldo, Tilin korko)
+      $sql = "INSERT INTO Tilit (idTilit, Tilin nimi, Tilin saldo, Tilin korko)
       VALUES ('$idT', '$tilin_nimi', '$tilin_saldo', '$tilin_korko', '$idK')";
       mysqli_query($conn, $sql);
    ?>

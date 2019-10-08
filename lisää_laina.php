@@ -29,7 +29,7 @@
       $lainan_korko = mysqli_real_escape_string($conn, $_POST['lai_k']);
       $idK = mysqli_real_escape_string($conn, $_POST['idK']);
 
-      $sql = "INSERT INTO Lainat (idLainat, Lainan nimi, Lainan ottopaiva, Lainan maara, Lainan korko, idKayttaja)
+      $sql = "INSERT INTO Lainat (idLainat, Lainan nimi, Lainan maara, Lainan korko, idKayttaja)
       VALUES ('$idL', '$lainan_nimi', '$lainan_maara', '$lainan_korko', '$idK')";
       mysqli_query($conn, $sql);
      ?>
