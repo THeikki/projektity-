@@ -9,10 +9,10 @@
   $idK = mysqli_real_escape_string($conn, $_POST['idK']);
 
   $sqlinsert = "INSERT INTO Sijoitukset (idSijoitukset, Sijoituskohde, Sijoituksen maara, Osakkeiden lukumaara, Osakkeen arvo)
-  VALUES ('$idL', '$sijoituskohde', '$sijoituksen_maara', '$osakkeiden_lukumaara','$osakkeen_arvo', '$idK')";
-  if (!mysqli_query($con, $sql)) {
-    die('Error: ' . mysqli_error($con));
+  VALUES ('$idS', '$sijoituskohde', '$sijoituksen_maara', '$osakkeiden_lukumaara','$osakkeen_arvo', '$idK')";
+  if (!mysqli_query($conn, $sqlinsert)) {
+    die('Error: ' . mysqli_error($conn));
   }
   echo "1 record added";
-  mysqli_close($con);
+  mysqli_close($conn);
 ?>

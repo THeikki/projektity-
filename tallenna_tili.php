@@ -1,6 +1,6 @@
 <?php
   include 'includes/yhteys.php';
-  
+
   $idT = mysqli_real_escape_string ($conn, $_POST['idS']);
   $tilin_nimi = mysqli_real_escape_string ($conn, $_POST['tilin_nimi']);
   $tilin_saldo = mysqli_real_escape_string ($conn, $_POST['tilin_saldo']);
@@ -9,9 +9,9 @@
 
   $sqlinsert = "INSERT INTO Tilit (idTilit, Tilin nimi, Tilin saldo, Tilin korko)
   VALUES ('$idT', '$tilin_nimi', '$tilin_saldo', '$tilin_korko', '$idK')";
-  if (!mysqli_query($con, $sql)) {
+  if (!mysqli_query($conn, $sqlinsert)) {
     die('Error: ' . mysqli_error($con));
   }
   echo "1 record added";
-  mysqli_close($con);
+  mysqli_close($conn);
 ?>
