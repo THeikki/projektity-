@@ -1,5 +1,5 @@
+<?php include 'includes/yhteys.php'; ?>
 <?php
-  include 'includes/yhteys.php';
 
   $idK = mysqli_real_escape_string($conn, $_POST['idK']);
   $etunimi = mysqli_real_escape_string($conn, $_POST['etunimi']);
@@ -13,5 +13,5 @@
     die('Error: ' . mysqli_error($con));
   }
   echo "1 record added";
-  mysqli_close($con);
+  
 ?>
