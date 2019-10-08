@@ -7,9 +7,13 @@
   $osoite = mysqli_real_escape_string($conn, $_POST['oso']);
   $puhelinnumero = mysqli_real_escape_string($conn, $_POST['puh']);
 
-  $Sql = "INSERT INTO Kayttaja (idKayttaja, Etunimi, Sukunimi, Osoite, Puhelinnumero)
+  $sqlinsert = "INSERT INTO Kayttaja (idKayttaja, Etunimi, Sukunimi, Osoite, Puhelinnumero)
   VALUES ('$idK', '$etunimi', '$sukunimi', '$osoite','$puhelinnumero')";
-  mysqli_query($conn, $Sql);
+  if (!mysqli_query($con, $sql)) {
+    die('Error: ' . mysqli_error($con));
+  }
+  echo "1 record added";
+
 ?>
 <html lang="en" dir="ltr">
   <head>

@@ -27,9 +27,12 @@
       $tilin_korko = mysqli_real_escape_string ($conn, $_POST['t_k']);
       $idK = mysqli_real_escape_string ($conn, $_POST['idK']);
 
-      $sql = "INSERT INTO Tilit (idTilit, Tilin nimi, Tilin saldo, Tilin korko)
+      $sqlinsert = "INSERT INTO Tilit (idTilit, Tilin nimi, Tilin saldo, Tilin korko)
       VALUES ('$idT', '$tilin_nimi', '$tilin_saldo', '$tilin_korko', '$idK')";
-      mysqli_query($conn, $sql);
-   ?>
+      if (!mysqli_query($con, $sql)) {
+        die('Error: ' . mysqli_error($con));
+      }
+      echo "1 record added";
+    ?>
   </body>
 </html>

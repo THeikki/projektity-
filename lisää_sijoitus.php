@@ -29,9 +29,12 @@
       $osakkeen_arvo = mysqli_real_escape_string($conn, $_POST['osa_a']);
       $idK = mysqli_real_escape_string($conn, $_POST['idK']);
 
-      $sql = "INSERT INTO Sijoitukset (idSijoitukset, Sijoituskohde, Sijoituksen maara, Osakkeiden lukumaara, Osakkeen arvo)
+      $sqlinsert = "INSERT INTO Sijoitukset (idSijoitukset, Sijoituskohde, Sijoituksen maara, Osakkeiden lukumaara, Osakkeen arvo)
       VALUES ('$idL', '$sijoituskohde', '$sijoituksen_maara', '$osakkeiden_lukumaara','$osakkeen_arvo', '$idK')";
-      mysqli_query($conn, $sql);
-   ?>
+      if (!mysqli_query($con, $sql)) {
+        die('Error: ' . mysqli_error($con));
+      }
+      echo "1 record added";
+    ?>
   </body>
 </html>
