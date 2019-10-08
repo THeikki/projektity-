@@ -11,8 +11,8 @@
     <a href="Pääsivu.php" class="back">Takaisin</a>
     <div class="box" id="box1">
         <h2>Tilitiedot</h2>
-        <form action"lisää_tili.php"methot="POST">
-          <input type="text" name="idT" value="" placeholder="id Tilit"> <br><br>
+        <form methot="POST" action"lisää_tili.php">
+          <input type="text" name="idT" value="" placeholder="id Tili"> <br><br>
           <input type="text" name="t_n" value="" placeholder="Tilin nimi"> <br><br>
           <input type="text" name="t_s" value="" placeholder="Tilin saldo"> <br><br>
           <input type="text" name="t_k" value="" placeholder="Tilin korko"> <br><br>
@@ -29,7 +29,7 @@
 
       $sqlinsert = "INSERT INTO Tilit (idTilit, Tilin nimi, Tilin saldo, Tilin korko)
       VALUES ('$idT', '$tilin_nimi', '$tilin_saldo', '$tilin_korko', '$idK')";
-      mysqli_query($conn, $sql)
+      mysqli_query($conn, $sqlinsert)
     ?>
   </body>
 </html>
