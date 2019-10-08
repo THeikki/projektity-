@@ -1,5 +1,3 @@
-<?php include_once 'includes/yhteys.php';
-?>
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
   <head>
@@ -21,18 +19,5 @@
           <input type="submit" name="" value="Tallenna"> <br>
         </form>
     </div>
-  </body>
-  <body>
-    <?php
-      $idK = mysqli_real_escape_string($conn, $POST['idK']);
-      $etunimi = mysqli_real_escape_string($conn, $POST['etun']);
-      $sukunimi = mysqli_real_escape_string($conn, $POST['sukun']);
-      $osoite = mysqli_real_escape_string($conn, $POST['oso']);
-      $puhelinnumero = mysqli_real_escape_string($conn, $POST['puh']);
-
-      $sql = "INSERT INTO Kayttaja (idKayttaja, Etunimi, Sukunimi, Osoite, Puhelinnumero)
-      VALUES ('$idK', '$etunimi', '$sukunimi', '$osoite','$puhelinnumero')";
-      mysqli_query($conn, $sql);
-    ?>
   </body>
 </html>
