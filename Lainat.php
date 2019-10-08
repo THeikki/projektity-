@@ -23,8 +23,7 @@
       $sql = "SELECT * FROM Lainat;";
       $result = mysqli_query($conn, $sql);
 
-
-      echo "<table border='1'>
+        echo "<table border='1'>
         <tr>
         <th>idLainat</th>
         <th>Lainan nimi</th>
