@@ -1,5 +1,5 @@
+<?php include 'yhteys.php'; ?>
 <?php
-  include 'includes/yhteys.php';
 
   $idS = mysqli_real_escape_string($conn, $_POST['idS']);
   $sijoituskohde = mysqli_real_escape_string($conn, $_POST['sijoituskohde']);
@@ -8,11 +8,11 @@
   $osakkeen_arvo = mysqli_real_escape_string($conn, $_POST['osakkeen_arvo']);
   $idK = mysqli_real_escape_string($conn, $_POST['idK']);
 
-  $sqlinsert = "INSERT INTO Sijoitukset (idSijoitukset, Sijoituskohde, Sijoituksen maara, Osakkeiden lukumaara, Osakkeen arvo)
+  $sql = "INSERT INTO Sijoitukset (idSijoitukset, Sijoituskohde, Sijoituksen maara, Osakkeiden lukumaara, Osakkeen arvo)
   VALUES ('$idS', '$sijoituskohde', '$sijoituksen_maara', '$osakkeiden_lukumaara','$osakkeen_arvo', '$idK')";
-  if (!mysqli_query($conn, $sqlinsert)) {
+  if (!mysqli_query($conn, $sql)) {
     die('Error: ' . mysqli_error($conn));
   }
   echo "1 record added";
-  header("Location: ..lisää_sijoitus.php?tallenna_sijoitus=onnistui");
+  header("Location: ../Pääsivu.php?tallenna_sijoitus=onnistui");
 ?>
