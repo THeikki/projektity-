@@ -10,9 +10,7 @@
   $Sql = "INSERT INTO Kayttaja (idKayttaja, Etunimi, Sukunimi, Osoite, Puhelinnumero)
   VALUES ('$idK', '$etunimi', '$sukunimi', '$osoite','$puhelinnumero')";
   mysqli_query($conn, $Sql);
-
 ?>
-
 <html lang="en" dir="ltr">
   <head>
     <meta charset="utf-8">

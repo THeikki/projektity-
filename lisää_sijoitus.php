@@ -1,5 +1,5 @@
 <?php include 'includes/yhteys.php';?>
-<!DOCTYPE html>
+
 <html lang="en" dir="ltr">
   <head>
     <meta charset="utf-8">
@@ -21,8 +21,6 @@
           <input type="submit" name="" value="Tallenna">
         </form>
     </div>
-  </body>
-  <body>
     <?php
       $idS = mysqli_real_escape_string($conn, $_POST['idS']);
       $sijoituskohde = mysqli_real_escape_string($conn, $_POST['sijk']);
