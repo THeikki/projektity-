@@ -1,5 +1,4 @@
 <?php include_once 'includes/yhteys.php'; ?>
-<?php include_once 'includes/tallennus.php'; ?>
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
   <head>

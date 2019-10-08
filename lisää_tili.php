@@ -22,4 +22,18 @@
         </form>
     </div>
   </body>
+  <body>
+    <?php
+      $idT = mysqli_real_escape_string ($conn, $_POST['idS']);
+      $tilin_nimi = mysqli_real_escape_string ($conn, $_POST['t_n']);
+      $tilin_aloituspaiva = mysqli_real_escape_string ($conn, $_POST['t_a']);
+      $tilin_saldo = mysqli_real_escape_string ($conn, $_POST['t_s']);
+      $tilin_korko = mysqli_real_escape_string ($conn, $_POST['t_k']);
+      $idK = mysqli_real_escape_string ($conn, $_POST['idK']);
+
+      $sql = "INSERT INTO Tilit (idTilit, Tilin nimi, Tilin aloituspaiva, Tilin saldo, Tilin korko)
+      VALUES ('$idT', '$tilin_nimi', '$tilin_aloituspaiva', '$tilin_saldo','$tilin_korko', '$idK')";
+      mysqli_query($conn, $sql);
+   ?>
+  </body>
 </html>
