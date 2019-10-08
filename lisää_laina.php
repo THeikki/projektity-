@@ -12,7 +12,7 @@
     <a href="Pääsivu.php" class="back">Takaisin</a>
     <div class="box" id="box1">
         <h2>Lainatiedot</h2>
-        <form class="" action="" methot="POST">
+        <form methot="POST">
           <input type="number" name="idL" value="" placeholder="id Lainat"> <br><br>
           <input type="text" name="lai_n" value="" placeholder="Lainan nimi"> <br><br>
           <input type="date" name="lai_o" value="" placeholder="Lainan ottopäivä"> <br><br>
@@ -22,6 +22,8 @@
           <input type="submit" name="" value="Tallenna">
         </form>
     </div>
+  </body>
+  <body>
     <?php
       $idL = mysqli_real_escape_string($conn, $_POST['idL']);
       $lainan_nimi = mysqli_real_escape_string($conn, $_POST['lai_n']);
