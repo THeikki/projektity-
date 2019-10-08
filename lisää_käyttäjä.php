@@ -1,3 +1,4 @@
+<?php include 'includes/yhteys.php'; ?>
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
   <head>
