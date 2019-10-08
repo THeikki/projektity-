@@ -1,3 +1,5 @@
+<?php include_once 'includes/yhteys.php';
+?>
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
   <head>
@@ -11,13 +13,27 @@
     <div class="box" id="box1">
         <h2>Tilitiedot</h2>
         <form class="" action="" methot="post">
-          <input type="text" name="id" value="" placeholder="id_Tilit"> <br><br>
-          <input type="text" name="tn" value="" placeholder="Tilin nimi"> <br><br>
-          <input type="text" name="ta" value="" placeholder="Tilin aloituspäivä"> <br><br>
-          <input type="text" name="ts" value="" placeholder="Tilin saldo €"> <br><br>
-          <input type="text" name="tk" value="" placeholder="Tilin korko %"> <br><br>
-          <input type="submit" name="" value="Aseta">
+          <input type="text" name="idT" value="" placeholder="id Tilit"> <br><br>
+          <input type="text" name="t_n" value="" placeholder="Tilin nimi"> <br><br>
+          <input type="text" name="t_a" value="" placeholder="Tilin aloituspäivä"> <br><br>
+          <input type="text" name="t_s" value="" placeholder="Tilin saldo €"> <br><br>
+          <input type="text" name="t_k" value="" placeholder="Tilin korko %"> <br><br>
+          <input type="text" name="idK" value="" placeholder="id Käyttäjä"> <br><br>
+          <input type="submit" name="" value="Tallenna">
         </form>
     </div>
+  </body>
+  <body>
+    <?php
+      $idT = mysqli_real_escape_string($con, $_POST['idS']);
+      $tilin_nimi = mysqli_real_escape_string($con, $_POST['t_n']);
+      $tilin_aloituspaiva = mysqli_real_escape_string($con, $_POST['t_a']);
+      $tilin_saldo = mysqli_real_escape_string($con, $_POST['t_s']);
+      $tilin_korko = mysqli_real_escape_string($con, $_POST['t_k']);
+      $idK = mysqli_real_escape_string($con, $_POST['idK']);
+
+      $sql = "INSERT INTO Tilit (idTilit, Tilin nimi, Tilin aloituspaiva, Tilin saldo, Tilin korko)
+      VALUES ('$idT', '$tilin_nimi', '$tilin_aloituspaiva', '$tilin_saldo','$tilin_korko', '$idK')";
+    ?>
   </body>
 </html>

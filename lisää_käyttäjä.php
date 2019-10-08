@@ -1,3 +1,5 @@
+<?php include_once 'includes/yhteys.php';
+?>
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
   <head>
@@ -11,13 +13,25 @@
     <div class="box" id="box1">
         <h2>Käyttäjätiedot</h2>
         <form class="" action="" methot="post">
-          <input type="text" name="id" value="" placeholder="id_käyttäjä"> <br><br>
-          <input type="text" name="en" value="" placeholder="Etunimi"> <br><br>
-          <input type="text" name="sn" value="" placeholder="Sukunimi"> <br><br>
-          <input type="text" name="os" value="" placeholder="Osoite"> <br><br>
-          <input type="text" name="pn" value="" placeholder="Puhelinnumero"> <br><br>
-          <input type="submit" name="" value="Aseta"> <br>
+          <input type="number" name="idK" value="" placeholder="id käyttäjä"> <br><br>
+          <input type="text" name="etun" value="" placeholder="Etunimi"> <br><br>
+          <input type="text" name="sukun" value="" placeholder="Sukunimi"> <br><br>
+          <input type="text" name="oso" value="" placeholder="Osoite"> <br><br>
+          <input type="text" name="puh" value="" placeholder="Puhelinnumero"> <br><br>
+          <input type="submit" name="" value="Tallenna"> <br>
         </form>
     </div>
+  </body>
+  <body>
+    <?php
+      $idK = mysqli_real_escape_string($con, $_POST['idK']);
+      $etunimi = mysqli_real_escape_string($con, $_POST['etun']);
+      $sukunimi = mysqli_real_escape_string($con, $_POST['sukun']);
+      $osoite = mysqli_real_escape_string($con, $_POST['oso']);
+      $puhelinnumero = mysqli_real_escape_string($con, $_POST['puh']);
+
+      $sql = "INSERT INTO Kayttaja (idKayttaja, Etunimi, Sukunimi, Osoite, Puhelinnumero)
+      VALUES ('$idK', '$etunimi', '$sukunimi', '$osoite','$puhelinnumero')";
+    ?>
   </body>
 </html>
