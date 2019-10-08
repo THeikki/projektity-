@@ -1,4 +1,4 @@
-<?php include 'includes/yhteys.php'; ?>
+<?php include 'yhteys.php'; ?>
 <?php
 
   $idK = mysqli_real_escape_string($conn, $_POST['idK']);
@@ -7,11 +7,11 @@
   $osoite = mysqli_real_escape_string($conn, $_POST['osoite']);
   $puhelinnumero = mysqli_real_escape_string($conn, $_POST['puhelinnumero']);
 
-  $sqlinsert = "INSERT INTO Kayttaja (idKayttaja, Etunimi, Sukunimi, Osoite, Puhelinnumero)
+  $sql = "INSERT INTO Kayttaja (idKayttaja, Etunimi, Sukunimi, Osoite, Puhelinnumero)
   VALUES ('$idK', '$etunimi', '$sukunimi', '$osoite','$puhelinnumero')";
-  if (!mysqli_query($conn, $sqlinsert)) {
+  if (!mysqli_query($conn, $sql)) {
     die('Error: ' . mysqli_error($conn));
   }
   echo "1 record added";
-  header("Location: ..lisää_käyttäjä.php?tallenna_käyttäjä=onnistui");
+  header("Location: ../Pääsivu.php?tallenna_käyttäjä=success");
 ?>
