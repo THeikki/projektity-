@@ -32,6 +32,8 @@
 
       $sql = "INSERT INTO Kayttaja (idKayttaja, Etunimi, Sukunimi, Osoite, Puhelinnumero)
       VALUES ('$idK', '$etunimi', '$sukunimi', '$osoite','$puhelinnumero')";
+
+      echo $sql;
     ?>
   </body>
 </html>

@@ -34,6 +34,7 @@
 
       $sql = "INSERT INTO Tilit (idTilit, Tilin nimi, Tilin aloituspaiva, Tilin saldo, Tilin korko)
       VALUES ('$idT', '$tilin_nimi', '$tilin_aloituspaiva', '$tilin_saldo','$tilin_korko', '$idK')";
+      echo $sql;
     ?>
   </body>
 </html>

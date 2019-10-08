@@ -34,6 +34,8 @@
 
       $sql = "INSERT INTO Lainat (idLainat, Lainan nimi, Lainan ottopaiva, Lainan maara, Lainan korko, idKayttaja)
       VALUES ('$idL', '$lainan_nimi', '$lainan_ottopaiva', '$lainan_maara','$lainan_korko', '$idK')";
+
+      echo $sql;
     ?>
   </body>
 </html>
