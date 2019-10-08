@@ -1,4 +1,3 @@
-<?php include 'includes/yhteys.php';?>
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
   <head>
@@ -11,7 +10,7 @@
     <a href="Pääsivu.php" class="back">Takaisin</a>
     <div class="box" id="box1">
         <h2>Tilitiedot</h2>
-        <form methot="POST" action"lisää_tili.php">
+        <form methot="POST" action"tallenna_tili.php">
           <input type="text" name="idT" value="" placeholder="id Tili"> <br><br>
           <input type="text" name="t_n" value="" placeholder="Tilin nimi"> <br><br>
           <input type="text" name="t_s" value="" placeholder="Tilin saldo"> <br><br>
@@ -20,16 +19,5 @@
           <input type="submit" name="" value="Tallenna">
         </form>
     </div>
-    <?php
-      $idT = mysqli_real_escape_string ($conn, $_POST['idS']);
-      $tilin_nimi = mysqli_real_escape_string ($conn, $_POST['t_n']);
-      $tilin_saldo = mysqli_real_escape_string ($conn, $_POST['t_s']);
-      $tilin_korko = mysqli_real_escape_string ($conn, $_POST['t_k']);
-      $idK = mysqli_real_escape_string ($conn, $_POST['idK']);
-
-      $sqlinsert = "INSERT INTO Tilit (idTilit, Tilin nimi, Tilin saldo, Tilin korko)
-      VALUES ('$idT', '$tilin_nimi', '$tilin_saldo', '$tilin_korko', '$idK')";
-      mysqli_query($conn, $sqlinsert)
-    ?>
   </body>
 </html>
