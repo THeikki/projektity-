@@ -1,4 +1,3 @@
-<?php include 'includes/yhteys.php'; ?>
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
   <head>
@@ -11,7 +10,7 @@
     <a href="Pääsivu.php" class="back">Takaisin</a>
     <div class="box" id="box1">
         <h2>Tilitiedot</h2>
-        <form methot="POST" action"tallenna_tili.php">
+        <form action"tallenna_tili.php" methot="post">
           <input type="number" name="idT" value="" placeholder="id Tili"> <br><br>
           <input type="text" name="tilin_nimi" value="" placeholder="Tilin nimi"> <br><br>
           <input type="text" name="tilin_saldo" value="" placeholder="Tilin saldo"> <br><br>

@@ -1,17 +1,22 @@
 <?php include_once 'yhteys.php'; ?>
 <?php
 
-  $sql = "INSERT INTO Kayttaja (idKayttaja, Etunimi, Sukunimi, Osoite, Puhelinnumero)
-  VALUES ('$idK', '$etunimi', '$sukunimi', '$osoite', '$puhelinnumero')";
-
-
   $idK = mysqli_real_escape_string($conn, $_POST['idK']);
   $etunimi = mysqli_real_escape_string($conn, $_POST['etunimi']);
   $sukunimi = mysqli_real_escape_string($conn, $_POST['sukunimi']);
   $osoite = mysqli_real_escape_string($conn, $_POST['osoite']);
   $puhelinnumero = mysqli_real_escape_string($conn, $_POST['puhelinnumero']);
 
-  mysqli_query($conn, $sql);
+  $sql = "INSERT INTO Kayttaja (idKayttaja, Etunimi, Sukunimi, Osoite, Puhelinnumero)
+  VALUES ('$idK', '$etunimi', '$sukunimi', '$osoite', '$puhelinnumero')";
 
-  header("Location: lisää_käyttäjä.php?tallenna=success");
+  if (!mysqli_query($conn, $sql)) {
+   echo "Ei lisätty";
+  }
+  else {
+    echo "1 käyttäjä lisätty";
+
+  }
+
+  header("refresh:2; url=lisää_käyttäjä.php");
 ?>
