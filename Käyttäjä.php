@@ -31,7 +31,7 @@
         mysqli_query($Deletequery, $conn);
       };
 
-      echo "<table border='1'>
+      echo "<table>
         <tr>
         <th>idKayttaja</th>
         <th>Etunimi</th>
@@ -41,6 +41,7 @@
         </tr>";
 
       while($row = mysqli_fetch_array($result)) {
+        echo"<form action=Kayttaja.php method=post>";
         echo "<tr>";
         echo "<td>" . $row['idKayttaja'] . "</td>";
         echo "<td>" . $row['Etunimi'] . "</td>";
@@ -50,6 +51,7 @@
         echo "<td>" . "<input type="submit" name="update" value="update" . " </td>;
         echo "<td>" . "<input type="submit" name="delete" value="delete" . " </td>;
         echo "</tr>";
+        echo</form>;
         }
         echo "</table>";
     ?>

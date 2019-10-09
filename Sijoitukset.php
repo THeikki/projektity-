@@ -32,7 +32,7 @@
       };
 
 
-      echo "<table border='1'>
+      echo "<table>
         <tr>
         <th>idSijoitukset</th>
         <th>Sijoituskohde</th>
