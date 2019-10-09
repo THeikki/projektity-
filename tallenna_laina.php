@@ -2,15 +2,15 @@
 <?php
 
   $idL = mysqli_real_escape_string($conn, $_POST['idL']);
-  $lainan_nimi = mysqli_real_escape_string($conn, $_POST['lainan_nimi']);
-  $lainan_maara = mysqli_real_escape_string($conn, $_POST['lainan_maara']);
-  $lainan_korko = mysqli_real_escape_string($conn, $_POST['lainan_korko']);
+  $lainannimi = mysqli_real_escape_string($conn, $_POST['lainannimi']);
+  $lainanmaara = mysqli_real_escape_string($conn, $_POST['lainanmaara']);
+  $lainankorko = mysqli_real_escape_string($conn, $_POST['lainankorko']);
   $idK = mysqli_real_escape_string($conn, $_POST['idK']);
 
-  $sql = "INSERT INTO Lainat (idLainat, Lainan nimi, Lainan maara, Lainan korko, idKayttaja)
-  VALUES ('$idL', '$lainan_nimi', '$lainan_maara', '$lainan_korko', '$idK')";
+  $sqlinsert = "INSERT INTO Lainat (idLainat, Lainan nimi, Lainan maara, Lainan korko, idKayttaja)
+  VALUES ('$idL', '$lainannimi', '$lainanmaara', '$lainankorko', '$idK')";
 
-  if (!mysqli_query($conn, $sql)) {
+  if (!mysqli_query($conn, $sqlinsert)) {
    echo "Ei lisätty";
   }
   else {
@@ -18,5 +18,5 @@
 
   }
 
-  header("refresh:2; url=lisää_laina.php");
+
 ?>
