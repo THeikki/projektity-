@@ -1,4 +1,5 @@
-<?php include 'includes/yhteys.php'; ?>
+<?php include_once 'includes/yhteys.php';
+?>
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
   <head>
@@ -16,21 +17,20 @@
     <a href="Sijoitukset.php" class="button1">Sijoitukset</a>
     <a href="Lainat.php" class="button2">Lainat</a>
     <hr class="line">
-  </body>
-  <body>
+
     <?php
-      $sql = "SELECT * FROM Lainat;";
-      $result = mysqli_query($conn, $sql);
 
       if(isset($_POST['update'])) {
         $Updatequery = "UPDATE Lainat SET idLainat=$_POST[idLainat], Lainan nimi=$_POST[Lainan nimi], Lainan maara=$_POST[Lainan maara], Lainan korko=$_POST[Lainan korko], idKayttaja=$_POST[IdKayttaja], WHERE idLainat=$_POST[hidden]";
         mysqli_query($Updatequery, $conn);
-      };
+      }
       if(isset($_POST['delete'])) {
         $Deletequery = "DELETE FROM Lainat WHERE idLainat=$_POST[hidden]";
         mysqli_query($Deletequery, $conn);
-      };
+      }
 
+      $sql = "SELECT * FROM Lainat;";
+      $result = mysqli_query($conn, $sql);
 
       echo "<table border='1'>
       <tr>
