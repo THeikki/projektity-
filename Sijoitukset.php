@@ -25,11 +25,11 @@
       if(isset($_POST['update'])) {
         $Updatequery = "UPDATE Sijoitukset SET idSijoitukset='$_POST[idSijoitukset]', Sijoituskohde='$_POST[Sijoituskohde]', Sijoituksen summa='$_POST[Sijoituksen summa]', Osakkeiden lukumaara='$_POST[Osakkeiden lukumaara]', Osakkeen arvo='$_POST[Osakkeen arvo]', WHERE idSijoitukset='$_POST[hidden]'";
         mysqli_query($Updatequery, $conn);
-      }
+      };
       if(isset($_POST['delete'])) {
         $Deletequery = "DELETE FROM Sijoitukset WHERE idSijoitukset='$_POST[hidden]'";
         mysqli_query($Deletequery, $conn);
-      }
+      };
 
 
       echo "<table border='1'>
