@@ -43,7 +43,7 @@
         </tr>";
 
       while($row = mysqli_fetch_array($result)) {
-        echo"<form action=Kayttaja.php method=post>";
+        echo"<form action=Sijoitukset.php method=post>";
         echo "<tr>";
         echo "<td>" . $row['idSijoitukset'] . "</td>";
         echo "<td>" . $row['Sijoituskohde'] . "</td>";
@@ -52,7 +52,7 @@
         echo "<td>" . $row['Osakkeen arvo'] . "</td>";
         echo "<td>" . $row['idKayttaja'] . "</td>";
         echo "<td>" . "<input type=submit name=update value=update" . " </td>";
-        echo "<td>" . "<input type=submit name=delete value=delete" . "</td>";
+        echo "<td>" . "<input type=submit name=delete value=delete" . " </td>";
         echo "</tr>";
         echo "</form>";
         }

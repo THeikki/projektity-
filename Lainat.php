@@ -48,8 +48,8 @@
         echo "<td>" . $row['Lainan maara'] . "</td>";
         echo "<td>" . $row['Lainan korko'] . "</td>";
         echo "<td>" . $row['idKayttaja'] . "</td>";
-        echo "<td>" . "<input type=submit name=update value=update" . "</td>";
-        echo "<td>" . "<input type=submit name=delete value=delete" . "</td>";
+        echo "<td>" . "<input type=submit name=update value=update" . " </td>";
+        echo "<td>" . "<input type=submit name=delete value=delete" . " </td>";
         echo "</tr>";
         echo "</form>";
         }

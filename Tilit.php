@@ -42,7 +42,7 @@
         </tr>";
 
       while($row = mysqli_fetch_array($result)) {
-        echo"<form action=Kayttaja.php method=post>";
+        echo"<form action=Tilit.php method=post>";
         echo "<tr>";
         echo "<td>" . $row['idTilit'] . "</td>";
         echo "<td>" . $row['Tilin nimi'] . "</td>";
