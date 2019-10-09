@@ -1,3 +1,5 @@
+<?php include "includes/yhteys.php"
+?>
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
   <head>
@@ -41,17 +43,13 @@
       </tr>";
 
       while($row = mysqli_fetch_array($result)) {
-        echo"<form action=Lainat.php method=post>";
         echo "<tr>";
         echo "<td>" . $row['idLainat'] . "</td>";
         echo "<td>" . $row['Lainan nimi'] . "</td>";
         echo "<td>" . $row['Lainan maara'] . "</td>";
         echo "<td>" . $row['Lainan korko'] . "</td>";
         echo "<td>" . $row['idKayttaja'] . "</td>";
-        echo "<td>" . "<input type=submit name=update value=Muokkaa" . " </td>";
-        echo "<td>" . "<input type=submit name=delete value=Poista" . " </td>";
         echo "</tr>";
-        echo "</form>";
         }
         echo "</table>";
     ?>
