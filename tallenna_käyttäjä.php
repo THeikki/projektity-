@@ -7,16 +7,15 @@
   $osoite = mysqli_real_escape_string($conn, $_POST['osoite']);
   $puhelinnumero = mysqli_real_escape_string($conn, $_POST['puhelinnumero']);
 
-  $sql = "INSERT INTO Kayttaja (idKayttaja, Etunimi, Sukunimi, Osoite, Puhelinnumero)
+  $sqlinsert = "INSERT INTO Kayttaja (idKayttaja, Etunimi, Sukunimi, Osoite, Puhelinnumero)
   VALUES ('$idK', '$etunimi', '$sukunimi', '$osoite', '$puhelinnumero')";
 
-  if (!mysqli_query($conn, $sql)) {
+  if (!mysqli_query($conn, $sqlinsert)) {
    echo "Ei lisätty";
   }
   else {
     echo "1 käyttäjä lisätty";
-
   }
 
-  header("refresh:2; url=lisää_käyttäjä.php");
+
 ?>

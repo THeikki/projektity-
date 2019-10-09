@@ -2,15 +2,15 @@
 <?php
 
   $idT = mysqli_real_escape_string ($conn, $_POST['idS']);
-  $tilin_nimi = mysqli_real_escape_string ($conn, $_POST['tilin_nimi']);
-  $tilin_saldo = mysqli_real_escape_string ($conn, $_POST['tilin_saldo']);
-  $tilin_korko = mysqli_real_escape_string ($conn, $_POST['tilin_korko']);
+  $tilinnimi = mysqli_real_escape_string ($conn, $_POST['tilinnimi']);
+  $tilinsaldo = mysqli_real_escape_string ($conn, $_POST['tilinsaldo']);
+  $tilinkorko = mysqli_real_escape_string ($conn, $_POST['tilinkorko']);
   $idK = mysqli_real_escape_string ($conn, $_POST['idK']);
 
-  $sql = "INSERT INTO Tilit (idTilit, Tilin nimi, Tilin saldo, Tilin korko)
-  VALUES ('$idT', '$tilin_nimi', '$tilin_saldo', '$tilin_korko', '$idK')";
+  $sqlinsert = "INSERT INTO Tilit (idTilit, Tilin nimi, Tilin saldo, Tilin korko)
+  VALUES ('$idT', '$tilinnimi', '$tilinsaldo', '$tilinkorko', '$idK')";
 
-  if (!mysqli_query($conn, $sql)) {
+  if (!mysqli_query($conn, $sqlinsert)) {
    echo "Ei lisätty";
   }
   else {
@@ -18,5 +18,4 @@
 
   }
 
-  header("refresh:2; url=lisää_tili.php");
 ?>
