@@ -1,3 +1,5 @@
+<?php include "includes/yhteys.php"
+?>
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
   <head>
@@ -18,15 +20,6 @@
 
     <?php
 
-      if(isset($_POST['update'])) {
-        $Updatequery = "UPDATE Tilit SET idTilit=$_POST[idTilit], Tilin nimi=$_POST[Tilin nimi], Tilin saldo=$_POST[Tilin saldo], Tilin korko=$_POST[Tilin korko], WHERE idTilit=$_POST[hidden]";
-        mysqli_query($Updatequery, $conn);
-      }
-      if(isset($_POST['delete'])) {
-        $Deletequery = "DELETE FROM Tilit WHERE idTilit=$_POST[hidden]";
-        mysqli_query($Deletequery, $conn);
-      }
-
       $sql = "SELECT * FROM Tilit;";
       $result = mysqli_query($conn, $sql);
 
@@ -40,17 +33,13 @@
         </tr>";
 
       while($row = mysqli_fetch_array($result)) {
-        echo"<form action=Tilit.php method=post>";
         echo "<tr>";
         echo "<td>" . $row['idTilit'] . "</td>";
         echo "<td>" . $row['Tilin nimi'] . "</td>";
         echo "<td>" . $row['Tilin saldo'] . "</td>";
         echo "<td>" . $row['Tilin korko'] . "</td>";
         echo "<td>" . $row['idKayttaja'] . "</td>";
-        echo "<td>" . "<input type=submit name=update value=Muokkaa" . " </td>";
-        echo "<td>" . "<input type=submit name=delete value=Poista" . " </td>";
         echo "</tr>";
-        echo "</form>";
         }
         echo "</table>";
     ?>
