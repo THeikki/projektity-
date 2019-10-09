@@ -1,5 +1,3 @@
-<?php include_once 'includes/yhteys.php';
-?>
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
   <head>
@@ -21,13 +19,14 @@
     <?php
 
       if(isset($_POST['update'])) {
-        $Updatequery = "UPDATE Lainat SET idLainat=$_POST[idLainat], Lainan nimi=$_POST[Lainan nimi], Lainan maara=$_POST[Lainan maara], Lainan korko=$_POST[Lainan korko], idKayttaja=$_POST[IdKayttaja], WHERE idLainat=$_POST[hidden]";
+        $Updatequery = "UPDATE Lainat SET idLainat=$_POST[idLainat], Lainan nimi=$_POST[Lainan nimi], Lainan maara=$_POST[Lainan maara], Lainan korko=$_POST[Lainan korko], WHERE idSijoitukset=$_POST[hidden]";
         mysqli_query($Updatequery, $conn);
-      }
+      };
       if(isset($_POST['delete'])) {
-        $Deletequery = "DELETE FROM Lainat WHERE idLainat=$_POST[hidden]";
+        $Deletequery = "DELETE FROM Kayttaja WHERE idKayttaja=$_POST[hidden]";
         mysqli_query($Deletequery, $conn);
-      }
+      };
+
 
       $sql = "SELECT * FROM Lainat;";
       $result = mysqli_query($conn, $sql);
