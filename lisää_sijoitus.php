@@ -1,4 +1,3 @@
-<?php include 'includes/yhteys.php'; ?>
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
   <head>
@@ -11,7 +10,7 @@
     <a href="Pääsivu.php" class="back">Takaisin</a>
     <div class="box" id="box1">
         <h2>Sijoitustiedot</h2>
-        <form methot="POST" action"tallenna_sijoitus.php">
+        <form action"tallenna_sijoitus.php" methot="post">
           <input type="number" name="idS" value="" placeholder="id Sijoitus"> <br><br>
           <input type="text" name="sijoituskohde" value="" placeholder="Sijoituskohde"> <br><br>
           <input type="text" name=sijoituksen_maara"" value="" placeholder="Sijoituksen määrä"> <br><br>
