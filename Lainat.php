@@ -31,7 +31,7 @@
       };
 
 
-      echo "<table border='1'>
+      echo "<table>
       <tr>
       <th>idLainat</th>
       <th>Lainan nimi</th>
