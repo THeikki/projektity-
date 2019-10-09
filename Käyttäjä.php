@@ -41,15 +41,15 @@
         </tr>";
 
       while($row = mysqli_fetch_array($result)) {
-        echo"<form action=Kayttaja.php method=post>";
+        echo"<form action=Käyttäjä.php method=post>";
         echo "<tr>";
         echo "<td>" . $row['idKayttaja'] . "</td>";
         echo "<td>" . $row['Etunimi'] . "</td>";
         echo "<td>" . $row['Sukunimi'] . "</td>";
         echo "<td>" . $row['Osoite'] . "</td>";
         echo "<td>" . $row['Puhelinnumero'] . "</td>";
-        echo "<td>" . "<input type=submit name=update value=update" . "</td>";
-        echo "<td>" . "<input type=submit name=delete value=delete" . "</td>";
+        echo "<td>" . "<input type=submit name=update value=update" . " </td>";
+        echo "<td>" . "<input type=submit name=delete value=delete" . " </td>";
         echo "</tr>";
         echo "</form>";
         }
