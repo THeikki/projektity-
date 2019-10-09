@@ -5,7 +5,7 @@
   $username = 't9tohe00';
   $password = 'Zakkeus1984';
 
- $conn = mysqli_connect($host,$dbname,$username,$password);
+ $conn = mysqli_connect($host,$dbname,$password,$username);
 
  if (mysqli_connect_errno()) {
    echo "Failed to connect to MySQL: " . mysqli_connect_error();
