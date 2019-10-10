@@ -2,20 +2,18 @@
 ?>
 <?php
 
-  $idT = mysqli_real_escape_stringg($conn, filter_input(INPUT_POST,'idT',FILTER_SANITIZE_STRING));
-  $tilinnimi = mysqli_real_escape_stringg($conn, filter_input(INPUT_POST,'tnimi',FILTER_SANITIZE_STRING));
-  $tilinsaldo = mysqli_real_escape_stringg($conn, filter_input(INPUT_POST,'tsaldo',FILTER_SANITIZE_STRING));
-  $tilinkorko = mysqli_real_escape_stringg($conn, filter_input(INPUT_POST,'tkorko',FILTER_SANITIZE_STRING));
-  $idK = mysqli_real_escape_stringg($conn, filter_input(INPUT_POST,'idK',FILTER_SANITIZE_STRING));
+  $idT = mysqli_real_escape_stringg($conn, filter_input(INPUT_POST,'idTilit',FILTER_SANITIZE_STRING));
+  $tilinnimi = mysqli_real_escape_stringg($conn, filter_input(INPUT_POST,'Tilin nimi',FILTER_SANITIZE_STRING));
+  $tilinsaldo = mysqli_real_escape_stringg($conn, filter_input(INPUT_POST,'Tilin saldo',FILTER_SANITIZE_STRING));
+  $tilinkorko = mysqli_real_escape_stringg($conn, filter_input(INPUT_POST,'Tilin korko',FILTER_SANITIZE_STRING));
+  $idK = mysqli_real_escape_stringg($conn, filter_input(INPUT_POST,'idKayttaja',FILTER_SANITIZE_STRING));
 
-  $sql = "INSERT INTO Tilit (idTilit, Tilin nimi, Tilin saldo, Tilin korko)
+  $sqlinsert = "INSERT INTO Tilit (idTilit, Tilin nimi, Tilin saldo, Tilin korko, idKayttaja)
   VALUES ('$idT', '$tilinnimi', '$tilinsaldo', '$tilinkorko', '$idK')";
 
-  if (!mysqli_query($conn, $sql)) {
-   echo "Ei lisätty";
-  }
-  else {
-    echo "1 tili lisätty";
-  }
-  header("Location: lisää_tili.php");
+  mysqli_query($conn, $sqlinsert);
+
+  echo "1 tili lisätty";
+
+  header("url=lisää_tili.php");
 ?>
