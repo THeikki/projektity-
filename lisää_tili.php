@@ -1,5 +1,5 @@
 <?php
-  include "includes/yhteys.php";
+  include "includes/yhteys.php"
 
   $idT = mysqli_real_escape_stringg($conn, filter_input(INPUT_POST,'idTilit',FILTER_SANITIZE_STRING));
   $tilinnimi = mysqli_real_escape_stringg($conn, filter_input(INPUT_POST,'Tilin nimi',FILTER_SANITIZE_STRING));
