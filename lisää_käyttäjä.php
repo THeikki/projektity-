@@ -1,3 +1,4 @@
+<?php include "includes/yhteys.php" ?>
 <html lang="en" dir="ltr">
   <head>
     <meta charset="utf-8">
@@ -20,7 +21,7 @@
     </div>
   </body>
 </html>
-<?php include "includes/yhteys.php"
+<?php
 
   if(isset($_POST['insert'])) {
 
@@ -39,7 +40,7 @@
       echo '<script> alert("Käyttäjää ei tallennettu")</script>';
     }
   else {
-    echo '<script> alert("uusi käyttäjä tallennettiin")</script>';
+    echo '<script> alert("Uusi käyttäjä tallennettiin")</script>';
 
   }
   }
