@@ -12,9 +12,9 @@
         <h2>Tilitiedot</h2>
         <form action"tallenna_tili.php" methot="post">
           <input type="number" name="idT" value="" placeholder="id Tili"> <br><br>
-          <input type="text" name="tilin_nimi" value="" placeholder="Tilin nimi"> <br><br>
-          <input type="text" name="tilin_saldo" value="" placeholder="Tilin saldo"> <br><br>
-          <input type="text" name="tilin_korko" value="" placeholder="Tilin korko"> <br><br>
+          <input type="text" name="tilinnimi" value="" placeholder="Tilin nimi"> <br><br>
+          <input type="number" name="tilinsaldo" value="" placeholder="Tilin saldo"> <br><br>
+          <input type="number" name="tilinkorko" value="" placeholder="Tilin korko"> <br><br>
           <input type="number" name="idK" value="" placeholder="id Käyttäjä"> <br><br>
           <input type="submit" name="" value="Tallenna">
         </form>

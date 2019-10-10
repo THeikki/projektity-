@@ -8,13 +8,13 @@
   <body>
     <hr class="line">
     <a href="Pääsivu.php" class="back">Takaisin</a>
-    <div class="box" id="box1">
+    <div id="box1">
         <h2>Lainatiedot</h2>
         <form action"tallenna_laina.php" methot="post">
           <input type="number" name="idL" value="" placeholder="id Laina"> <br><br>
-          <input type="text" name="lainan_nimi" value="" placeholder="Lainan nimi"> <br><br>
-          <input type="text" name="lainan_maara" value="" placeholder="Lainan määrä"> <br><br>
-          <input type="text" name="lainan_korko" value="" placeholder="Lainan korko"> <br><br>
+          <input type="text" name="lainannimi" value="" placeholder="Lainan nimi"> <br><br>
+          <input type="number" name="lainanmaara" value="" placeholder="Lainan määrä"> <br><br>
+          <input type="number" name="lainankorko" value="" placeholder="Lainan korko"> <br><br>
           <input type="number" name="idK" value="" placeholder="id Käyttäjä"> <br><br>
           <input type="submit" name="" value="Tallenna">
         </form>

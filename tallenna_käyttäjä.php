@@ -8,13 +8,14 @@
   $osoite = mysqli_real_escape_stringg($conn, filter_input(INPUT_POST,'os',FILTER_SANITIZE_STRING));
   $puhelinnumero = mysqli_real_escape_stringg($conn, filter_input(INPUT_POST,'puh',FILTER_SANITIZE_STRING));
 
-  $tallennaK = "INSERT INTO Kayttaja (idKayttaja, Etunimi, Sukunimi, Osoite, Puhelinnumero)
+  $sql = "INSERT INTO Kayttaja (idKayttaja, Etunimi, Sukunimi, Osoite, Puhelinnumero)
   VALUES ('$idK', '$etunimi', '$sukunimi', '$osoite', '$puhelinnumero')";
 
-  if (!mysqli_query($conn, $tallennaK)) {
+  if (!mysqli_query($conn, $sql)) {
    echo "Ei lisätty";
   }
   else {
     echo "1 käyttäjä lisätty";
   }
+  header("Location: lisää_käyttäjä.php");
 ?>
