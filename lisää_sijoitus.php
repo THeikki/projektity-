@@ -1,5 +1,5 @@
+<?php include "includes/yhteys.php" ?>
 <?php
-  include "includes/yhteys.php";
 
   $idS = mysqli_real_escape_string($conn, filter_input(INPUT_POST,'idSijoitukset',FILTER_SANITIZE_STRING));
   $sijoituskohde = mysqli_real_escape_string($conn, filter_input(INPUT_POST,'Sijoituksen kohde',FILTER_SANITIZE_STRING));
@@ -12,10 +12,6 @@
   VALUES ('$idS', '$sijoituskohde', '$sijoituksenmaara', '$osakkeidenlukumaara','$osakkeenarvo', '$idK')";
 
   mysqli_query($conn, $sqlinsert);
-
-  echo "1 sijoitus lisätty";
-
-  header("url=lisää_sijoitus.php");
 ?>
 <html lang="en" dir="ltr">
   <head>
