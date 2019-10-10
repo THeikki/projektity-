@@ -27,9 +27,9 @@
         <tr>
         <th>idSijoitukset</th>
         <th>Sijoituskohde</th>
-        <th>Sijoituksen summa</th>
-        <th>Osakkeiden lukumaara</th>
-        <th>Osakkeen arvo</th>
+        <th>Sijoituksen_summa</th>
+        <th>Osakkeiden_lukumaara</th>
+        <th>Osakkeen_arvo</th>
         <th>idKayttaja</th>
         </tr>";
 
@@ -37,9 +37,9 @@
         echo "<tr>";
         echo "<td>" . $row['idSijoitukset'] . "</td>";
         echo "<td>" . $row['Sijoituskohde'] . "</td>";
-        echo "<td>" . $row['Sijoituksen summa'] . "</td>";
-        echo "<td>" . $row['Osakkeiden lukumaara'] . "</td>";
-        echo "<td>" . $row['Osakkeen arvo'] . "</td>";
+        echo "<td>" . $row['Sijoituksen_summa'] . "</td>";
+        echo "<td>" . $row['Osakkeiden_lukumaara'] . "</td>";
+        echo "<td>" . $row['Osakkeen_arvo'] . "</td>";
         echo "<td>" . $row['idKayttaja'] . "</td>";
         echo "</tr>";
         }

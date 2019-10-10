@@ -26,18 +26,18 @@
       echo "<table border='1'>
         <tr>
         <th>idTilit</th>
-        <th>Tilin nimi</th>
-        <th>Tilin saldo</th>
-        <th>Tilin korko</th>
+        <th>Tilin_nimi</th>
+        <th>Tilin_saldo</th>
+        <th>Tilin_korko</th>
         <th>idKayttaja</th>
         </tr>";
 
       while($row = mysqli_fetch_array($result)) {
         echo "<tr>";
         echo "<td>" . $row['idTilit'] . "</td>";
-        echo "<td>" . $row['Tilin nimi'] . "</td>";
-        echo "<td>" . $row['Tilin saldo'] . "</td>";
-        echo "<td>" . $row['Tilin korko'] . "</td>";
+        echo "<td>" . $row['Tilin_nimi'] . "</td>";
+        echo "<td>" . $row['Tilin_saldo'] . "</td>";
+        echo "<td>" . $row['Tilin_korko'] . "</td>";
         echo "<td>" . $row['idKayttaja'] . "</td>";
         echo "</tr>";
         }

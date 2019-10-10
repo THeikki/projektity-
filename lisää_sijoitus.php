@@ -6,12 +6,12 @@
 
     $idSijoitukset = mysqli_real_escape_string($conn, filter_input(INPUT_POST,'idSijoitukset',FILTER_SANITIZE_STRING));
     $sijoituskohde = mysqli_real_escape_string($conn, filter_input(INPUT_POST,'Sijoituskohde',FILTER_SANITIZE_STRING));
-    $sijoituksensumma = mysqli_real_escape_string($conn, filter_input(INPUT_POST,'Sijoituksen summa',FILTER_SANITIZE_STRING));
-    $osakkeidenlukumaara = mysqli_real_escape_string($conn, filter_input(INPUT_POST,'Osakkeiden lukumaara',FILTER_SANITIZE_STRING));
-    $osakkeenarvo = mysqli_real_escape_string($conn, filter_input(INPUT_POST,'Osakkeen arvo',FILTER_SANITIZE_STRING));
+    $sijoituksensumma = mysqli_real_escape_string($conn, filter_input(INPUT_POST,'Sijoituksen_summa',FILTER_SANITIZE_STRING));
+    $osakkeidenlukumaara = mysqli_real_escape_string($conn, filter_input(INPUT_POST,'Osakkeiden_lukumaara',FILTER_SANITIZE_STRING));
+    $osakkeenarvo = mysqli_real_escape_string($conn, filter_input(INPUT_POST,'Osakkeen_arvo',FILTER_SANITIZE_STRING));
     $idKayttaja = mysqli_real_escape_string($conn, filter_input(INPUT_POST,'idKayttaja',FILTER_SANITIZE_STRING));
 
-    $sqlinsert = "INSERT INTO Sijoitukset (idSijoitukset, Sijoituskohde, Sijoituksen summa, Osakkeiden lukumaara, Osakkeen arvo, idKayttaja)
+    $sqlinsert = "INSERT INTO Sijoitukset (idSijoitukset, Sijoituskohde, Sijoituksen_summa, Osakkeiden_lukumaara, Osakkeen_arvo, idKayttaja)
     VALUES ('$idSijoitukset', '$sijoituskohde', '$sijoituksensumma', '$osakkeidenlukumaara','$osakkeenarvo', '$idKayttaja')";
 
     $query_run = mysqli_query($conn, $sqlinsert);
@@ -38,9 +38,9 @@
         <form action="lisää_sijoitus.php" method="post">
           <input type="number" name="idSijoitukset" value="" placeholder="id Sijoitus"> <br><br>
           <input type="text" name="Sijoituskohde" value="" placeholder="Sijoituskohde"> <br><br>
-          <input type="text" name="Sijoituksen summa" value="" placeholder="Sijoituksen määrä"> <br><br>
-          <input type="text" name="Osakkeiden lukumaara" value="" placeholder="Osakkeiden lukumäärä"> <br><br>
-          <input type="text" name="Osakkeen arvo" value="" placeholder="Osakkeen arvo"> <br><br>
+          <input type="text" name="Sijoituksen_summa" value="" placeholder="Sijoituksen määrä"> <br><br>
+          <input type="text" name="Osakkeiden_lukumaara" value="" placeholder="Osakkeiden lukumäärä"> <br><br>
+          <input type="text" name="Osakkeen_arvo" value="" placeholder="Osakkeen arvo"> <br><br>
           <input type="number" name="idKayttaja" value="" placeholder="id Käyttäjä"> <br><br>
           <input type="submit" name="insert" value="Tallenna"> <br>
         </form>
