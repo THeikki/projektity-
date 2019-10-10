@@ -8,14 +8,14 @@
   <body>
     <hr class="line">
     <a href="Pääsivu.php" class="back">Takaisin</a>
-    <div class="box" id="box1">
+    <div id="box1">
         <h2>Käyttäjätiedot</h2>
         <form action="tallenna_käyttäjä.php" methot="post">
           <input type="number" name="idK" value="" placeholder="id Käyttäjä"> <br><br>
           <input type="text" name="etunimi" value="" placeholder="Etunimi"> <br><br>
           <input type="text" name="sukunimi" value="" placeholder="Sukunimi"> <br><br>
           <input type="text" name="osoite" value="" placeholder="Osoite"> <br><br>
-          <input type="text" name="puhelinnumero" value="" placeholder="Puhelinnumero"> <br><br>
+          <input type="number" name="puhelinnumero" value="" placeholder="Puhelinnumero"> <br><br>
           <input type="submit" name="" value="Tallenna"> <br>
         </form>
     </div>
