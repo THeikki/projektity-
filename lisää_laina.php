@@ -8,7 +8,7 @@
   $idKayttaja = mysqli_real_escape_string($conn, filter_input(INPUT_POST,'idKayttaja',FILTER_SANITIZE_STRING));
 
   $sqlinsert = "INSERT INTO Lainat (idLainat, Lainan nimi, Lainan maara, Lainan korko, idKayttaja)
-  VALUES ('$idLainat', '$lainannimi', '$lainanmaara', '$lainankorko', '$idKayttaja')";
+  VALUES ('$idLainat', '$Lainannimi', '$Lainanmaara', '$Lainankorko', '$idKayttaja')";
 
   mysqli_query($conn, $sqlinsert);
 ?>
