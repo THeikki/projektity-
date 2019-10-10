@@ -27,7 +27,7 @@
     <a href="Pääsivu.php" class="back">Takaisin</a>
     <div class="box" id="box1">
         <h2>Tilitiedot</h2>
-        <form action"lisää_tili.php" methot="post">
+        <form action"lisää_tili.php" method="post">
           <input type="number" name="idT" value="" placeholder="id Tili"> <br><br>
           <input type="text" name="tilinnimi" value="" placeholder="Tilin nimi"> <br><br>
           <input type="number" name="tilinsaldo" value="" placeholder="Tilin saldo"> <br><br>

@@ -27,7 +27,7 @@
     <a href="Pääsivu.php" class="back">Takaisin</a>
     <div id="box1">
         <h2>Lainatiedot</h2>
-        <form action"lisää_laina.php" methot="post">
+        <form action"lisää_laina.php" method="post">
           <input type="number" name="idL" value="" placeholder="id Laina"> <br><br>
           <input type="text" name="lainannimi" value="" placeholder="Lainan nimi"> <br><br>
           <input type="number" name="lainanmaara" value="" placeholder="Lainan määrä"> <br><br>

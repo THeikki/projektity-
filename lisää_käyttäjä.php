@@ -23,7 +23,7 @@
     <a href="Pääsivu.php" class="back">Takaisin</a>
     <div id="box1">
         <h2>Käyttäjätiedot</h2>
-        <form action="lisää_käyttäjä.php" methot="post">
+        <form action="lisää_käyttäjä.php" method="post">
           <input type="number" name="idK" value="" placeholder="id Käyttäjä"> <br><br>
           <input type="text" name="etunimi" value="" placeholder="Etunimi"> <br><br>
           <input type="text" name="sukunimi" value="" placeholder="Sukunimi"> <br><br>
