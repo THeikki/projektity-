@@ -9,7 +9,7 @@
   $idKayttaja = mysqli_real_escape_string($conn, filter_input(INPUT_POST,'idKayttaja',FILTER_SANITIZE_STRING));
 
   $sqlinsert = "INSERT INTO Tilit (idTilit, Tilin nimi, Tilin saldo, Tilin korko, idKayttaja)
-  VALUES ('$idT', '$tilinnimi', '$tilinsaldo', '$tilinkorko', '$idK')";
+  VALUES ('$idTilit', '$tilinnimi', '$tilinsaldo', '$tilinkorko', '$idKayttaja')";
 
   mysqli_query($conn, $sqlinsert);
 ?>
@@ -26,9 +26,9 @@
         <h2>Tilitiedot</h2>
         <form action"lisää_tili.php" method="post">
           <input type="number" name="idTilit" value="" placeholder="id Tili"> <br><br>
-          <input type="text" name="tilinnimi" value="" placeholder="Tilin nimi"> <br><br>
-          <input type="number" name="tilinsaldo" value="" placeholder="Tilin saldo"> <br><br>
-          <input type="number" name="tilinkorko" value="" placeholder="Tilin korko"> <br><br>
+          <input type="text" name="Tilin nimi" value="" placeholder="Tilin nimi"> <br><br>
+          <input type="number" name="Tilin saldo" value="" placeholder="Tilin saldo"> <br><br>
+          <input type="number" name="Tilin korko" value="" placeholder="Tilin korko"> <br><br>
           <input type="number" name="idKayttaja" value="" placeholder="id Käyttäjä"> <br><br>
           <input type="submit" name="" value="Tallenna">
         </form>
