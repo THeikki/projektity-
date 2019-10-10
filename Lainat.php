@@ -20,6 +20,15 @@
 
     <?php
 
+      if(isset($_POST['update'])) {
+        $Updatequery = "UPDATE Lainat SET idLainat=$_POST[idLainat], Lainan nimi=$_POST[Lainan nimi], Lainan maara=$_POST[Lainan maara], Lainan korko=$_POST[Lainan korko], WHERE idSijoitukset=$_POST[hidden]";
+        mysqli_query($Updatequery, $conn);
+      }
+      if(isset($_POST['delete'])) {
+        $Deletequery = "DELETE FROM Kayttaja WHERE idKayttaja=$_POST[hidden]";
+        mysqli_query($Deletequery, $conn);
+      }
+
       $sql = "SELECT * FROM Lainat;";
       $result = mysqli_query($conn, $sql);
 
@@ -30,6 +39,8 @@
       <th>Lainan maara</th>
       <th>Lainan korko</th>
       <th>idKayttaja</th>
+      <th>Muokkaa</th>
+      <th>Poista</th>
       </tr>";
 
       while($row = mysqli_fetch_array($result)) {
@@ -39,6 +50,8 @@
         echo "<td>" . $row['Lainan maara'] . "</td>";
         echo "<td>" . $row['Lainan korko'] . "</td>";
         echo "<td>" . $row['idKayttaja'] . "</td>";
+        echo "<td>" . "<input type=submit name=update value=Muokkaa" . " </td>";
+        echo "<td>" . "<input type=submit name=delete value=Poista" . " </td>";
         echo "</tr>";
         }
         echo "</table>";

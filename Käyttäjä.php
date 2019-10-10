@@ -23,11 +23,11 @@
       if(isset($_POST['update'])) {
         $Updatequery = "UPDATE Kayttaja SET idKayttaja=$_POST[idKayttaja], Etunimi=$_POST[Etunimi], Sukunimi=$_POST[Sukunimi], Osoite=$_POST[Osoite], Puhelinnumero=$_POST[Puhelinnumero], WHERE idSijoitukset=$_POST[hidden]";
         mysqli_query($Updatequery, $conn);
-      };
+      }
       if(isset($_POST['delete'])) {
         $Deletequery = "DELETE FROM Kayttaja WHERE idKayttaja=$_POST[hidden]";
         mysqli_query($Deletequery, $conn);
-      };
+      }
 
       $sql = "SELECT * FROM Kayttaja;";
       $result = mysqli_query($conn, $sql);
@@ -39,6 +39,8 @@
         <th>Sukunimi</th>
         <th>Osoite</th>
         <th>Puhelinnumero</th>
+        <th>Muokkaa</th>
+        <th>Poista</th>
         </tr>";
 
       while($row = mysqli_fetch_array($result)) {
@@ -49,7 +51,7 @@
         echo "<td>" . $row['Osoite'] . "</td>";
         echo "<td>" . $row['Puhelinnumero'] . "</td>";
         echo "<td>" . "<input type=submit name=update value=Muokkaa" . " </td>";
-        echo "<td>" . "<input type=submit name=delete value=Poista" . " </td>";
+        echo "<td>" . "<input type=delete name=delete value=Poista" . " </td>";
         echo "</tr>";
         }
         echo "</table>";
