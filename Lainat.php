@@ -20,6 +20,9 @@
 
     <?php
 
+      $sql = "SELECT * FROM Lainat;";
+      $result = mysqli_query($conn, $sql);
+
       if(isset($_POST['update'])) {
         $Updatequery = "UPDATE Lainat SET idLainat=$_POST[idLainat], Lainan nimi=$_POST[Lainan nimi], Lainan maara=$_POST[Lainan maara], Lainan korko=$_POST[Lainan korko], WHERE idSijoitukset=$_POST[hidden]";
         mysqli_query($Updatequery, $conn);
@@ -29,19 +32,14 @@
         mysqli_query($Deletequery, $conn);
       }
 
-      $sql = "SELECT * FROM Lainat;";
-      $result = mysqli_query($conn, $sql);
-
       echo "<table border='1'>
-      <tr>
-      <th>idLainat</th>
-      <th>Lainan nimi</th>
-      <th>Lainan maara</th>
-      <th>Lainan korko</th>
-      <th>idKayttaja</th>
-      <th>Muokkaa</th>
-      <th>Poista</th>
-      </tr>";
+        <tr>
+        <th>idLainat</th>
+        <th>Lainan nimi</th>
+        <th>Lainan maara</th>
+        <th>Lainan korko</th>
+        <th>idKayttaja</th>
+        </tr>";
 
       while($row = mysqli_fetch_array($result)) {
         echo "<tr>";

@@ -20,6 +20,9 @@
 
     <?php
 
+      $sql = "SELECT * FROM Kayttaja;";
+      $result = mysqli_query($conn, $sql);
+
       if(isset($_POST['update'])) {
         $Updatequery = "UPDATE Kayttaja SET idKayttaja=$_POST[idKayttaja], Etunimi=$_POST[Etunimi], Sukunimi=$_POST[Sukunimi], Osoite=$_POST[Osoite], Puhelinnumero=$_POST[Puhelinnumero], WHERE idSijoitukset=$_POST[hidden]";
         mysqli_query($Updatequery, $conn);
@@ -29,9 +32,6 @@
         mysqli_query($Deletequery, $conn);
       }
 
-      $sql = "SELECT * FROM Kayttaja;";
-      $result = mysqli_query($conn, $sql);
-
       echo "<table border='1'>
         <tr>
         <th>idKayttaja</th>
@@ -39,8 +39,6 @@
         <th>Sukunimi</th>
         <th>Osoite</th>
         <th>Puhelinnumero</th>
-        <th>Muokkaa</th>
-        <th>Poista</th>
         </tr>";
 
       while($row = mysqli_fetch_array($result)) {
