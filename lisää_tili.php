@@ -1,4 +1,22 @@
-<!DOCTYPE html>
+<?php
+  include "includes/yhteys.php";
+
+  $idT = mysqli_real_escape_stringg($conn, filter_input(INPUT_POST,'idTilit',FILTER_SANITIZE_STRING));
+  $tilinnimi = mysqli_real_escape_stringg($conn, filter_input(INPUT_POST,'Tilin nimi',FILTER_SANITIZE_STRING));
+  $tilinsaldo = mysqli_real_escape_stringg($conn, filter_input(INPUT_POST,'Tilin saldo',FILTER_SANITIZE_STRING));
+  $tilinkorko = mysqli_real_escape_stringg($conn, filter_input(INPUT_POST,'Tilin korko',FILTER_SANITIZE_STRING));
+  $idK = mysqli_real_escape_stringg($conn, filter_input(INPUT_POST,'idKayttaja',FILTER_SANITIZE_STRING));
+
+  $sqlinsert = "INSERT INTO Tilit (idTilit, Tilin nimi, Tilin saldo, Tilin korko, idKayttaja)
+  VALUES ('$idT', '$tilinnimi', '$tilinsaldo', '$tilinkorko', '$idK')";
+
+  mysqli_query($conn, $sqlinsert);
+
+  echo "1 tili lisätty";
+
+  header("url=lisää_tili.php");
+?>
+
 <html lang="en" dir="ltr">
   <head>
     <meta charset="utf-8">
@@ -10,7 +28,7 @@
     <a href="Pääsivu.php" class="back">Takaisin</a>
     <div class="box" id="box1">
         <h2>Tilitiedot</h2>
-        <form action"tallenna_tili.php" methot="post">
+        <form action"lisää_tili.php" methot="post">
           <input type="number" name="idT" value="" placeholder="id Tili"> <br><br>
           <input type="text" name="tilinnimi" value="" placeholder="Tilin nimi"> <br><br>
           <input type="number" name="tilinsaldo" value="" placeholder="Tilin saldo"> <br><br>
