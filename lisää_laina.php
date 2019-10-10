@@ -1,5 +1,5 @@
+<?php include "includes/yhteys.php" ?>
 <?php
-  include "includes/yhteys.php";
 
   $idL = mysqli_real_escape_string($conn, filter_input(INPUT_POST,'idLainat',FILTER_SANITIZE_STRING));
   $lainannimi = mysqli_real_escape_string($conn, filter_input(INPUT_POST,'Lainan nimi',FILTER_SANITIZE_STRING));
@@ -11,10 +11,6 @@
   VALUES ('$idL', '$lainannimi', '$lainanmaara', '$lainankorko', '$idK')";
 
   mysqli_query($conn, $sqlinsert);
-
-  echo "1 laina lisätty";
-
-  header("url=lisää_laina.php");
 ?>
 <html lang="en" dir="ltr">
   <head>
