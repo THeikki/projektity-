@@ -31,7 +31,7 @@
           <input type="text" name="Osakkeiden lukumaara" value="" placeholder="Osakkeiden lukumäärä"> <br><br>
           <input type="text" name="Osakkeen arvo" value="" placeholder="Osakkeen arvo"> <br><br>
           <input type="number" name="idKayttaja" value="" placeholder="id Käyttäjä"> <br><br>
-          <input type="submit" name="" value="Tallenna">
+          <input type="submit" name="" value="Tallenna"> <br>
         </form>
     </div>
   </body>

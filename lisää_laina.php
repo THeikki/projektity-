@@ -29,7 +29,7 @@
           <input type="text" name="Lainan maara" value="" placeholder="Lainan määrä"> <br><br>
           <input type="text" name="Lainan korko" value="" placeholder="Lainan korko"> <br><br>
           <input type="number" name="idKayttaja" value="" placeholder="id Käyttäjä"> <br><br>
-          <input type="submit" name="" value="Tallenna">
+          <input type="submit" name="" value="Tallenna"> <br>
         </form>
     </div>
   </body>
