@@ -1,4 +1,5 @@
-<?php include "includes/yhteys.php" ?>
+<?php include "includes/yhteys.php"
+?>
 <?php
 
   if(isset($_POST['insert'])) {
@@ -36,8 +37,8 @@
         <form action="lisää_laina.php" method="post">
           <input type="number" name="" value="" placeholder="id Laina"> <br><br>
           <input type="text" name="" value="" placeholder="Lainan nimi"> <br><br>
-          <input type="number" name="" value="" placeholder="Lainan määrä"> <br><br>
-          <input type="number" name="" value="" placeholder="Lainan korko"> <br><br>
+          <input type="text" name="" value="" placeholder="Lainan määrä"> <br><br>
+          <input type="text" name="" value="" placeholder="Lainan korko"> <br><br>
           <input type="number" name="" value="" placeholder="id Käyttäjä"> <br><br>
           <input type="submit" name="insert" value="Tallenna"> <br>
         </form>

@@ -1,4 +1,5 @@
-<?php include "includes/yhteys.php" ?>
+<?php include "includes/yhteys.php"
+?>
 <?php
 
   if(isset($_POST['insert'])) {
@@ -12,14 +13,10 @@
     $sqlinsert = "INSERT INTO Tilit (idTilit, Tilin nimi, Tilin saldo, Tilin korko, idKayttaja)
     VALUES ('$idTilit', '$tilinnimi', '$tilinsaldo', '$tilinkorko', '$idKayttaja')";
 
-    $query_run = mysqli_query($conn, $sqlinsert);
-
-    if($query_run) {
-      echo '<script> alert("Uusi tili tallennettiin")</script>';
+    if(!mysqli_query($conn, $sqlinsert))
+    {
+     die('Error: ' . mysqli_error($conn));
     }
-  else {
-    echo '<script> alert("Tiliä ei tallennettu")</script>';
-  }
   }
 ?>
 <html lang="en" dir="ltr">
