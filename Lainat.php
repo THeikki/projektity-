@@ -23,15 +23,6 @@
       $sql = "SELECT * FROM Lainat;";
       $result = mysqli_query($conn, $sql);
 
-      if(isset($_POST['update'])) {
-        $Updatequery = "UPDATE Lainat SET idLainat=$_POST[idLainat], Lainan nimi=$_POST[Lainan nimi], Lainan maara=$_POST[Lainan maara], Lainan korko=$_POST[Lainan korko], WHERE idSijoitukset=$_POST[hidden]";
-        mysqli_query($Updatequery, $conn);
-      }
-      if(isset($_POST['delete'])) {
-        $Deletequery = "DELETE FROM Kayttaja WHERE idKayttaja=$_POST[hidden]";
-        mysqli_query($Deletequery, $conn);
-      }
-
       echo "<table border='1'>
         <tr>
         <th>idLainat</th>
@@ -48,8 +39,6 @@
         echo "<td>" . $row['Lainan maara'] . "</td>";
         echo "<td>" . $row['Lainan korko'] . "</td>";
         echo "<td>" . $row['idKayttaja'] . "</td>";
-        echo "<td>" . "<input type=submit name=update value=Muokkaa" . " </td>";
-        echo "<td>" . "<input type=submit name=delete value=Poista" . " </td>";
         echo "</tr>";
         }
         echo "</table>";
