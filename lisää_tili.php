@@ -1,11 +1,11 @@
 <?php
   include ("includes/yhteys.php");
 
-  $idT = mysqli_real_escape_stringg($conn, filter_input(INPUT_POST,'idTilit',FILTER_SANITIZE_STRING));
-  $tilinnimi = mysqli_real_escape_stringg($conn, filter_input(INPUT_POST,'Tilin nimi',FILTER_SANITIZE_STRING));
-  $tilinsaldo = mysqli_real_escape_stringg($conn, filter_input(INPUT_POST,'Tilin saldo',FILTER_SANITIZE_STRING));
-  $tilinkorko = mysqli_real_escape_stringg($conn, filter_input(INPUT_POST,'Tilin korko',FILTER_SANITIZE_STRING));
-  $idK = mysqli_real_escape_stringg($conn, filter_input(INPUT_POST,'idKayttaja',FILTER_SANITIZE_STRING));
+  $idT = mysqli_real_escape_string($conn, filter_input(INPUT_POST,'idTilit',FILTER_SANITIZE_STRING));
+  $tilinnimi = mysqli_real_escape_string($conn, filter_input(INPUT_POST,'Tilin nimi',FILTER_SANITIZE_STRING));
+  $tilinsaldo = mysqli_real_escape_string($conn, filter_input(INPUT_POST,'Tilin saldo',FILTER_SANITIZE_STRING));
+  $tilinkorko = mysqli_real_escape_string($conn, filter_input(INPUT_POST,'Tilin korko',FILTER_SANITIZE_STRING));
+  $idK = mysqli_real_escape_string($conn, filter_input(INPUT_POST,'idKayttaja',FILTER_SANITIZE_STRING));
 
   $sqlinsert = "INSERT INTO Tilit (idTilit, Tilin nimi, Tilin saldo, Tilin korko, idKayttaja)
   VALUES ('$idT', '$tilinnimi', '$tilinsaldo', '$tilinkorko', '$idK')";
@@ -16,7 +16,6 @@
 
   header("url=lisää_tili.php");
 ?>
-
 <html lang="en" dir="ltr">
   <head>
     <meta charset="utf-8">
