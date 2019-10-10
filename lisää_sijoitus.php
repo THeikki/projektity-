@@ -1,4 +1,5 @@
-<?php include "includes/yhteys.php" ?>
+<?php include "includes/yhteys.php"
+?>
 <?php
 
   if(isset($_POST['insert'])) {
