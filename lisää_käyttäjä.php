@@ -1,14 +1,14 @@
 <?php include "includes/yhteys.php" ?>
 <?php
 
-  $idK = mysqli_real_escape_string($conn, filter_input(INPUT_POST,'idKayttaja',FILTER_SANITIZE_STRING));
+  $idKayttaja = mysqli_real_escape_string($conn, filter_input(INPUT_POST,'idKayttaja',FILTER_SANITIZE_STRING));
   $etunimi = mysqli_real_escape_string($conn, filter_input(INPUT_POST,'Etunimi',FILTER_SANITIZE_STRING));
   $sukunimi = mysqli_real_escape_string($conn, filter_input(INPUT_POST,'Sukunimi',FILTER_SANITIZE_STRING));
   $osoite = mysqli_real_escape_string($conn, filter_input(INPUT_POST,'Osoite',FILTER_SANITIZE_STRING));
   $puhelinnumero = mysqli_real_escape_string($conn, filter_input(INPUT_POST,'Puhelinnumero',FILTER_SANITIZE_STRING));
 
   $sqlinsert = "INSERT INTO Kayttaja (idKayttaja, Etunimi, Sukunimi, Osoite, Puhelinnumero)
-  VALUES ('$idK', '$etunimi', '$sukunimi', '$osoite', '$puhelinnumero')";
+  VALUES ('$idKayttaja', '$etunimi', '$sukunimi', '$osoite', '$puhelinnumero')";
 
   mysqli_query($conn, $sqlinsert);
 ?>
@@ -24,11 +24,11 @@
     <div id="box1">
         <h2>Käyttäjätiedot</h2>
         <form action="lisää_käyttäjä.php" method="post">
-          <input type="number" name="idK" value="" placeholder="id Käyttäjä"> <br><br>
-          <input type="text" name="etunimi" value="" placeholder="Etunimi"> <br><br>
-          <input type="text" name="sukunimi" value="" placeholder="Sukunimi"> <br><br>
-          <input type="text" name="osoite" value="" placeholder="Osoite"> <br><br>
-          <input type="number" name="puhelinnumero" value="" placeholder="Puhelinnumero"> <br><br>
+          <input type="number" name="idKayttaja" value="" placeholder="id Käyttäjä"> <br><br>
+          <input type="text" name="Etunimi" value="" placeholder="Etunimi"> <br><br>
+          <input type="text" name="Sukunimi" value="" placeholder="Sukunimi"> <br><br>
+          <input type="text" name="Osoite" value="" placeholder="Osoite"> <br><br>
+          <input type="number" name="Puhelinnumero" value="" placeholder="Puhelinnumero"> <br><br>
           <input type="submit" name="" value="Tallenna"> <br>
         </form>
     </div>

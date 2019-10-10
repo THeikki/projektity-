@@ -1,15 +1,15 @@
 <?php include "includes/yhteys.php" ?>
 <?php
 
-  $idS = mysqli_real_escape_string($conn, filter_input(INPUT_POST,'idSijoitukset',FILTER_SANITIZE_STRING));
-  $sijoituskohde = mysqli_real_escape_string($conn, filter_input(INPUT_POST,'Sijoituksen kohde',FILTER_SANITIZE_STRING));
-  $sijoituksenmaara = mysqli_real_escape_string($conn, filter_input(INPUT_POST,'Sijoituksen maara',FILTER_SANITIZE_STRING));
+  $idSijoitukset = mysqli_real_escape_string($conn, filter_input(INPUT_POST,'idSijoitukset',FILTER_SANITIZE_STRING));
+  $sijoituskohde = mysqli_real_escape_string($conn, filter_input(INPUT_POST,'Sijoituskohde',FILTER_SANITIZE_STRING));
+  $sijoituksensumma = mysqli_real_escape_string($conn, filter_input(INPUT_POST,'Sijoituksen summa',FILTER_SANITIZE_STRING));
   $osakkeidenlukumaara = mysqli_real_escape_string($conn, filter_input(INPUT_POST,'Osakkeiden lukumaara',FILTER_SANITIZE_STRING));
   $osakkeenarvo = mysqli_real_escape_string($conn, filter_input(INPUT_POST,'Osakkeen arvo',FILTER_SANITIZE_STRING));
-  $idK = mysqli_real_escape_string($conn, filter_input(INPUT_POST,'idKayttaja',FILTER_SANITIZE_STRING));
+  $idKayttaja = mysqli_real_escape_string($conn, filter_input(INPUT_POST,'idKayttaja',FILTER_SANITIZE_STRING));
 
   $sqlinsert = "INSERT INTO Sijoitukset (idSijoitukset, Sijoituskohde, Sijoituksen maara, Osakkeiden lukumaara, Osakkeen arvo, idKayttaja)
-  VALUES ('$idS', '$sijoituskohde', '$sijoituksenmaara', '$osakkeidenlukumaara','$osakkeenarvo', '$idK')";
+  VALUES ('$idSijoitukset', '$sijoituskohde', '$sijoituksensumma', '$osakkeidenlukumaara','$osakkeenarvo', '$idKayttaja')";
 
   mysqli_query($conn, $sqlinsert);
 ?>
@@ -25,12 +25,12 @@
     <div class="box" id="box1">
         <h2>Sijoitustiedot</h2>
         <form action"lisää_sijoitus.php" method="post">
-          <input type="number" name="idS" value="" placeholder="id Sijoitus"> <br><br>
-          <input type="text" name="sijoituskohde" value="" placeholder="Sijoituskohde"> <br><br>
-          <input type="number" name=sijoituksenmaara"" value="" placeholder="Sijoituksen määrä"> <br><br>
-          <input type="number" name="osakkeidenlukumaara" value="" placeholder="Osakkeiden lukumäärä"> <br><br>
-          <input type="number" name="osakkeenarvo" value="" placeholder="Osakkeen arvo"> <br><br>
-          <input type="number" name="idK" value="" placeholder="id Käyttäjä"> <br><br>
+          <input type="number" name="idSijoitukset" value="" placeholder="id Sijoitus"> <br><br>
+          <input type="text" name="Sijoituskohde" value="" placeholder="Sijoituskohde"> <br><br>
+          <input type="number" name="Sijoituksen summa" value="" placeholder="Sijoituksen määrä"> <br><br>
+          <input type="number" name="Osakkeiden lukumaara" value="" placeholder="Osakkeiden lukumäärä"> <br><br>
+          <input type="number" name="Osakkeen arvo" value="" placeholder="Osakkeen arvo"> <br><br>
+          <input type="number" name="idKayttaja" value="" placeholder="id Käyttäjä"> <br><br>
           <input type="submit" name="" value="Tallenna">
         </form>
     </div>
