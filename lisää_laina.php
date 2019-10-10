@@ -1,17 +1,5 @@
 <?php include "includes/yhteys.php" ?>
-<?php
 
-  $idLainat = mysqli_real_escape_string($conn, filter_input(INPUT_POST,'idLainat',FILTER_SANITIZE_STRING));
-  $lainannimi = mysqli_real_escape_string($conn, filter_input(INPUT_POST,'Lainan nimi',FILTER_SANITIZE_STRING));
-  $lainanmaara = mysqli_real_escape_string($conn, filter_input(INPUT_POST,'Lainan maara',FILTER_SANITIZE_STRING));
-  $lainankorko = mysqli_real_escape_string($conn, filter_input(INPUT_POST,'Lainan korko',FILTER_SANITIZE_STRING));
-  $idKayttaja = mysqli_real_escape_string($conn, filter_input(INPUT_POST,'idKayttaja',FILTER_SANITIZE_STRING));
-
-  $sqlinsert = "INSERT INTO Lainat (idLainat, Lainan nimi, Lainan maara, Lainan korko, idKayttaja)
-  VALUES ('$idlainat', '$lainannimi', '$lainanmaara', '$lainankorko', '$idKayttaja')";
-
-  mysqli_query($conn, $sqlinsert);
-?>
 <html lang="en" dir="ltr">
   <head>
     <meta charset="utf-8">
@@ -29,8 +17,32 @@
           <input type="text" name="Lainan maara" value="" placeholder="Lainan määrä"> <br><br>
           <input type="text" name="Lainan korko" value="" placeholder="Lainan korko"> <br><br>
           <input type="number" name="idKayttaja" value="" placeholder="id Käyttäjä"> <br><br>
-          <input type="submit" name="" value="Tallenna"> <br>
+          <input type="submit" name="insert" value="Tallenna"> <br>
         </form>
     </div>
   </body>
 </html>
+<?php
+
+  if(isset($_POST['insert'])) {
+
+    $idLainat = mysqli_real_escape_string($conn, filter_input(INPUT_POST,'idLainat',FILTER_SANITIZE_STRING));
+    $lainannimi = mysqli_real_escape_string($conn, filter_input(INPUT_POST,'Lainan nimi',FILTER_SANITIZE_STRING));
+    $lainanmaara = mysqli_real_escape_string($conn, filter_input(INPUT_POST,'Lainan maara',FILTER_SANITIZE_STRING));
+    $lainankorko = mysqli_real_escape_string($conn, filter_input(INPUT_POST,'Lainan korko',FILTER_SANITIZE_STRING));
+    $idKayttaja = mysqli_real_escape_string($conn, filter_input(INPUT_POST,'idKayttaja',FILTER_SANITIZE_STRING));
+
+    $sqlinsert = "INSERT INTO Lainat (idLainat, Lainan nimi, Lainan maara, Lainan korko, idKayttaja)
+    VALUES ('$idlainat', '$lainannimi', '$lainanmaara', '$lainankorko', '$idKayttaja')";
+
+    $query_run = mysqli_query($conn, $sqlinsert);
+
+    if($query_run) {
+      echo '<script> alert("Käyttäjää ei tallennettu")</script>';
+    }
+  else {
+    echo '<script> alert("Uusi käyttäjä tallennettiin")</script>';
+
+  }
+  }
+?>
