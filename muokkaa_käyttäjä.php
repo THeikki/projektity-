@@ -4,10 +4,11 @@
 
 	if( isset($_GET['edit']))
 	{
-		$id = $_GET['edit'];
+		$idKayttaja = $_GET['edit'];
 		$res= mysqli_query("SELECT * FROM Kayttaja WHERE idKayttaja='$idKayttaja'");
 		$row= mysqli_fetch_array($res);
 	}
+  
 
 ?>
 <html lang="en" dir="ltr">
