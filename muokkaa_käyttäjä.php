@@ -7,7 +7,6 @@ if(isset($_GET['edit'])) {
         mysqli_query($conn, $Updatequery) or die mysqli_error($conn));
           echo "Käyttäjä poistettiin onnistuneesti!";
 }
-
 ?>
 <html lang="en" dir="ltr">
   <head>
