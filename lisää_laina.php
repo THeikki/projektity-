@@ -16,10 +16,10 @@
     $query_run = mysqli_query($conn, $sqlinsert);
 
     if($query_run) {
-      echo '<script> alert("Uusi käyttäjä tallennettiin")</script>';
+      echo '<script> alert("Uusi laina tallennettiin")</script>';
     }
   else {
-    echo '<script> alert("Käyttäjää ei tallennettu")</script>';
+    echo '<script> alert("Lainaa ei tallennettu")</script>';
   }
   }
 ?>
