@@ -2,11 +2,9 @@
 ?>
 <?php
 
-  mysqli_select_db($conn, 't9tohe00');
+  $Deletequery = "DELETE FROM Kayttaja WHERE idKayttaja='$_POST[id]'";
 
-  $Deletequery = "DELETE FROM Kayttaja WHERE idKayttaja=$_POST[id]";
-
-  if(mysqli_query($Deletequery, $conn))
+  if(mysqli_query($conn, $Deletequery))
     header("refresh:1; url=Käyttäjä.php");
   else
     echo "Ei poistettu";
