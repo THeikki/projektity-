@@ -10,31 +10,35 @@
     $tilin_korko = mysqli_real_escape_string($conn, filter_input(INPUT_POST,'Tilin_korko',FILTER_SANITIZE_STRING));
     $idKayttaja = mysqli_real_escape_string($conn, filter_input(INPUT_POST,'idKayttaja',FILTER_SANITIZE_STRING));
 
-    $sqlinsert = "INSERT INTO Tilit (idTilit, Tilin_nimi, Tilin_saldo, Tilin_korko, idKayttaja)
+    $sqlinsert = "INSERT INTO Sijoitukset (idSijoitukset, Sijoituskohde, Sijoituksen_summa, Osakkeiden_lukumaara, Osakkeen_arvo, idKayttaja)
     VALUES ('$idTilit', '$tilin_nimi', '$tilin_saldo', '$tilin_korko', '$idKayttaja')";
 
-    mysqli_query($conn, $sqlinsert);
+    $query_run = mysqli_query($conn, $sqlinsert);
 
-    if (!mysqli_query($conn, $sqlinsert)) {
-      die('Error: ' . mysqli_error($conn));
+    if($query_run) {
+      echo '<script> alert("Uusi tili tallennettiin")</script>';
     }
+  else {
+    echo '<script> alert("Tiliä ei tallennettu")</script>';
+  }
+  }
 ?>
 <html lang="en" dir="ltr">
   <head>
     <meta charset="utf-8">
-    <title>lisää_tili</title>
+    <title>lisää_sijoitus</title>
     <link rel="stylesheet" href="includes/mystyle.css">
   </head>
   <body>
     <hr class="line">
     <a href="Pääsivu.php" class="back">Takaisin</a>
     <div class="box" id="box1">
-        <h2>Tilitiedot</h2>
-        <form action="lisää_tili.php" method="post">
-          <input type="number" name="idTilit" value="" placeholder="id Tili"> <br><br>
-          <input type="text" name="Tilin_nimi" value="" placeholder="Tilin nimi"> <br><br>
-          <input type="text" name="Tilin_saldo" value="" placeholder="Tilin saldo"> <br><br>
-          <input type="text" name="Tilin_korko" value="" placeholder="Tilin korko"> <br><br>
+        <h2>Sijoitustiedot</h2>
+        <form action="lisää_sijoitus.php" method="post">
+          <input type="number" name="idTilit" value="" placeholder="id Sijoitus"> <br><br>
+          <input type="text" name="Tilin_nimi" value="" placeholder="Sijoituskohde"> <br><br>
+          <input type="text" name="Tilin_saldo" value="" placeholder="Sijoituksen määrä"> <br><br>
+          <input type="text" name="Tilin_korko" value="" placeholder="Osakkeiden lukumäärä"> <br><br>
           <input type="number" name="idKayttaja" value="" placeholder="id Käyttäjä"> <br><br>
           <input type="submit" name="insert" value="Tallenna"> <br>
         </form>
