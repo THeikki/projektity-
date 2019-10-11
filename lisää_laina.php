@@ -34,11 +34,11 @@
     <a href="Pääsivu.php" class="back">Takaisin</a>
     <div class="box" id="box1">
         <h2>Sijoitustiedot</h2>
-        <form action="lisää_sijoitus.php" method="post">
-          <input type="number" name="idLainat" value="" placeholder="id Sijoitus"> <br><br>
-          <input type="text" name="Lainan_nimi" value="" placeholder="Sijoituskohde"> <br><br>
-          <input type="text" name="Lainan_maara" value="" placeholder="Sijoituksen määrä"> <br><br>
-          <input type="text" name="Lainan_korko" value="" placeholder="Osakkeiden lukumäärä"> <br><br>
+        <form action="lisää_laina.php" method="post">
+          <input type="number" name="idLainat" value="" placeholder="id Laina"> <br><br>
+          <input type="text" name="Lainan_nimi" value="" placeholder="Lainan nimi"> <br><br>
+          <input type="text" name="Lainan_maara" value="" placeholder="Lainan maara"> <br><br>
+          <input type="text" name="Lainan_korko" value="" placeholder="Lainan korko"> <br><br>
           <input type="number" name="idKayttaja" value="" placeholder="id Käyttäjä"> <br><br>
           <input type="submit" name="insert" value="Tallenna"> <br>
         </form>
