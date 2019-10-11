@@ -72,26 +72,26 @@
 }
 .button1 {
   background-color: #FFFFFF;
+  display: block;
+  height: 20px;
+  width: auto;
   border: 2px solid #797979;
-  color: black;
-  height: 26px;
   text-align: center;
-  text-decoration: none;
-  display: inline-block;
   font-size: 16px;
+  font-family: "proxima nova";
   margin-left: 40px;
   margin-top: 15px;
   cursor: pointer;
 }
 .button2 {
-  background-color: #ffff80;
+  background-color: #FFFF80;
+  display: block;
+  height: 20px;
+  width: auto;
   border: 2px solid #797979;
-  color: black;
-  height: 25px;
   text-align: center;
-  text-decoration: none;
-  display: inline-block;
   font-size: 16px;
+  font-family: "proxima nova";
   margin-left: 40px;
   margin-top: 15px;
   cursor: pointer;
