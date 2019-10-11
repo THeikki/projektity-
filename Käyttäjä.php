@@ -33,7 +33,6 @@
         </tr>";
 
       while($row = mysqli_fetch_array($result)) {
-        echo "<form action=poista_käyttäjä.php method=post>";
         echo "<tr>";
         echo "<td>" . $row['idKayttaja'] . "</td>";
         echo "<td>" . $row['Etunimi'] . "</td>";
