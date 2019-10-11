@@ -2,7 +2,7 @@
 ?>
 <?php
 
-  $Deletequery = "DELETE FROM Kayttaja WHERE idKayttaja='$_GET[idKayttaja]'";
+  $Deletequery = "DELETE FROM Kayttaja WHERE idKayttaja='$_POST[id]'";
 
   if(mysqli_query($conn, $Deletequery)) {
     echo "Käyttäjä poistettiin";
