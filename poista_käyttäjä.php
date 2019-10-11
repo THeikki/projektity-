@@ -3,9 +3,9 @@
 <?php
 
   if(isset($_POST['delete'])) {
-        $Deletequery = "DELETE FROM Kayttaja WHERE idKayttaja='$_POST[idKayttaja]'";
+        $Deletequery = "DELETE FROM Kayttaja WHERE idKayttaja='$_GET[idKayttaja]'";
         mysqli_query($Deletequery, $conn);
       }
-  header("refresh:1; Location: Käyttäjä.php");
+  header("Location: Käyttäjä.php");
 
 ?>
