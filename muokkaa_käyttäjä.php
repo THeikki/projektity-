@@ -7,8 +7,7 @@ if(isset($_POST['update'])) {
         mysqli_query($conn, $Updatequery) or die(mysqli_error($conn));
           echo "Käyttäjä muokattiin onnistuneesti!";
 }
-?>
-<?php
+
 
 $sql = "SELECT * FROM Kayttaja";
 $mydata = mysqli_query($conn, $sql);
@@ -30,6 +29,7 @@ echo "<td>" . "<input type=text name=etunimi value=" . $record['Etunimi'] . " </
 echo "<td>" . "<input type=text name=sukunimi value=" . $record['Sukunimi'] . " </td>";
 echo "<td>" . "<input type=text name=osoite value=" . $record['Osoite'] . " </td>";
 echo "<td>" . "<input type=text name=puhelinnumero value=" . $record['Puhelinnumero'] . " </td>";
+echo "<td>" . "<input type=hidden name=idKayttaja value=" . $record['idKayttaja'] . " </td>";
 echo "<td>" . "<input type=submit name=update value=Muokkaa" . " </td>";
 echo "</tr>";
 echo "</form>";
