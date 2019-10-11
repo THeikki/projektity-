@@ -8,28 +8,28 @@
 		$res= mysqli_query("SELECT * FROM Kayttaja WHERE idKayttaja='$idKayttaja'");
 		$row= mysqli_fetch_array($res);
 	}
-  if( isset($_POST['uusi_etun']) )
+  if( isset($_POST['uusi_etun']))
 	{
 		$uusi_etun = $_POST['uusi_etun'];
 		$idKayttaja = $_POST['idKayttaja'];
 		$sql = "UPDATE Kayttaja SET Etunimi='$uusi_etun' WHERE id='$idKayttaja'";
 		$res = mysqli_query($sql) or die mysqli_error($conn));
   }
-  if( isset($_POST['uusi_sukun']) )
+  if( isset($_POST['uusi_sukun']))
 	{
 		$uusi_sukun = $_POST['uusi_sukun'];
 		$idKayttaja = $_POST['idKayttaja'];
 		$sql = "UPDATE Kayttaja SET Sukunimi='$uusi_sukun' WHERE id='$idKayttaja'";
 		$res = mysqli_query($sql) or die mysqli_error($conn));
   }
-  if( isset($_POST['uusi_os']) )
+  if( isset($_POST['uusi_os']))
 	{
 		$uusi_os = $_POST['uusi_os'];
 		$idKayttaja = $_POST['idKayttaja'];
 		$sql = "UPDATE Kayttaja SET Osoite='$uusi_os' WHERE id='$idKayttaja'";
 		$res = mysqli_query($sql) or die mysqli_error($conn));
   }
-  if( isset($_POST['uusi_puh']) )
+  if( isset($_POST['uusi_puh']))
 	{
 		$uusi_puh = $_POST['uusi_puh'];
 		$idKayttaja = $_POST['idKayttaja'];
