@@ -34,7 +34,7 @@
         <form action="lisää_laina.php" method="post">
           <input type="number" name="idLainat" value="" placeholder="id Laina"> <br><br>
           <input type="text" name="Lainan_nimi" value="" placeholder="Lainan nimi"> <br><br>
-          <input type="text" name="Lainan_maara" value="" placeholder="Lainan maara"> <br><br>
+          <input type="text" name="Lainan_maara" value="" placeholder="Lainan määrä"> <br><br>
           <input type="text" name="Lainan_korko" value="" placeholder="Lainan korko"> <br><br>
           <input type="number" name="idKayttaja" value="" placeholder="id Käyttäjä"> <br><br>
           <input type="submit" name="insert" value="Tallenna"> <br>
