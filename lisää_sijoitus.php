@@ -34,7 +34,7 @@
     <hr class="line">
     <a href="Pääsivu.php" class="back">Takaisin</a>
     <div class="box" id="box1">
-        <h2>Sijoitustiedot</h2>
+        <h2>Anna sijoitustiedot</h2>
         <form action="lisää_sijoitus.php" method="post">
           <input type="number" name="idSijoitukset" value="" placeholder="id Sijoitus"> <br><br>
           <input type="text" name="Sijoituskohde" value="" placeholder="Sijoituskohde"> <br><br>

@@ -33,7 +33,7 @@
     <hr class="line">
     <a href="Pääsivu.php" class="back">Takaisin</a>
     <div class="box" id="box1">
-        <h2>Tilitiedot</h2>
+        <h2>Anna tilitiedot</h2>
         <form action="lisää_tili.php" method="post">
           <input type="number" name="idTilit" value="" placeholder="id Tili"> <br><br>
           <input type="text" name="Tilin_nimi" value="" placeholder="Tilin nimi"> <br><br>
