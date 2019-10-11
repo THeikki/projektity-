@@ -25,7 +25,7 @@
         mysqli_query($Updatequery, $conn);
       };
       if(isset($_POST['delete'])) {
-        $Deletequery = "DELETE FROM Kayttaja WHERE idKayttaja=$_POST[idKayttaja]";
+        $Deletequery = "DELETE FROM Kayttaja WHERE idKayttaja='$_POST[idKayttaja]'";
         mysqli_query($Deletequery, $conn);
       };
 
