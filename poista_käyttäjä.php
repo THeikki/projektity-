@@ -13,7 +13,8 @@ if(isset($_GET['delete'])) {
 <html lang="en" dir="ltr">
   <head>
     <meta charset="utf-8">
-    <title></title>
+    <title>poista_käyttäjä</title>
+    <link rel="stylesheet" href="includes/mystyle.css">
   </head>
   <body>
     <hr class="line">
