@@ -15,13 +15,9 @@
 
     $query_run = mysqli_query($conn, $sqlinsert);
 
-    if($query_run) {
-      echo '<script> alert("Uusi laina tallennettiin")</script>';
+    if (!mysqli_query($conn, $sqlinsert)) {
+      die('Error: ' . mysqli_error($conn));
     }
-  else {
-    echo '<script> alert("Lainaa ei tallennettu")</script>';
-  }
-  }
 ?>
 <html lang="en" dir="ltr">
   <head>
