@@ -17,11 +17,11 @@
     $query_run = mysqli_query($conn, $sqlinsert);
 
     if($query_run) {
-      echo '<script> alert("Uusi sijoitus tallennettiin")</script>';
+      echo "Sijoitus lisättiin onnistuneesti!";
     }
   else {
-    echo '<script> alert("Sijoitusta ei tallennettu")</script>';
-  }
+    echo "Sijoitusta ei lisätty!";
+    }
   }
 ?>
 <html lang="en" dir="ltr">

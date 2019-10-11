@@ -16,10 +16,10 @@
     $query_run = mysqli_query($conn, $sqlinsert);
 
     if($query_run) {
-      echo '<script> alert("Uusi tili tallennettiin")</script>';
+      echo "Tili lisättiin onnistuneesti!";
     }
   else {
-    echo '<script> alert("Tiliä ei tallennettu")</script>';
+    echo "Tiliä ei lisätty!";
   }
   }
 ?>
