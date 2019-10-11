@@ -41,7 +41,7 @@
         echo "<td>" . $row['Osakkeiden_lukumaara'] . "</td>";
         echo "<td>" . $row['Osakkeen_arvo'] . "</td>";
         echo "<td>" . $row['idKayttaja'] . "</td>";
-        echo "<td><a href=poista_käyttäjä.php?id=" . $row['idKayttaja'] . ">Muokkaa</a></td>";
+        echo "<td><a href=muokkaa_käyttäjä.php?id=" . $row['idKayttaja'] . ">Muokkaa</a></td>";
         echo "<td><a href=poista_käyttäjä.php?id=" . $row['idKayttaja'] . ">Poista</a></td>";
         echo "</tr>";
         }
