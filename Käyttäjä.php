@@ -20,15 +20,6 @@
 
     <?php
 
-      if(isset($_POST['update'])) {
-        $Updatequery = "UPDATE Kayttaja SET idKayttaja='$_POST[idKayttaja]', Etunimi='$_POST[Etunimi]', Sukunimi='$_POST[Sukunimi]', Osoite='$_POST[Osoite]', Puhelinnumero='$_POST[Puhelinnumero]', WHERE idKayttaja='$_POST[idKayttaja]'";
-        mysqli_query($Updatequery, $conn);
-      };
-      if(isset($_POST['delete'])) {
-        $Deletequery = "DELETE FROM Kayttaja WHERE idKayttaja='$_POST[idKayttaja]'";
-        mysqli_query($Deletequery, $conn);
-      };
-
       $sql = "SELECT * FROM Kayttaja;";
       $result = mysqli_query($conn, $sql);
 
@@ -42,15 +33,15 @@
         </tr>";
 
       while($row = mysqli_fetch_array($result)) {
-        echo "<form action=Käyttäjä.php method=post>";
+        echo "<form action=poista_käyttäjä.php method=post>";
         echo "<tr>";
         echo "<td>" . $row['idKayttaja'] . "</td>";
         echo "<td>" . $row['Etunimi'] . "</td>";
         echo "<td>" . $row['Sukunimi'] . "</td>";
         echo "<td>" . $row['Osoite'] . "</td>";
         echo "<td>" . $row['Puhelinnumero'] . "</td>";
-        echo "<td>" . "<input type=submit name=update value=Muokkaa" . " </td>";
-        echo "<td>" . "<input type=submit name=delete value=Poista" . " </td>";
+        echo "<td> a href=muokkaa_käyttäjä.php?id=" . $row['idKayttaja'] . ">Muokkaa</a></td>";
+        echo "<td>  a href=poista_käyttäjä.php?id=" . $row['idKayttaja'] . ">Poista</a></td>";
         echo "</tr>";
         echo "</form>";
         }
