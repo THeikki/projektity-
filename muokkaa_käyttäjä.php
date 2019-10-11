@@ -3,7 +3,7 @@
 <?php
 
 if(isset($_POST['update'])) {
-        $Updatequery = "UPDATE Kayttaja SET Etunimi='$_POST[etunimi]', Sukunimi='$_POST[sukunimi]', Osoite='$_POST[osoite]', Puhelinnumero='$_POST[puhelinnumero]' WHERE idKayttaja='$_POST[idK]'";
+        $Updatequery = "UPDATE Kayttaja SET Etunimi='$_POST[etunimi]', Sukunimi='$_POST[sukunimi]', Osoite='$_POST[osoite]', Puhelinnumero='$_POST[puhelinnumero]' WHERE idKayttaja='$_POST[hidden]'";
         mysqli_query($conn, $Updatequery) or die(mysqli_error($conn));
           echo "Käyttäjä muokattiin onnistuneesti!";
 }
