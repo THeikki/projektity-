@@ -6,6 +6,6 @@
         $Deletequery = "DELETE FROM Kayttaja WHERE idKayttaja=$_POST[idKayttaja]";
         mysqli_query($Deletequery, $conn);
       }
-  header("Location: ..Käyttäjä.php");
+  header("Location: Käyttäjä.php");
 
 ?>
