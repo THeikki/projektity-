@@ -3,7 +3,7 @@
 <?php
 
 if(isset($_POST['update'])) {
-        $Updatequery = "UPDATE Kayttaja SET idKayttaja='$_POST[idK]', Etunimi='$_POST[etunimi]', Sukunimi='$_POST[sukunimi]', Osoite='$_POST[osoite]', Puhelinnumero='$_POST[puhelinnumero]', WHERE idKayttaja='$_POST[hidden]'";
+        $Updatequery = "UPDATE Kayttaja SET idKayttaja='$_POST[idKayttaja]', Etunimi='$_POST[etunimi]', Sukunimi='$_POST[sukunimi]', Osoite='$_POST[osoite]', Puhelinnumero='$_POST[puhelinnumero]', WHERE idKayttaja='$_POST[hidden]'";
         mysqli_query($conn, $Updatequery) or die(mysqli_error($conn));
           echo "Käyttäjä muokattiin onnistuneesti!";
       }
@@ -20,7 +20,7 @@ if(isset($_POST['update'])) {
     <div id="box1">
         <h2>Muokkaa käyttäjätietoja</h2>
         <form action="muokkaa_käyttäjä.php" method="post">
-          <input type="hidden" name="idK" value="" placeholder="id Käyttäjä"> <br><br>
+          <input type="hidden" name="idKayttaja" value="" placeholder="id Käyttäjä"> <br><br>
           <input type="text" name="etunimi" value="" placeholder="Etunimi"> <br><br>
           <input type="text" name="sukunimi" value="" placeholder="Sukunimi"> <br><br>
           <input type="text" name="osoite" value="" placeholder="Osoite"> <br><br>
