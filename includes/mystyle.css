@@ -71,16 +71,16 @@
   cursor: pointer;
 }
 .button1 {
-  background-color: #ffff80;
+  background-color: #FFFFFF;
   border: 2px solid #797979;
   color: black;
   height: 26px;
-  padding: 15px 32px;
   text-align: center;
   text-decoration: none;
   display: inline-block;
   font-size: 16px;
-  margin: 4px 2px;
+  margin-left: 40px;
+  margin-top: 15px;
   cursor: pointer;
 }
 .button2 {
@@ -88,12 +88,12 @@
   border: 2px solid #797979;
   color: black;
   height: 25px;
-  padding: 15px 32px;
   text-align: center;
   text-decoration: none;
   display: inline-block;
   font-size: 16px;
-  margin: 4px 2px;
+  margin-left: 40px;
+  margin-top: 15px;
   cursor: pointer;
 }
 .line {
