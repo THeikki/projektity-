@@ -39,7 +39,7 @@
         echo "<td>" . $row['Lainan_maara'] . "</td>";
         echo "<td>" . $row['Lainan_korko'] . "</td>";
         echo "<td>" . $row['idKayttaja'] . "</td>";
-        echo "<td><a href=poista_käyttäjä.php?id=" . $row['idKayttaja'] . ">Poista</a></td>";
+        echo "<td><a href=poista_käyttäjä.php?id=" . $row['idKayttaja'] . ">Muokkaa</a></td>";
         echo "<td><a href=poista_käyttäjä.php?id=" . $row['idKayttaja'] . ">Poista</a></td>";
         echo "</tr>";
         }
