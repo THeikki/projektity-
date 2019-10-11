@@ -7,5 +7,6 @@ if(isset($_GET['delete'])) {
     $Deletequery = "DELETE FROM Kayttaja WHERE idKayttaja='$idKayttaja'";
     mysqli_query($conn, $Deletequery) or die(mysqli_error($conn));
       echo "Käyttäjä poistettiin onnistuneesti!";
+      header("Location: ..Käyttäjä.php")
   }
 ?>
