@@ -10,7 +10,7 @@
     $tilin_korko = mysqli_real_escape_string($conn, filter_input(INPUT_POST,'Tilin_korko',FILTER_SANITIZE_STRING));
     $idKayttaja = mysqli_real_escape_string($conn, filter_input(INPUT_POST,'idKayttaja',FILTER_SANITIZE_STRING));
 
-    $sqlinsert = "INSERT INTO Tilit (idTili, Tilin_nimi, Tilin_saldo, Tilin_korko, idKayttaja)
+    $sqlinsert = "INSERT INTO Tilit (idTilit, Tilin_nimi, Tilin_saldo, Tilin_korko, idKayttaja)
     VALUES ('$idTilit', '$tilin_nimi', '$tilin_saldo', '$tilin_korko', '$idKayttaja')";
 
     mysqli_query($conn, $sqlinsert);
