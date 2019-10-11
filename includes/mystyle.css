@@ -70,34 +70,28 @@
   margin-top: 15px;
   cursor: pointer;
 }
-.button1 {
-  background-color: #FFFFFF;
+.button {
+  background-color: #ffffff;
   border: 2px solid #797979;
   color: black;
-  width: 142px;
-  height: 25px;
+  padding: 15px 32px;
   text-align: center;
   text-decoration: none;
   display: inline-block;
   font-size: 16px;
-  font-family: "proxima nova";
-  margin-left: 40px;
-  margin-top: 15px;
+  margin: 4px 2px;
   cursor: pointer;
 }
-.button2 {
-  background-color: #FFFF80;
+.button {
+  background-color: #ffff80;
   border: 2px solid #797979;
   color: black;
-  width: 142px;
-  height: 25px;
+  padding: 15px 32px;
   text-align: center;
-  text-decoration: inherit;
+  text-decoration: none;
   display: inline-block;
   font-size: 16px;
-  font-family: "proxima nova";
-  margin-left: 40px;
-  margin-top: 15px;
+  margin: 4px 2px;
   cursor: pointer;
 }
 .line {
