@@ -13,7 +13,7 @@
     $sqlinsert = "INSERT INTO Lainat (idLainat, Lainan_nimi, Lainan_maara, Lainan_korko, idKayttaja)
     VALUES ('$idlainat', '$lainannimi', '$lainanmaara', '$lainankorko', '$idKayttaja')";
 
-    $query_run = mysqli_query($conn, $sqlinsert);
+    mysqli_query($conn, $sqlinsert);
 
     if (!mysqli_query($conn, $sqlinsert)) {
       die('Error: ' . mysqli_error($conn));
