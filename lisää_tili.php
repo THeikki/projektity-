@@ -10,7 +10,7 @@
     $tilin_korko = mysqli_real_escape_string($conn, filter_input(INPUT_POST,'Tilin_korko',FILTER_SANITIZE_STRING));
     $idKayttaja = mysqli_real_escape_string($conn, filter_input(INPUT_POST,'idKayttaja',FILTER_SANITIZE_STRING));
 
-    $sqlinsert = "INSERT INTO Tilit (idSijoitukset, Sijoituskohde, Sijoituksen_summa, Osakkeiden_lukumaara, Osakkeen_arvo, idKayttaja)
+    $sqlinsert = "INSERT INTO Tilit (idTili, Tilin_nimi, Tilin_saldo, Tilin_korko, idKayttaja)
     VALUES ('$idTilit', '$tilin_nimi', '$tilin_saldo', '$tilin_korko', '$idKayttaja')";
 
     mysqli_query($conn, $sqlinsert);

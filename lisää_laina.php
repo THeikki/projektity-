@@ -4,7 +4,7 @@
 
   if(isset($_POST['insert'])) {
 
-    $idLainat = mysqli_real_escape_string($conn, filter_input(INPUT_POST,'idLainatt',FILTER_SANITIZE_STRING));
+    $idLainat = mysqli_real_escape_string($conn, filter_input(INPUT_POST,'idLainat',FILTER_SANITIZE_STRING));
     $lainan_nimi = mysqli_real_escape_string($conn, filter_input(INPUT_POST,'Lainan_nimi',FILTER_SANITIZE_STRING));
     $lainan_maara = mysqli_real_escape_string($conn, filter_input(INPUT_POST,'Lainan_maara',FILTER_SANITIZE_STRING));
     $lainan_korko = mysqli_real_escape_string($conn, filter_input(INPUT_POST,'Lainan_korko',FILTER_SANITIZE_STRING));
