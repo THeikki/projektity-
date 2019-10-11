@@ -44,11 +44,12 @@
       while($row = mysqli_fetch_array($result)) {
         echo "<form action=Käyttäjä.php method=post>";
         echo "<tr>";
-        echo "<td>" . $row['idKayttaja'] . "</td>";
-        echo "<td>" . $row['Etunimi'] . "</td>";
-        echo "<td>" . $row['Sukunimi'] . "</td>";
-        echo "<td>" . $row['Osoite'] . "</td>";
-        echo "<td>" . $row['Puhelinnumero'] . "</td>";
+        echo "<td>" . "<input type=number name=update value=" .$row['idKayttaja'] . "</td>";
+        echo "<td>" . "<input type=text name=etunimi value=" .$row['Etunimi'] . "</td>";
+        echo "<td>" . "<input type=text name=sukunimi value=" .$row['Sukunimi'] . "</td>";
+        echo "<td>" . "<input type=text name=osoite value=" .$row['Osoite'] . "</td>";
+        echo "<td>" . "<input type=text name=puhelinnumero value=" .$row['Puhelinnumero'] . "</td>";
+        echo "<td>" . "<input type=hidden name=hidden value=" .$row['idKayttaja'] . "</td>";
         echo "<td>" . "<input type=submit name=update value=Muokkaa" . " </td>";
         echo "<td>" . "<input type=submit name=delete value=Poista" . " </td>";
         echo "</tr>";
