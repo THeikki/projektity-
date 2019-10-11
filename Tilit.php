@@ -39,6 +39,8 @@
         echo "<td>" . $row['Tilin_saldo'] . "</td>";
         echo "<td>" . $row['Tilin_korko'] . "</td>";
         echo "<td>" . $row['idKayttaja'] . "</td>";
+        echo "<td>" . "<input type=submit name=update value=Muokkaa" . " </td>";
+        echo "<td>" . "<input type=submit name=delete value=Poista" . " </td>";
         echo "</tr>";
         }
         echo "</table>";
