@@ -70,8 +70,8 @@
   margin-top: 15px;
   cursor: pointer;
 }
-.button {
-  background-color: #ffffff;
+.button2 {
+  background-color: #ffff80;
   border: 2px solid #797979;
   color: black;
   padding: 15px 32px;
@@ -82,7 +82,7 @@
   margin: 4px 2px;
   cursor: pointer;
 }
-.button {
+.button2 {
   background-color: #ffff80;
   border: 2px solid #797979;
   color: black;
