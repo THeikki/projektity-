@@ -2,20 +2,20 @@
 ?>
 <?php
 
-	if( isset($_GET['edit']) )
+	if( isset($_GET['edit']))
 	{
 		$id = $_GET['edit'];
-		$res= mysql_query("SELECT * FROM Kayttaja WHERE idKayttaja='$idKayttaja'");
-		$row= mysql_fetch_array($res);
+		$res= mysqli_query("SELECT * FROM Kayttaja WHERE idKayttaja='$idKayttaja'");
+		$row= mysqli_fetch_array($res);
 	}
 
-	if( isset($_POST['newName']) )
+	if( isset($_POST['newName']))
 	{
 		$newName = $_POST['newName'];
 		$idKayttaja = $_POST['idKayttaja'];
-		$sql = "UPDATE apple SET name='$newName' WHERE id='$id'";
-		$res = mysqli_query($sql) or die("Could not update".mysqli_error());
-		echo "Käyttäjää muokattiin onnistuneesti!";
+		$Updatequery = "UPDATE Kayttaja SET Etunimi='$newName' WHERE id='$idKayttaja'";
+		mysqli_query($conn, $Updatequery) or die("Could not update".mysqli_error($conn));
+		  echo "Käyttäjää muokattiin onnistuneesti!";
 	}
 
 ?>
@@ -36,7 +36,7 @@
           <input type="text" name="Sukunimi" value="" placeholder="Sukunimi"> <br><br>
           <input type="text" name="Osoite" value="" placeholder="Osoite"> <br><br>
           <input type="number" name="Puhelinnumero" value="" placeholder="Puhelinnumero"> <br><br>
-          <input type="submit" name="insert" value="Tallenna"> <br>
+          <input type="submit" name="insert" value="Muokkaa"> <br>
         </form>
     </div>
   </body>
