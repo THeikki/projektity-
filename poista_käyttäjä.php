@@ -4,12 +4,8 @@
 
   $Deletequery = "DELETE FROM Kayttaja WHERE idKayttaja='$_POST[id]'";
 
-  $query_run = mysqli_query($conn, $Deletequery);
-
-  if($query_run) {
-    echo '<script> alert("Käyttäjä poistettiin!")</script>';
-  }
-else {
-  echo '<script> alert("Käyttäjää ei poistettu!")</script>';
-}
+  if(mysqli_query($conn,$Deletequery))
+    header("refresh:1; location: Käyttäjä.php");
+  else
+    echo "Käyttäjää ei poistettu!";
 ?>
