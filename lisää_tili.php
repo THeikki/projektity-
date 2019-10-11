@@ -13,15 +13,12 @@
     $sqlinsert = "INSERT INTO Tilit (idSijoitukset, Sijoituskohde, Sijoituksen_summa, Osakkeiden_lukumaara, Osakkeen_arvo, idKayttaja)
     VALUES ('$idTilit', '$tilin_nimi', '$tilin_saldo', '$tilin_korko', '$idKayttaja')";
 
-    $query_run = mysqli_query($conn, $sqlinsert);
+    mysqli_query($conn, $sqlinsert);
 
-    if($query_run) {
-      echo '<script> alert("Uusi tili tallennettiin")</script>';
+    if (!mysqli_query($conn, $sqlinsert)) {
+     die('Error: ' . mysqli_error($conn));
     }
-  else {
-    echo '<script> alert("Tiliä ei tallennettu")</script>';
-  }
-  }
+ }
 ?>
 <html lang="en" dir="ltr">
   <head>
