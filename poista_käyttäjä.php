@@ -2,10 +2,10 @@
 ?>
 <?php
 
-  $Deletequery = "DELETE FROM Kayttaja WHERE idKayttaja='$_POST[id]'";
+  if(isset($_POST['delete'])) {
+        $Deletequery = "DELETE FROM Kayttaja WHERE idKayttaja=$_POST[idKayttaja]";
+        mysqli_query($Deletequery, $conn);
+      }
+  header("Location: ..Käyttäjä.php");
 
-  if(mysqli_query($conn,$Deletequery))
-    header("refresh:1; location: Käyttäjä.php");
-  else
-    echo "Käyttäjää ei poistettu!";
 ?>
