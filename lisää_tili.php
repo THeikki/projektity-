@@ -10,7 +10,7 @@
     $tilin_korko = mysqli_real_escape_string($conn, filter_input(INPUT_POST,'Tilin_korko',FILTER_SANITIZE_STRING));
     $idKayttaja = mysqli_real_escape_string($conn, filter_input(INPUT_POST,'idKayttaja',FILTER_SANITIZE_STRING));
 
-    $sqlinsert = "INSERT INTO Sijoitukset (idSijoitukset, Sijoituskohde, Sijoituksen_summa, Osakkeiden_lukumaara, Osakkeen_arvo, idKayttaja)
+    $sqlinsert = "INSERT INTO Tilit (idSijoitukset, Sijoituskohde, Sijoituksen_summa, Osakkeiden_lukumaara, Osakkeen_arvo, idKayttaja)
     VALUES ('$idTilit', '$tilin_nimi', '$tilin_saldo', '$tilin_korko', '$idKayttaja')";
 
     $query_run = mysqli_query($conn, $sqlinsert);
@@ -26,15 +26,15 @@
 <html lang="en" dir="ltr">
   <head>
     <meta charset="utf-8">
-    <title>lisää_sijoitus</title>
+    <title>lisää_tili</title>
     <link rel="stylesheet" href="includes/mystyle.css">
   </head>
   <body>
     <hr class="line">
     <a href="Pääsivu.php" class="back">Takaisin</a>
     <div class="box" id="box1">
-        <h2>Sijoitustiedot</h2>
-        <form action="lisää_sijoitus.php" method="post">
+        <h2>Tilitiedot</h2>
+        <form action="lisää_tili.php" method="post">
           <input type="number" name="idTilit" value="" placeholder="id Tili"> <br><br>
           <input type="text" name="Tilin_nimi" value="" placeholder="Tilin nimi"> <br><br>
           <input type="text" name="Tilin_saldo" value="" placeholder="Tilin saldo"> <br><br>

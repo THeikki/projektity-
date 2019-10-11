@@ -6,13 +6,13 @@
 
     $idSijoitukset = mysqli_real_escape_string($conn, filter_input(INPUT_POST,'idSijoitukset',FILTER_SANITIZE_STRING));
     $sijoituskohde = mysqli_real_escape_string($conn, filter_input(INPUT_POST,'Sijoituskohde',FILTER_SANITIZE_STRING));
-    $sijoituksensumma = mysqli_real_escape_string($conn, filter_input(INPUT_POST,'Sijoituksen_summa',FILTER_SANITIZE_STRING));
-    $osakkeidenlukumaara = mysqli_real_escape_string($conn, filter_input(INPUT_POST,'Osakkeiden_lukumaara',FILTER_SANITIZE_STRING));
+    $sijoituksen_summa = mysqli_real_escape_string($conn, filter_input(INPUT_POST,'Sijoituksen_summa',FILTER_SANITIZE_STRING));
+    $osakkeiden_lukumaara = mysqli_real_escape_string($conn, filter_input(INPUT_POST,'Osakkeiden_lukumaara',FILTER_SANITIZE_STRING));
     $osakkeenarvo = mysqli_real_escape_string($conn, filter_input(INPUT_POST,'Osakkeen_arvo',FILTER_SANITIZE_STRING));
     $idKayttaja = mysqli_real_escape_string($conn, filter_input(INPUT_POST,'idKayttaja',FILTER_SANITIZE_STRING));
 
     $sqlinsert = "INSERT INTO Sijoitukset (idSijoitukset, Sijoituskohde, Sijoituksen_summa, Osakkeiden_lukumaara, Osakkeen_arvo, idKayttaja)
-    VALUES ('$idSijoitukset', '$sijoituskohde', '$sijoituksensumma', '$osakkeidenlukumaara','$osakkeenarvo', '$idKayttaja')";
+    VALUES ('$idSijoitukset', '$sijoituskohde', '$sijoituksen_summa', '$osakkeiden_lukumaara','$osakkeenarvo', '$idKayttaja')";
 
     $query_run = mysqli_query($conn, $sqlinsert);
 
