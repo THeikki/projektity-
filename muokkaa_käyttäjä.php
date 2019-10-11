@@ -8,25 +8,32 @@ if(isset($_POST['update'])) {
           echo "Käyttäjä muokattiin onnistuneesti!";
 }
 ?>
-<html lang="en" dir="ltr">
-  <head>
-    <meta charset="utf-8">
-    <title>lisää_käyttäjä</title>
-    <link rel="stylesheet" href="includes/mystyle.css">
-  </head>
-  <body>
-    <hr class="line">
-    <a href="Pääsivu.php" class="back">Takaisin</a>
-    <div id="box1">
-        <h2>Muokkaa käyttäjätietoja</h2>
-        <form action="muokkaa_käyttäjä.php" method="post">
-          <input type="hidden" name="idK" value="" placeholder="id Käyttäjä"> <br><br>
-          <input type="text" name="etunimi" value="" placeholder="Etunimi"> <br><br>
-          <input type="text" name="sukunimi" value="" placeholder="Sukunimi"> <br><br>
-          <input type="text" name="osoite" value="" placeholder="Osoite"> <br><br>
-          <input type="number" name="puhelinnumero" value="" placeholder="Puhelinnumero"> <br><br>
-          <input type="submit" name="update" value="Muokkaa"> <br>
-        </form>
-    </div>
-  </body>
-</html>
+<?php
+
+$sql = "SELECT * FROM Kayttaja";
+$mydata = mysqli_query($conn, $sql);
+echo "<table border=2>
+<tr>
+<th>idKayttaja</th>
+<th>Etunimi</th>
+<th>Sukunimi</th>
+<th>Osoite</th>
+<th>Puhelinnumero</th>
+</tr>";
+
+
+while($record = mysqli_fetch_array($mydata)) {
+echo "<form action=muokkaa_käyttäjä.php method=post>";
+echo "<tr>";
+echo "<td>" . "<input type=number name=idKayttaja value=" . $record['idKayttaja'] . " </td>";
+echo "<td>" . "<input type=text name=etunimi value=" . $record['Etunimi'] . " </td>";
+echo "<td>" . "<input type=text name=sukunimi value=" . $record['Sukunimi'] . " </td>";
+echo "<td>" . "<input type=text name=osoite value=" . $record['Osoite'] . " </td>";
+echo "<td>" . "<input type=text name=puhelinnumero value=" . $record['Puhelinnumero'] . " </td>";
+echo "<td>" . "<input type=submit name=update value=Muokkaa" . " </td>";
+echo "</tr>";
+echo "</form>";
+
+echo "</table>";
+
+?>
