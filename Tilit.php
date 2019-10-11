@@ -39,8 +39,8 @@
         echo "<td>" . $row['Tilin_saldo'] . "</td>";
         echo "<td>" . $row['Tilin_korko'] . "</td>";
         echo "<td>" . $row['idKayttaja'] . "</td>";
-        echo "<td><a href=muokkaa_tili.php?id=" . $row['idKayttaja'] . ">Muokkaa</a></td>";
-        echo "<td><a href=poista_tili.php?id=" . $row['idKayttaja'] . ">Poista</a></td>";
+        echo "<td><a href=muokkaa_tili.php?edit=" . $row['idTilit'] . ">Muokkaa</a></td>";
+        echo "<td><a href=poista_tili.php?delete=" . $row['idTilit'] . ">Poista</a></td>";
         echo "</tr>";
         }
         echo "</table>";
