@@ -16,11 +16,11 @@
     $query_run = mysqli_query($conn, $sqlinsert);
 
     if($query_run) {
-      echo '<script> alert("Uusi käyttäjä tallennettiin")</script>';
+        echo "Käyttäjä lisättiin onnistuneesti!";
     }
   else {
-    echo '<script> alert("Käyttäjää ei tallennettu")</script>';
-  }
+    echo "Käyttäjää ei lisätty"
+    }
   }
 ?>
 <html lang="en" dir="ltr">

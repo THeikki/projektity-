@@ -16,11 +16,11 @@
     $query_run = mysqli_query($conn, $sqlinsert);
 
     if($query_run) {
-      echo '<script> alert("Uusi laina tallennettiin")</script>';
+      echo "Laina lisättiin onnistuneesti!";
     }
   else {
-    echo '<script> alert("Lainaa ei tallennettu")</script>';
-  }
+    echo "Lainaa ei lisätty"
+    }
   }
 ?>
 <html lang="en" dir="ltr">
