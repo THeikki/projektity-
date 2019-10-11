@@ -12,11 +12,11 @@
 	if( isset($_POST['newName']))
 	{
     $idKayttaja = $_POST['idKayttaja'];
-    $etunimi = $_POST['Etunimi'];
-    $sukunimi = $_POST['Sukunimi'];
-    $osoite = $_POST['Osoite'];
-    $puhelinnumero = $_POST['Puhelinnumero'];
-		$Updatequery = "UPDATE Kayttaja SET Etunimi='$etunimi', Sukunimi='$sukunimi', Osoite='$osoite', Puhelinnumero='$puhelinnumero' WHERE id='$idKayttaja'";
+    $uusi_etun = $_POST['uusi_etun'];
+    $uusi_sukun = $_POST['uusi_sukun'];
+    $uusi_os = $_POST['uusi_os'];
+    $uusi_puh = $_POST['uusi_puh'];
+		$Updatequery = "UPDATE Kayttaja SET Etunimi='$uusi_etun', Sukunimi='$uusi_sukun', Osoite='$uusi_os', Puhelinnumero='$uusi_puh' WHERE id='$idKayttaja'";
 		mysqli_query($conn, $Updatequery) or die mysqli_error($conn));
 		  echo "Käyttäjää muokattiin onnistuneesti!";
 	}
