@@ -22,14 +22,14 @@ echo "<table border='1'>
   </tr>";
 
 while($row = mysqli_fetch_array($result)) {
+  echo "<form action=muokkaa_käyttäjä.php method=post>";
   echo "<tr>";
   echo "<td>" . $row['idKayttaja'] . "</td>";
   echo "<td>" . $row['Etunimi'] . "</td>";
   echo "<td>" . $row['Sukunimi'] . "</td>";
   echo "<td>" . $row['Osoite'] . "</td>";
   echo "<td>" . $row['Puhelinnumero'] . "</td>";
-  echo "<td><a href=muokkaa_käyttäjä.php?update=" . $row['idKayttaja'] . ">Muokkaa</a></td>";
-  echo "<td><a href=poista_käyttäjä.php?delete=" . $row['idKayttaja'] . ">Poista</a></td>";
+  echo "<td>" . "<input type=submit name=update value=Muokkaa" . " </td>";
   echo "</tr>";
   echo "</form>";
   }
