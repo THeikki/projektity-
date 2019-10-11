@@ -16,10 +16,10 @@
     $query_run = mysqli_query($conn, $sqlinsert);
 
     if($query_run) {
-        echo "Käyttäjä lisättiin onnistuneesti!";
+      echo "Käyttäjä lisättiin onnistuneesti!";
     }
-  else {
-    echo "Käyttäjää ei lisätty"
+    else {
+      echo "Käyttäjää ei lisätty"
     }
   }
 ?>
