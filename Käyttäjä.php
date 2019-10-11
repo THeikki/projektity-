@@ -39,7 +39,7 @@
         echo "<td>" . $row['Sukunimi'] . "</td>";
         echo "<td>" . $row['Osoite'] . "</td>";
         echo "<td>" . $row['Puhelinnumero'] . "</td>";
-        echo "<td><a href=poista_käyttäjä.php?id=" . $row['idKayttaja'] . ">Muokkaa</a></td>";
+        echo "<td><a href=muokkaa_käyttäjä.php?id=" . $row['idKayttaja'] . ">Muokkaa</a></td>";
         echo "<td><a href=poista_käyttäjä.php?id=" . $row['idKayttaja'] . ">Poista</a></td>";
         echo "</tr>";
         echo "</form>";
