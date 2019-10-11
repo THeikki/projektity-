@@ -13,13 +13,9 @@
     $sqlinsert = "INSERT INTO Tilit (idTilit, Tilin_nimi, Tilin_saldo, Tilin_korko, idKayttaja)
     VALUES ('$idTilit', '$tilin_nimi', '$tilin_saldo', '$tilin_korko', '$idKayttaja')";
 
-    if($query_run) {
-      echo '<script> alert("Uusi käyttäjä tallennettiin")</script>';
+    if (!mysqli_query($conn, $sqlinsert)) {
+      die('Error: ' . mysqli_error($conn));
     }
-  else {
-    echo '<script> alert("Käyttäjää ei tallennettu")</script>';
-  }
-  }
 ?>
 <html lang="en" dir="ltr">
   <head>
