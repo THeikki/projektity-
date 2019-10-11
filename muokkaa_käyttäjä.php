@@ -2,10 +2,10 @@
 ?>
 <?php
 
-if(isset($_POST['update'])) {
+if(isset($_POST['edit'])) {
         $Updatequery = "UPDATE Kayttaja SET idKayttaja='$_POST[idKayttaja]', Etunimi='$_POST[etunimi]', Sukunimi='$_POST[sukunimi]', Osoite='$_POST[osoite]', Puhelinnumero='$_POST[puhelinnumero]', WHERE idKayttaja='$_POST[hidden]'";
         mysqli_query($Updatequery, $conn) or die(mysqli_error($conn));
-          echo "Käyttäjä poistettiin onnistuneesti!";
+          echo "Käyttäjä muokattiin onnistuneesti!";
       }
 ?>
 <html lang="en" dir="ltr">
