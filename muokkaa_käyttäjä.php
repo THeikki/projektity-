@@ -34,11 +34,11 @@
     <div id="box1">
         <h2>Muokkaa käyttäjätietoja</h2>
         <form action="muokkaa_käyttäjä.php" method="post">
-          <input type="hidden" name="idKayttaja" value="<?php echo $row[idKayttaja]; ?>" placeholder="id Käyttäjä"> <br><br>
-          <input type="text" name="Etunimi" value="<?php echo $row[Etunimi]; ?>" placeholder="Etunimi"> <br><br>
-          <input type="text" name="Sukunimi" value="<?php echo $row[Sukunimi]; ?>" placeholder="Sukunimi"> <br><br>
-          <input type="text" name="Osoite" value="<?php echo $row[Osoite]; ?>" placeholder="Osoite"> <br><br>
-          <input type="number" name="Puhelinnumero" value="<?php echo $row[Puhelinnumero]; ?>" placeholder="Puhelinnumero"> <br><br>
+          <input type="hidden" name="idKayttaja" value="" placeholder="id Käyttäjä"> <br><br>
+          <input type="text" name="Etunimi" value="" placeholder="Etunimi"> <br><br>
+          <input type="text" name="Sukunimi" value="" placeholder="Sukunimi"> <br><br>
+          <input type="text" name="Osoite" value="" placeholder="Osoite"> <br><br>
+          <input type="number" name="Puhelinnumero" value="" placeholder="Puhelinnumero"> <br><br>
           <input type="submit" name="insert" value="Muokkaa"> <br>
         </form>
     </div>
