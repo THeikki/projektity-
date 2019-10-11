@@ -39,8 +39,8 @@
         echo "<td>" . $row['Lainan_maara'] . "</td>";
         echo "<td>" . $row['Lainan_korko'] . "</td>";
         echo "<td>" . $row['idKayttaja'] . "</td>";
-        echo "<td><a href=muokkaa_laina.php?id=" . $row['idKayttaja'] . ">Muokkaa</a></td>";
-        echo "<td><a href=poista_laina.php?id=" . $row['idKayttaja'] . ">Poista</a></td>";
+        echo "<td><a href=muokkaa_laina.php?edit=" . $row['idLainat'] . ">Muokkaa</a></td>";
+        echo "<td><a href=poista_laina.php?delete=" . $row['idLainat'] . ">Poista</a></td>";
         echo "</tr>";
         }
         echo "</table>";
