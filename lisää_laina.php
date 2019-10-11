@@ -19,7 +19,7 @@
       echo "Laina lisättiin onnistuneesti!";
     }
     else {
-      echo "Lainaa ei lisätty"
+      echo "Lainaa ei lisätty";
       }
   }
 ?>
