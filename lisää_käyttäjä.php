@@ -19,7 +19,7 @@
       echo "Käyttäjä lisättiin onnistuneesti!";
     }
     else {
-      echo "Käyttäjää ei lisätty"
+      echo "Käyttäjää ei lisätty";
     }
   }
 ?>
