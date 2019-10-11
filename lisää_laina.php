@@ -33,7 +33,7 @@
     <hr class="line">
     <a href="Pääsivu.php" class="back">Takaisin</a>
     <div class="box" id="box1">
-        <h2>Lainatiedot</h2>
+        <h2>Anna lainatiedot</h2>
         <form action="lisää_laina.php" method="post">
           <input type="number" name="idLainat" value="" placeholder="id Laina"> <br><br>
           <input type="text" name="Lainan_nimi" value="" placeholder="Lainan nimi"> <br><br>
