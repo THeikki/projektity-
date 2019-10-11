@@ -18,9 +18,9 @@
     if($query_run) {
       echo "Laina lisättiin onnistuneesti!";
     }
-  else {
-    echo "Lainaa ei lisätty"
-    }
+    else {
+      echo "Lainaa ei lisätty"
+      }
   }
 ?>
 <html lang="en" dir="ltr">

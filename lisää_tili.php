@@ -18,9 +18,9 @@
     if($query_run) {
       echo "Tili lisättiin onnistuneesti!";
     }
-  else {
-    echo "Tiliä ei lisätty!";
-  }
+    else {
+      echo "Tiliä ei lisätty!";
+    }
   }
 ?>
 <html lang="en" dir="ltr">

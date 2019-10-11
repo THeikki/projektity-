@@ -19,9 +19,9 @@
     if($query_run) {
       echo "Sijoitus lisättiin onnistuneesti!";
     }
-  else {
-    echo "Sijoitusta ei lisätty!";
-    }
+    else {
+      echo "Sijoitusta ei lisätty!";
+      }
   }
 ?>
 <html lang="en" dir="ltr">
