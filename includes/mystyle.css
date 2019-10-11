@@ -72,26 +72,32 @@
 }
 .button1 {
   background-color: #FFFFFF;
-  border: 2px solid #797979; ;
-  color: white;
-  padding: 15px 32px;
+  border: 2px solid #797979;
+  color: black;
+  width: 142px;
+  height: 25px;
   text-align: center;
   text-decoration: none;
   display: inline-block;
   font-size: 16px;
-  margin: 4px 2px;
+  font-family: "proxima nova";
+  margin-left: 40px;
+  margin-top: 15px;
   cursor: pointer;
 }
 .button2 {
   background-color: #FFFF80;
-  border: 2px solid #797979; ;
-  color: white;
-  padding: 15px 32px;
+  border: 2px solid #797979;
+  color: black;
+  width: 142px;
+  height: 25px;
   text-align: center;
-  text-decoration: none;
+  text-decoration: inherit;
   display: inline-block;
   font-size: 16px;
-  margin: 4px 2px;
+  font-family: "proxima nova";
+  margin-left: 40px;
+  margin-top: 15px;
   cursor: pointer;
 }
 .line {
