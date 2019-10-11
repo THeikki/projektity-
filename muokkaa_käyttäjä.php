@@ -2,11 +2,10 @@
 ?>
 <?php
 
-if(isset($_GET['edit'])) {
-        $Updatequery = "UPDATE Kayttaja SET idKayttaja='$_POST[idKayttaja]', Etunimi='$_POST[etunimi]', Sukunimi='$_POST[sukunimi]', Osoite='$_POST[osoite]', Puhelinnumero='$_POST[puhelinnumero]', WHERE idKayttaja='$_POST[hidden]'";
-        mysqli_query($conn, $Updatequery) or die mysqli_error($conn));
-          echo "Käyttäjä poistettiin onnistuneesti!";
-}
+if(isset($_POST['update'])) {
+        $Updatequery = "UPDATE Kayttaja SET idKayttaja='$_POST[idKayttaja]', Etunimi='$_POST[Etunimi]', Sukunimi='$_POST[Sukunimi]', Osoite='$_POST[Osoite]', Puhelinnumero='$_POST[Puhelinnumero]', WHERE idKayttaja='$_POST[hidden]'";
+        mysqli_query($Updatequery, $conn) or die(mysqli_error($conn)); 
+      }
 ?>
 <html lang="en" dir="ltr">
   <head>
