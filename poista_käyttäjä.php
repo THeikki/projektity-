@@ -6,7 +6,7 @@
 
   if(mysqli_query($conn, $Deletequery)) {
     echo "Käyttäjä poistettiin";
-    header("refresh:2; Location: Käyttäjä.php");
+    header("refresh:2 Location: Käyttäjä.php");
   }
 
   else
