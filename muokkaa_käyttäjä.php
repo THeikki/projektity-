@@ -7,7 +7,7 @@ if(isset($_GET['edit'])){
  $row = mysqli_fetch_array($result);
 }
 //Update Information
-if(isset($_POST['update'])){
+if(isset($_POST['btn-update'])){
  $idKayttaja = mysqli_real_escape_string($conn, filter_input(INPUT_POST,'idKayttaja',FILTER_SANITIZE_STRING));
  $etunimi = mysqli_real_escape_string($conn, filter_input(INPUT_POST,'Etunimi',FILTER_SANITIZE_STRING));
  $sukunimi = mysqli_real_escape_string($conn, filter_input(INPUT_POST,'Sukunimi',FILTER_SANITIZE_STRING));
@@ -20,28 +20,31 @@ if(isset($_POST['update'])){
  }
  else
  {
- echo "Käyttäjä muokattiin onnistuneesti!"
+ header("location: Käyttäjä.php");
  }
 }
 ?>
-<html lang="en" dir="ltr">
-  <head>
-    <meta charset="utf-8">
-    <title>lisää_käyttäjä</title>
-    <link rel="stylesheet" href="includes/mystyle.css">
-  </head>
-  <body>
-    <hr class="line">
-    <a href="Pääsivu.php" class="back">Takaisin</a>
-    <div id="box1">
-      <h2>Muokkaa käyttäjätietoja</h2>
-      <form action="muokkaa_käyttäjä.php" method="post">
-        <label>Etunimi:</label><input type="text" name="Etunimi" placeholder="Etunimi" value="<?php echo $row['Etunimi']; ?>"><br/><br/>
-        <label>Sukunimi:</label><input type="text" name="Sukunimi" placeholder="Sukunimi" value="<?php echo $row['Sukunimi']; ?>"><br/><br/>
-        <label>Osoite:</label><input type="text" name="Osoite" placeholder="Osoite" value="<?php echo $row['Osoite']; ?>"><br/><br/>
-        <label>Puhelinnumero:</label><input type="text" name="Puhelinnumero" placeholder="Puhelinnumero" value="<?php echo $row['Puhelinnumero']; ?>"><br/><br/>
-        <input type="submit" name="update" value="Muokkaa"> <br>
-      </form>
-    </div>
-  </body>
+<!--Create Edit form -->
+<!doctype html>
+<html>
+<body>
+<form method="post">
+<h1>Muokkaa käyttäjätietoja</h1>
+<label>Etunimi:</label><input type="text" name="Etunimi" placeholder="Etunimi" value="<?php echo $row['Etunimi']; ?>"><br/><br/>
+<label>Sukunimi:</label><input type="text" name="Sukunimi" placeholder="Sukunimi" value="<?php echo $row['Sukunimi']; ?>"><br/><br/>
+<label>Osoite:</label><input type="text" name="Osoite" placeholder="Osoite" value="<?php echo $row['Osoite']; ?>"><br/><br/>
+<label>Puhelinnumero:</label><input type="text" name="Puhelinnumero" placeholder="Puhelinnumero" value="<?php echo $row['Puhelinnumero']; ?>"><br/><br/>
+<button type="submit" name="btn-update" id="btn-update" onClick="update()"><strong>Update</strong></button>
+<a href="disp.php"><button type="button" value="button">Cancel</button></a>
+</form>
+<!-- Alert for Updating -->
+<script>
+function update(){
+ var x;
+ if(confirm("Updated data Sucessfully") == true){
+ x= "update";
+ }
+}
+</script>
+</body>
 </html>
