@@ -2,7 +2,7 @@
 ?>
 <?php
 if(isset($_GET['edit'])){
-  $sql = "SELECT * FROM Kayttaja WHERE idKayttaja =" .$_GET['update'];
+  $sql = "SELECT * FROM Kayttaja WHERE idKayttaja =" .$_GET['edit'];
   $result = mysqli_query($conn, $sql);
   $row = mysqli_fetch_array($result);
   }
@@ -17,7 +17,7 @@ if(isset($_POST['update'])) {
 
   $Updatequery = "UPDATE Kayttaja SET idKayttaja='$idkayttaja', Etunimi='$etunimi', Sukunimi='$sukunimi', Osoite='$osoite', Puhelinnumero='$puhelinnumero' WHERE idKayttaja='$_POST[hidden]'";
   mysqli_query($conn, $Updatequery) or die(mysqli_error($conn));
-    echo "Käyttäjä muokattiin onnistuneesti!";
+          echo "Käyttäjä muokattiin onnistuneesti!";
 }
 ?>
 <html lang="en" dir="ltr">
