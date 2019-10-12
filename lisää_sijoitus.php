@@ -18,7 +18,7 @@
     }
     else {
       echo "Sijoitusta ei lisätty!";
-      }
+    }
   }
 ?>
 <html lang="en" dir="ltr">

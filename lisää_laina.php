@@ -17,7 +17,7 @@
     }
     else {
       echo "Lainaa ei lisätty!";
-      }
+    }
   }
 ?>
 <html lang="en" dir="ltr">
