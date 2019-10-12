@@ -13,8 +13,15 @@ if(isset($_POST['btn-update'])){
  $osoite = $_POST['Osoite'];
  $puhelinnumero = $_POST['Puhelinnumero'];
  $update = "UPDATE Kayttaja SET Etunimi='$etunimi', Sukunimi='$sukunimi',Osoite='$osoite',Puhelinnumero='$puhelinnumero' WHERE idKayttaja=". $_GET['edit'];
- mysqli_query($conn, $update) or die(mysqli_error($conn));
-          echo "Käyttäjä muokattiin onnistuneesti!";
+ $up = mysqli_query($conn, $update);
+ if(!isset($sql)){
+ die ("Error $sql" .mysqli_connect_error());
+ }
+ else
+ {
+ echo "Käyttäjä muokattiin onnistuneesti!"
+ }
+}
 ?>
 <html lang="en" dir="ltr">
   <head>
