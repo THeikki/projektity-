@@ -15,7 +15,7 @@ if(isset($_POST['btn-update'])) {
 
  $update = "UPDATE Kayttaja SET Etunimi='$etunimi', Sukunimi='$sukunimi',Osoite='$osoite',Puhelinnumero='$puhelinnumero' WHERE idKayttaja=". $_GET['edit'];
  $up = mysqli_query($conn, $update);
- if($query_run) {
+ if($up) {
    echo "Käyttäjä muokattiin onnistuneesti!";
  }
  else {
