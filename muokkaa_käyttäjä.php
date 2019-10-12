@@ -19,7 +19,7 @@ if(isset($_POST['btn-update'])){
  }
  else
  {
- header("location: disp.php");
+ header("location: Käyttäjä.php");
  }
 }
 ?>
@@ -30,9 +30,9 @@ if(isset($_POST['btn-update'])){
 <form method="post">
 <h1>Muokkaa käyttäjätietoja</h1>
 <label>Etunimi:</label><input type="text" name="Etunimi" placeholder="Etunimi" value="<?php echo $row['Etunimi']; ?>"><br/><br/>
-<label>Sukunimi:</label><input type="text" name="Sukunimi" placeholder="Gender" value="<?php echo $row['Sukunimi']; ?>"><br/><br/>
-<label>Osoite:</label><input type="text" name="Osoite" placeholder="Department" value="<?php echo $row['Osoite']; ?>"><br/><br/>
-<label>Puhelinnumero:</label><input type="text" name="Puhelinnumero" placeholder="Address" value="<?php echo $row['Puhelinnumero']; ?>"><br/><br/>
+<label>Sukunimi:</label><input type="text" name="Sukunimi" placeholder="Sukunimi" value="<?php echo $row['Sukunimi']; ?>"><br/><br/>
+<label>Osoite:</label><input type="text" name="Osoite" placeholder="Osoite" value="<?php echo $row['Osoite']; ?>"><br/><br/>
+<label>Puhelinnumero:</label><input type="text" name="Puhelinnumero" placeholder="Puhelinnumero" value="<?php echo $row['Puhelinnumero']; ?>"><br/><br/>
 <button type="submit" name="btn-update" id="btn-update" onClick="update()"><strong>Update</strong></button>
 <a href="disp.php"><button type="button" value="button">Cancel</button></a>
 </form>
