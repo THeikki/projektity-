@@ -3,7 +3,6 @@
 <?php
 
   if(isset($_POST['insert'])) {
-
     $idSijoitukset = mysqli_real_escape_string($conn, filter_input(INPUT_POST,'idSijoitukset',FILTER_SANITIZE_STRING));
     $sijoituskohde = mysqli_real_escape_string($conn, filter_input(INPUT_POST,'Sijoituskohde',FILTER_SANITIZE_STRING));
     $sijoituksen_summa = mysqli_real_escape_string($conn, filter_input(INPUT_POST,'Sijoituksen_summa',FILTER_SANITIZE_STRING));
