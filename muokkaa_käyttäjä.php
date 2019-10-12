@@ -8,10 +8,11 @@ if(isset($_GET['edit'])){
 }
 //Update Information
 if(isset($_POST['update'])){
- $etunimi = $_POST['Etunimi'];
- $sukunimi = $_POST['Sukunimi'];
- $osoite = $_POST['Osoite'];
- $puhelinnumero = $_POST['Puhelinnumero'];
+ $idKayttaja = mysqli_real_escape_string($conn, filter_input(INPUT_POST,'idKayttaja',FILTER_SANITIZE_STRING));
+ $etunimi = mysqli_real_escape_string($conn, filter_input(INPUT_POST,'Etunimi',FILTER_SANITIZE_STRING));
+ $sukunimi = mysqli_real_escape_string($conn, filter_input(INPUT_POST,'Sukunimi',FILTER_SANITIZE_STRING));
+ $osoite = mysqli_real_escape_string($conn, filter_input(INPUT_POST,'Osoite',FILTER_SANITIZE_STRING));
+ $puhelinnumero = mysqli_real_escape_string($conn, filter_input(INPUT_POST,'Puhelinnumero',FILTER_SANITIZE_STRING));
  $update = "UPDATE Kayttaja SET Etunimi='$etunimi', Sukunimi='$sukunimi',Osoite='$osoite',Puhelinnumero='$puhelinnumero' WHERE idKayttaja=". $_GET['edit'];
  $up = mysqli_query($conn, $update);
  if(!isset($sql)){
@@ -35,10 +36,10 @@ if(isset($_POST['update'])){
     <div id="box1">
       <h2>Muokkaa käyttäjätietoja</h2>
       <form action="muokkaa_käyttäjä.php" method="post">
-        <input type="text" name="Etunimi" placeholder="Etunimi" value="<?php echo $row['Etunimi']; ?>"><br/><br/>
-        <input type="text" name="Sukunimi" placeholder="Sukunimi" value="<?php echo $row['Sukunimi']; ?>"><br/><br/>
-        <input type="text" name="Osoite" placeholder="Osoite" value="<?php echo $row['Osoite']; ?>"><br/><br/>
-        <input type="text" name="Puhelinnumero" placeholder="Puhelinnumero" value="<?php echo $row['Puhelinnumero']; ?>"><br/><br/>
+        <label>Etunimi:</label><input type="text" name="Etunimi" placeholder="Etunimi" value="<?php echo $row['Etunimi']; ?>"><br/><br/>
+        <label>Sukunimi:</label><input type="text" name="Sukunimi" placeholder="Sukunimi" value="<?php echo $row['Sukunimi']; ?>"><br/><br/>
+        <label>Osoite:</label><input type="text" name="Osoite" placeholder="Osoite" value="<?php echo $row['Osoite']; ?>"><br/><br/>
+        <label>Puhelinnumero:</label><input type="text" name="Puhelinnumero" placeholder="Puhelinnumero" value="<?php echo $row['Puhelinnumero']; ?>"><br/><br/>
         <input type="submit" name="update" value="Muokkaa"> <br>
       </form>
     </div>
