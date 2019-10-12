@@ -1,12 +1,12 @@
 <?php include "includes/yhteys.php"
 ?>
 <?php
-if(isset($_GET['edit'])){
- $sql = "SELECT * FROM data WHERE empid =" .$_GET['edit'];
+if(isset($_GET['edit'])) {
+ $sql = "SELECT * FROM data WHERE empid =" . $_GET['edit'];
  $result = mysqli_query($conn, $sql);
  $row = mysqli_fetch_array($result);
 }
-if(isset($_POST['Update'])){
+if(isset($_POST['Update'])) {
  $idKayttaja = mysqli_real_escape_string($conn, filter_input(INPUT_POST,'idKayttaja',FILTER_SANITIZE_STRING));
  $etunimi = mysqli_real_escape_string($conn, filter_input(INPUT_POST,'Etunimi',FILTER_SANITIZE_STRING));
  $sukunimi = mysqli_real_escape_string($conn, filter_input(INPUT_POST,'Sukunimi',FILTER_SANITIZE_STRING));
@@ -19,7 +19,7 @@ if(isset($_POST['Update'])){
    echo "Käyttäjä muokattiin onnistuneesti!";
  }
  else {
-   mysqli_error($conn);
+   echo "Käyttäjää ei muokattu";
  }
 }
 ?>
@@ -31,6 +31,7 @@ if(isset($_POST['Update'])){
   </head>
   <body>
     <hr class="line">
+    <a href="Pääsivu.php" class="back">Takaisin</a>
     <div id="box1">
       <form action="muokkaa_käyttäjä.php"method="post">
         <h2>Muokkaa käyttäjätietoja</h2>
