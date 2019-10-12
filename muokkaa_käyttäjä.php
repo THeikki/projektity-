@@ -12,7 +12,7 @@ if(isset($_POST['btn-update'])){
  $sukunimi = $_POST['Sukunimi'];
  $osoite = $_POST['Osoite'];
  $puhelinnumero = $_POST['Puhelinnumero'];
- $update = "UPDATE Kayttaja SET Etunimi='$name', Sukunimi='$gender',Osoite='$department',Puhelinnumero='$address' WHERE idKayttaja=". $_GET['edit'];
+ $update = "UPDATE Kayttaja SET Etunimi='$etunimi', Sukunimi='$sukunimi',Osoite='$osoite',Puhelinnumero='$puhelinnumero' WHERE idKayttaja=". $_GET['edit'];
  $up = mysqli_query($conn, $update);
  if(!isset($sql)){
  die ("Error $sql" .mysqli_connect_error());
