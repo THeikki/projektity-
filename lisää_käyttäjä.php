@@ -17,7 +17,7 @@
     }
     else {
       echo "Käyttäjää ei lisätty!";
-      }
+    }
   }
 ?>
 <html lang="en" dir="ltr">
@@ -29,8 +29,8 @@
   <body>
     <hr class="line">
     <a href="Pääsivu.php" class="back">Takaisin</a>
-    <div id="box1">
-        <h2>Anna käyttäjätiedot</h2>
+    <div class="box" id="box1">
+        <h2>Anna tilitiedot</h2>
         <form action="lisää_käyttäjä.php" method="post">
           <input type="number" name="idKayttaja" value="" placeholder="id Käyttäjä"> <br><br>
           <input type="text" name="Etunimi" value="" placeholder="Etunimi"> <br><br>
