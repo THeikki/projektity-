@@ -17,7 +17,7 @@
     }
     else {
       echo "Käyttäjää ei lisätty!";
-    }
+      }
   }
 ?>
 <html lang="en" dir="ltr">
