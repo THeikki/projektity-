@@ -1,11 +1,11 @@
 <?php include "includes/yhteys.php"
 ?>
 <?php
-if(isset($_GET['edit'])) {
+/*if(isset($_GET['edit'])) {
  $sql = "SELECT * FROM Kayttaja WHERE idKayttaja =" . $_GET['edit'];
  $result = mysqli_query($conn, $sql);
  $row = mysqli_fetch_array($result);
-}
+}*/
 if(isset($_POST['btn-update'])) {
  $idKayttaja = mysqli_real_escape_string($conn, filter_input(INPUT_POST,'idKayttaja',FILTER_SANITIZE_STRING));
  $etunimi = mysqli_real_escape_string($conn, filter_input(INPUT_POST,'Etunimi',FILTER_SANITIZE_STRING));
