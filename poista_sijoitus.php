@@ -4,9 +4,15 @@
 
 if(isset($_GET['delete'])) {
     $idSijoitukset = $_GET['delete'];
-    $Deletequery = "DELETE FROM Sijoitukset WHERE idSijoitukset='$idSijoitukset'";
-    mysqli_query($conn, $Deletequery) or die(mysqli_error($conn));
+    $sqldelete = "DELETE FROM Sijoitukset WHERE idSijoitukset='$idSijoitukset'";
+    $query_run = mysqli_query($conn, $sqldelete);
+
+    if($query_run) {
       echo "Sijoitus poistettiin onnistuneesti!";
+    }
+    else {
+      echo "Sijoitusta ei poistettu!";
+    }
   }
 ?>
 <!DOCTYPE html>

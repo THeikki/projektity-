@@ -4,9 +4,15 @@
 
 if(isset($_GET['delete'])) {
     $idLainat = $_GET['delete'];
-    $Deletequery = "DELETE FROM Lainat WHERE idLainat='$idLainat'";
-    mysqli_query($conn, $Deletequery) or die(mysqli_error($conn));
+    $sqldelete = "DELETE FROM Lainat WHERE idLainat='$idLainat'";
+    $query_run = mysqli_query($conn, $sqldelete);
+
+    if($query_run) {
       echo "Laina poistettiin onnistuneesti!";
+    }
+    else {
+      echo "Lainaa ei poistettu!";
+    }
   }
 ?>
 <!DOCTYPE html>

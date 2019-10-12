@@ -4,9 +4,15 @@
 
 if(isset($_GET['delete'])) {
     $idKayttaja = $_GET['delete'];
-    $Deletequery = "DELETE FROM Kayttaja WHERE idKayttaja='$idKayttaja'";
-    mysqli_query($conn, $Deletequery) or die(mysqli_error($conn));
+    $sqldelete = "DELETE FROM Kayttaja WHERE idKayttaja='$idKayttaja'";
+    $query_run = mysqli_query($conn, $sqldelete);
+
+    if($query_run) {
       echo "Käyttäjä poistettiin onnistuneesti!";
+    }
+    else {
+      echo "Käyttäjää ei poistettu!";
+    }
   }
 ?>
 <!DOCTYPE html>
