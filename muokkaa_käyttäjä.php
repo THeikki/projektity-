@@ -15,7 +15,7 @@ if(isset($_POST['update'])) {
   $osoite = mysqli_real_escape_string($conn, filter_input(INPUT_POST,'Osoite',FILTER_SANITIZE_STRING));
   $puhelinnumero = mysqli_real_escape_string($conn, filter_input(INPUT_POST,'Puhelinnumero',FILTER_SANITIZE_STRING));
 
-  $Updatequery = "UPDATE Kayttaja SET idKayttaja='$idkayttaja', Etunimi='$etunimi', Sukunimi='$sukunimi', Osoite='$osoite', Puhelinnumero='$puhelinnumero' WHERE idKayttaja='$_POST[hidden]'";
+  $Updatequery = "UPDATE Kayttaja SET Etunimi='$etunimi', Sukunimi='$sukunimi', Osoite='$osoite', Puhelinnumero='$puhelinnumero' WHERE idKayttaja='$_POST[edit]'";
   mysqli_query($conn, $Updatequery) or die(mysqli_error($conn));
           echo "Käyttäjä muokattiin onnistuneesti!";
 }
@@ -32,7 +32,6 @@ if(isset($_POST['update'])) {
     <div id="box1">
         <h2>Muokkaa käyttäjätietoja</h2>
         <form action="muokkaa_käyttäjä.php" method="post">
-          <input type="hidden" name="idKayttaja" placeholder="id Käyttäjä" value="<?php echo $row['idKayttaja']; ?>"><br/><br/>
           <input type="text" name="Etunimi" placeholder="Etunimi" value="<?php echo $row['Etunimi']; ?>"><br/><br/>
           <input type="text" name="Sukunimi" placeholder="Sukunimi" value="<?php echo $row['Sukunimi']; ?>"><br/><br/>
           <input type="text" name="Osoite" placeholder="Osoite" value="<?php echo $row['Osoite']; ?>"><br/><br/>
