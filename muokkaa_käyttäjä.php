@@ -6,7 +6,7 @@ if(isset($_GET['edit'])) {
  $result = mysqli_query($conn, $sql);
  $row = mysqli_fetch_array($result);
 }
-if(isset($_POST['Update'])) {
+if(isset($_POST['btn-update'])) {
  $idKayttaja = mysqli_real_escape_string($conn, filter_input(INPUT_POST,'idKayttaja',FILTER_SANITIZE_STRING));
  $etunimi = mysqli_real_escape_string($conn, filter_input(INPUT_POST,'Etunimi',FILTER_SANITIZE_STRING));
  $sukunimi = mysqli_real_escape_string($conn, filter_input(INPUT_POST,'Sukunimi',FILTER_SANITIZE_STRING));
@@ -20,7 +20,7 @@ if(isset($_POST['Update'])) {
  }
  else
  {
-   header("location: disp.php");
+   header("location: Käyttäjä.php");
  }
 }
 ?>
@@ -32,15 +32,15 @@ if(isset($_POST['Update'])) {
   </head>
   <body>
     <hr class="line">
-    <a href="Pääsivu.php" class="back">Takaisin</a>
+    <a href="Käyttäjä.php" class="back">Takaisin</a>
     <div id="box1">
-      <form action="muokkaa_käyttäjä.php"method="post">
+      <form method="post">
         <h2>Muokkaa käyttäjätietoja</h2>
         <input type="text" name="Etunimi" placeholder="Etunimi" value="<?php echo $row['Etunimi']; ?>"><br/><br/>
         <input type="text" name="Sukunimi" placeholder="Sukunimi" value="<?php echo $row['Sukunimi']; ?>"><br/><br/>
         <input type="text" name="Osoite" placeholder="Osoite" value="<?php echo $row['Osoite']; ?>"><br/><br/>
         <input type="text" name="Puhelinnumero" placeholder="Puhelinnumero" value="<?php echo $row['Puhelinnumero']; ?>"><br/><br/>
-        <button type="submit" name="btn-update" id="btn-update" onClick="update()"><strong>Update</strong></button>
+        <button type="submit" name="btn-update" id="btn-update" onClick="update()">Update<</button>
 
       </form>
       <script>
