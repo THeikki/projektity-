@@ -7,7 +7,7 @@ if(isset($_GET['edit'])){
  $row = mysqli_fetch_array($result);
 }
 //Update Information
-if(isset($_POST['btn-update'])){
+if(isset($_POST['update'])){
  $etunimi = $_POST['Etunimi'];
  $sukunimi = $_POST['Sukunimi'];
  $osoite = $_POST['Osoite'];
