@@ -40,8 +40,7 @@ if(isset($_POST['btn-update'])) {
         <input type="text" name="Sukunimi" placeholder="Sukunimi" value="<?php echo $row['Sukunimi']; ?>"><br/><br/>
         <input type="text" name="Osoite" placeholder="Osoite" value="<?php echo $row['Osoite']; ?>"><br/><br/>
         <input type="text" name="Puhelinnumero" placeholder="Puhelinnumero" value="<?php echo $row['Puhelinnumero']; ?>"><br/><br/>
-        <button type="submit" name="btn-update" id="btn-update" onClick="update()">Update<</button>
-
+        <button type="submit" name="btn-update" id="btn-update" onClick="update()">Muokkaa</button>
       </form>
       <script>
         function update(){
