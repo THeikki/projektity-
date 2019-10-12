@@ -19,7 +19,7 @@ if(isset($_POST['Update'])){
    echo "Käyttäjä muokattiin onnistuneesti!";
  }
  else {
-   echo "Käyttäjää ei muokattu";
+   mysqli_error($conn);
  }
 }
 ?>
