@@ -17,6 +17,8 @@ if(isset($_POST['btn-update'])) {
  $up = mysqli_query($conn, $update);
  if($up) {
    echo "Käyttäjä muokattiin onnistuneesti!";
+   header("location: Käyttäjä.php");
+
  }
  else {
    echo "Käyttäjää ei muokattu";
