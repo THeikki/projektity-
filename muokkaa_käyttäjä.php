@@ -15,11 +15,12 @@ if(isset($_POST['Update'])) {
 
  $update = "UPDATE Kayttaja SET Etunimi='$etunimi', Sukunimi='$sukunimi',Osoite='$osoite',Puhelinnumero='$puhelinnumero' WHERE idKayttaja=". $_GET['edit'];
  $up = mysqli_query($conn, $update);
- if($up) {
-   echo "Käyttäjä muokattiin onnistuneesti!";
+ if(!isset($sql)){
+ die ("Error $sql" .mysqli_connect_error());
  }
- else {
-   echo "Käyttäjää ei muokattu";
+ else
+ {
+   header("location: disp.php");
  }
 }
 ?>
@@ -39,8 +40,16 @@ if(isset($_POST['Update'])) {
         <input type="text" name="Sukunimi" placeholder="Sukunimi" value="<?php echo $row['Sukunimi']; ?>"><br/><br/>
         <input type="text" name="Osoite" placeholder="Osoite" value="<?php echo $row['Osoite']; ?>"><br/><br/>
         <input type="text" name="Puhelinnumero" placeholder="Puhelinnumero" value="<?php echo $row['Puhelinnumero']; ?>"><br/><br/>
-        <input type="submit" name="Update" value="Muokkaa"> <br>
+        <button type="submit" name="btn-update" id="btn-update" onClick="update()"><strong>Update</strong></button>
+
       </form>
-    </div>
+      <script>
+        function update(){
+          var x;
+          if(confirm("Käyttäjää muokattiin onnistuneesti") == true){
+          x= "update";
+          }
+        }
+      </script>
   </body>
 </html>
