@@ -1,27 +1,23 @@
 <?php include "includes/yhteys.php"
 ?>
 <?php
-if(isset($_GET['edit'])) {
- $sql = "SELECT * FROM Tilit WHERE idTilit =" . $_GET['edit'];
- $result = mysqli_query($conn, $sql);
- $row = mysqli_fetch_array($result);
-}
-if(isset($_POST['btn-update'])) {
-  $idTilit = mysqli_real_escape_string($conn, filter_input(INPUT_POST,'idTilit',FILTER_SANITIZE_STRING));
-  $tilin_nimi = mysqli_real_escape_string($conn, filter_input(INPUT_POST,'Tilin_nimi',FILTER_SANITIZE_STRING));
-  $tilin_saldo = mysqli_real_escape_string($conn, filter_input(INPUT_POST,'Tilin_saldo',FILTER_SANITIZE_STRING));
-  $tilin_korko = mysqli_real_escape_string($conn, filter_input(INPUT_POST,'Tilin_korko',FILTER_SANITIZE_STRING));
-  $idKayttaja = mysqli_real_escape_string($conn, filter_input(INPUT_POST,'idKayttaja',FILTER_SANITIZE_STRING));
+  if(isset($_POST['btn-update'])) {
+    $idTilit = mysqli_real_escape_string($conn, filter_input(INPUT_POST,'idTilit',FILTER_SANITIZE_STRING));
+    $tilin_nimi = mysqli_real_escape_string($conn, filter_input(INPUT_POST,'Tilin_nimi',FILTER_SANITIZE_STRING));
+    $tilin_saldo = mysqli_real_escape_string($conn, filter_input(INPUT_POST,'Tilin_saldo',FILTER_SANITIZE_STRING));
+    $tilin_korko = mysqli_real_escape_string($conn, filter_input(INPUT_POST,'Tilin_korko',FILTER_SANITIZE_STRING));
+    $idKayttaja = mysqli_real_escape_string($conn, filter_input(INPUT_POST,'idKayttaja',FILTER_SANITIZE_STRING));
 
- $update = "UPDATE Tilit SET Tilin_nimi='$tilin_nimi', Tilin_saldo='$tilin_saldo',Tilin_korko='$tilin_korko' WHERE idTilit=". $_GET['edit'];
- $up = mysqli_query($conn, $update);
- if($up) {
-   echo "Tiliä muokattiin onnistuneesti!";
- }
- else {
-   echo "Tiliä ei muokattu";
- }
-}
+   $update = "UPDATE Tilit SET Tilin_nimi='$tilin_nimi', Tilin_saldo='$tilin_saldo',Tilin_korko='$tilin_korko' WHERE idTilit=". $_GET['edit'];
+   $up = mysqli_query($conn, $update);
+
+   if($up) {
+     echo "Tili muokattiin onnistuneesti!";
+   }
+   else {
+     echo "Tiliä ei muokattu!";
+   }
+  }
 ?>
 <html lang="en" dir="ltr">
   <head>

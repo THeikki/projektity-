@@ -1,27 +1,23 @@
 <?php include "includes/yhteys.php"
 ?>
 <?php
-/*if(isset($_GET['edit'])) {
- $sql = "SELECT * FROM Kayttaja WHERE idKayttaja =" . $_GET['edit'];
- $result = mysqli_query($conn, $sql);
- $row = mysqli_fetch_array($result);
-}*/
-if(isset($_POST['btn-update'])) {
- $idKayttaja = mysqli_real_escape_string($conn, filter_input(INPUT_POST,'idKayttaja',FILTER_SANITIZE_STRING));
- $etunimi = mysqli_real_escape_string($conn, filter_input(INPUT_POST,'Etunimi',FILTER_SANITIZE_STRING));
- $sukunimi = mysqli_real_escape_string($conn, filter_input(INPUT_POST,'Sukunimi',FILTER_SANITIZE_STRING));
- $osoite = mysqli_real_escape_string($conn, filter_input(INPUT_POST,'Osoite',FILTER_SANITIZE_STRING));
- $puhelinnumero = mysqli_real_escape_string($conn, filter_input(INPUT_POST,'Puhelinnumero',FILTER_SANITIZE_STRING));
+  if(isset($_POST['btn-update'])) {
+   $idKayttaja = mysqli_real_escape_string($conn, filter_input(INPUT_POST,'idKayttaja',FILTER_SANITIZE_STRING));
+   $etunimi = mysqli_real_escape_string($conn, filter_input(INPUT_POST,'Etunimi',FILTER_SANITIZE_STRING));
+   $sukunimi = mysqli_real_escape_string($conn, filter_input(INPUT_POST,'Sukunimi',FILTER_SANITIZE_STRING));
+   $osoite = mysqli_real_escape_string($conn, filter_input(INPUT_POST,'Osoite',FILTER_SANITIZE_STRING));
+   $puhelinnumero = mysqli_real_escape_string($conn, filter_input(INPUT_POST,'Puhelinnumero',FILTER_SANITIZE_STRING));
 
- $update = "UPDATE Kayttaja SET Etunimi='$etunimi', Sukunimi='$sukunimi',Osoite='$osoite',Puhelinnumero='$puhelinnumero' WHERE idKayttaja=". $_GET['edit'];
- $up = mysqli_query($conn, $update);
- if($up) {
-   echo "Käyttäjä muokattiin onnistuneesti!";
- }
- else {
-   echo "Käyttäjää ei muokattu";
- }
-}
+   $update = "UPDATE Kayttaja SET Etunimi='$etunimi', Sukunimi='$sukunimi',Osoite='$osoite',Puhelinnumero='$puhelinnumero' WHERE idKayttaja=". $_GET['edit'];
+   $up = mysqli_query($conn, $update);
+
+   if($up) {
+     echo "Käyttäjä muokattiin onnistuneesti!";
+   }
+   else {
+     echo "Käyttäjää ei muokattu!";
+   }
+  }
 ?>
 <html lang="en" dir="ltr">
   <head>
@@ -42,6 +38,5 @@ if(isset($_POST['btn-update'])) {
         <button type="submit" name="btn-update">Muokkaa</button>
       </form>
     </div>
-    <?php header("location: Käyttäjä.php"); ?>
   </body>
 </html>

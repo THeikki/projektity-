@@ -1,27 +1,23 @@
 <?php include "includes/yhteys.php"
 ?>
 <?php
-if(isset($_GET['edit'])) {
- $sql = "SELECT * FROM Lainat WHERE idLainat =" . $_GET['edit'];
- $result = mysqli_query($conn, $sql);
- $row = mysqli_fetch_array($result);
-}
-if(isset($_POST['btn-update'])) {
-  $idLainat = mysqli_real_escape_string($conn, filter_input(INPUT_POST,'idLainat',FILTER_SANITIZE_STRING));
-  $lainan_nimi = mysqli_real_escape_string($conn, filter_input(INPUT_POST,'Lainan_nimi',FILTER_SANITIZE_STRING));
-  $lainan_maara = mysqli_real_escape_string($conn, filter_input(INPUT_POST,'Lainan_maara',FILTER_SANITIZE_STRING));
-  $lainan_korko = mysqli_real_escape_string($conn, filter_input(INPUT_POST,'Lainan_korko',FILTER_SANITIZE_STRING));
-  $idKayttaja = mysqli_real_escape_string($conn, filter_input(INPUT_POST,'idKayttaja',FILTER_SANITIZE_STRING));
+  if(isset($_POST['btn-update'])) {
+    $idLainat = mysqli_real_escape_string($conn, filter_input(INPUT_POST,'idLainat',FILTER_SANITIZE_STRING));
+    $lainan_nimi = mysqli_real_escape_string($conn, filter_input(INPUT_POST,'Lainan_nimi',FILTER_SANITIZE_STRING));
+    $lainan_maara = mysqli_real_escape_string($conn, filter_input(INPUT_POST,'Lainan_maara',FILTER_SANITIZE_STRING));
+    $lainan_korko = mysqli_real_escape_string($conn, filter_input(INPUT_POST,'Lainan_korko',FILTER_SANITIZE_STRING));
+    $idKayttaja = mysqli_real_escape_string($conn, filter_input(INPUT_POST,'idKayttaja',FILTER_SANITIZE_STRING));
 
- $update = "UPDATE Lainat SET Lainan_nimi='$lainan_nimi', Lainan_maara='$lainan_maara', Lainan_korko='$lainan_korko' WHERE idKayttaja=". $_GET['edit'];
- $up = mysqli_query($conn, $update);
- if($up) {
-   echo "Laina muokattiin onnistuneesti!";
- }
- else {
-   echo "Lainaa ei muokattu";
- }
-}
+   $update = "UPDATE Lainat SET Lainan_nimi='$lainan_nimi', Lainan_maara='$lainan_maara', Lainan_korko='$lainan_korko' WHERE idKayttaja=". $_GET['edit'];
+   $up = mysqli_query($conn, $update);
+
+   if($up) {
+     echo "Laina muokattiin onnistuneesti!";
+   }
+   else {
+     echo "Lainaa ei muokattu!";
+   }
+  }
 ?>
 <html lang="en" dir="ltr">
   <head>
