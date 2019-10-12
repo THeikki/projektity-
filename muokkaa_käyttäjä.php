@@ -8,10 +8,10 @@
    $osoite = mysqli_real_escape_string($conn, filter_input(INPUT_POST,'Osoite',FILTER_SANITIZE_STRING));
    $puhelinnumero = mysqli_real_escape_string($conn, filter_input(INPUT_POST,'Puhelinnumero',FILTER_SANITIZE_STRING));
 
-   $update = "UPDATE Kayttaja SET Etunimi='$etunimi', Sukunimi='$sukunimi',Osoite='$osoite',Puhelinnumero='$puhelinnumero' WHERE idKayttaja=". $_GET['edit'];
-   $up = mysqli_query($conn, $update);
+   $sqlupdate = "UPDATE Kayttaja SET Etunimi='$etunimi', Sukunimi='$sukunimi',Osoite='$osoite',Puhelinnumero='$puhelinnumero' WHERE idKayttaja=". $_GET['edit'];
+   $query_run = mysqli_query($conn, $sqlupdate);
 
-   if($up) {
+   if($query_run) {
      echo "Käyttäjä muokattiin onnistuneesti!";
    }
    else {

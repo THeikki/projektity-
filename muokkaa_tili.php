@@ -8,10 +8,10 @@
     $tilin_korko = mysqli_real_escape_string($conn, filter_input(INPUT_POST,'Tilin_korko',FILTER_SANITIZE_STRING));
     $idKayttaja = mysqli_real_escape_string($conn, filter_input(INPUT_POST,'idKayttaja',FILTER_SANITIZE_STRING));
 
-   $update = "UPDATE Tilit SET Tilin_nimi='$tilin_nimi', Tilin_saldo='$tilin_saldo',Tilin_korko='$tilin_korko' WHERE idTilit=". $_GET['edit'];
-   $up = mysqli_query($conn, $update);
+   $sqlupdate = "UPDATE Tilit SET Tilin_nimi='$tilin_nimi', Tilin_saldo='$tilin_saldo',Tilin_korko='$tilin_korko' WHERE idTilit=". $_GET['edit'];
+   $query_run = mysqli_query($conn, $sqlupdate);
 
-   if($up) {
+   if($query_run) {
      echo "Tili muokattiin onnistuneesti!";
    }
    else {

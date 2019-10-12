@@ -8,10 +8,10 @@
     $lainan_korko = mysqli_real_escape_string($conn, filter_input(INPUT_POST,'Lainan_korko',FILTER_SANITIZE_STRING));
     $idKayttaja = mysqli_real_escape_string($conn, filter_input(INPUT_POST,'idKayttaja',FILTER_SANITIZE_STRING));
 
-   $update = "UPDATE Lainat SET Lainan_nimi='$lainan_nimi', Lainan_maara='$lainan_maara', Lainan_korko='$lainan_korko' WHERE idKayttaja=". $_GET['edit'];
-   $up = mysqli_query($conn, $update);
+   $sqlupdate = "UPDATE Lainat SET Lainan_nimi='$lainan_nimi', Lainan_maara='$lainan_maara', Lainan_korko='$lainan_korko' WHERE idKayttaja=". $_GET['edit'];
+   $query_run = mysqli_query($conn, $sqlupdate);
 
-   if($up) {
+   if($query_run) {
      echo "Laina muokattiin onnistuneesti!";
    }
    else {
