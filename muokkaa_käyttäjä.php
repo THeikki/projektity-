@@ -21,8 +21,6 @@ if(isset($_POST['btn-update'])) {
  else {
    echo "Käyttäjää ei muokattu";
  }
- header("location: Käyttäjä.php");
-
 }
 ?>
 <html lang="en" dir="ltr">
@@ -44,5 +42,6 @@ if(isset($_POST['btn-update'])) {
         <button type="submit" name="btn-update">Muokkaa</button>
       </form>
     </div>
+    <?php header("location: Käyttäjä.php"); ?>
   </body>
 </html>
