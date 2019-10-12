@@ -37,7 +37,7 @@ if(isset($_POST['btn-update'])) {
       <form method="post">
         <h2>Muokkaa sijoitustietoja</h2>
         <input type="text" name="Sijoituskohde" placeholder="Sijoituskohde" value="<?php echo $row['Sijoituskohde']; ?>"><br/><br/>
-        <input type="text" name="Sijoituksen_summa" placeholder="Sijoituksen summa" value="<?php echo $row['Sijoitukse_summa']; ?>"><br/><br/>
+        <input type="text" name="Sijoituksen_summa" placeholder="Sijoituksen summa" value="<?php echo $row['Sijoituksen_summa']; ?>"><br/><br/>
         <input type="text" name="Osakkeiden_lukumaara" placeholder="Osakkeiden lukumäärä" value="<?php echo $row['Osakkeiden_lukumaara']; ?>"><br/><br/>
         <input type="text" name="Osakkeen_arvo" placeholder="Osakkeen arvo" value="<?php echo $row['Osakkeen_arvo']; ?>"><br/><br/>
         <button type="submit" name="btn-update">Muokkaa</button>
