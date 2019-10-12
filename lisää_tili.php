@@ -1,7 +1,6 @@
 <?php include "includes/yhteys.php"
 ?>
 <?php
-
   if(isset($_POST['insert'])) {
     $idTilit = mysqli_real_escape_string($conn, filter_input(INPUT_POST,'idTilit',FILTER_SANITIZE_STRING));
     $tilin_nimi = mysqli_real_escape_string($conn, filter_input(INPUT_POST,'Tilin_nimi',FILTER_SANITIZE_STRING));
@@ -11,7 +10,6 @@
 
     $sqlinsert = "INSERT INTO Tilit (idTilit, Tilin_nimi, Tilin_saldo, Tilin_korko, idKayttaja)
     VALUES ('$idTilit', '$tilin_nimi', '$tilin_saldo', '$tilin_korko', '$idKayttaja')";
-
     $query_run = mysqli_query($conn, $sqlinsert);
 
     if($query_run) {

@@ -1,7 +1,6 @@
 <?php include "includes/yhteys.php"
 ?>
 <?php
-
   if(isset($_POST['insert'])) {
     $idKayttaja = mysqli_real_escape_string($conn, filter_input(INPUT_POST,'idKayttaja',FILTER_SANITIZE_STRING));
     $etunimi = mysqli_real_escape_string($conn, filter_input(INPUT_POST,'Etunimi',FILTER_SANITIZE_STRING));
@@ -11,14 +10,13 @@
 
     $sqlinsert = "INSERT INTO Kayttaja (idKayttaja, Etunimi, Sukunimi, Osoite, Puhelinnumero)
     VALUES ('$idKayttaja', '$etunimi', '$sukunimi', '$osoite', '$puhelinnumero')";
-
     $query_run = mysqli_query($conn, $sqlinsert);
 
     if($query_run) {
       echo "Käyttäjä lisättiin onnistuneesti!";
     }
     else {
-      echo "Käyttäjää ei lisätty";
+      echo "Käyttäjää ei lisätty!";
     }
   }
 ?>
