@@ -4,9 +4,15 @@
 
 if(isset($_GET['delete'])) {
     $idTilit = $_GET['delete'];
-    $Deletequery = "DELETE FROM Tilit WHERE idTilit='$idTilit'";
-    mysqli_query($conn, $Deletequery) or die(mysqli_error($conn));
+    $sqldelete = "DELETE FROM Tilit WHERE idTilit='$idTilit'";
+    $query_run = mysqli_query($conn, $sqldelete);
+
+    if($query_run) {
       echo "Tili poistettiin onnistuneesti!";
+    }
+    else {
+      echo "Tiliä ei poistettu!";
+    }
   }
 ?>
 <!DOCTYPE html>

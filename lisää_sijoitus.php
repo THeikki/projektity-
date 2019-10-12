@@ -10,7 +10,7 @@
     $idKayttaja = mysqli_real_escape_string($conn, filter_input(INPUT_POST,'idKayttaja',FILTER_SANITIZE_STRING));
 
     $sqlinsert = "INSERT INTO Sijoitukset (idSijoitukset, Sijoituskohde, Sijoituksen_summa, Osakkeiden_lukumaara, Osakkeen_arvo, idKayttaja)
-    VALUES ('$idSijoitukset', '$sijoituskohde', '$sijoituksen_summa', '$osakkeiden_lukumaara','$osakkeen_arvo', '$idKayttaja')";
+    VALUES ('$idSijoitukset', '$sijoituskohde', '$sijoituksen_summa', '$osakkeiden_lukumaara', '$osakkeen_arvo', '$idKayttaja')";
     $query_run = mysqli_query($conn, $sqlinsert);
 
     if($query_run) {
