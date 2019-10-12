@@ -6,7 +6,6 @@ if(isset($_GET['edit'])){
   $result = mysqli_query($conn, $sql);
   $row = mysqli_fetch_array($result);
   }
-
 if(isset($_POST['update'])) {
 
   $idkayttaja = mysqli_real_escape_string($conn, filter_input(INPUT_POST,'idKayttaja',FILTER_SANITIZE_STRING));
@@ -15,7 +14,7 @@ if(isset($_POST['update'])) {
   $osoite = mysqli_real_escape_string($conn, filter_input(INPUT_POST,'Osoite',FILTER_SANITIZE_STRING));
   $puhelinnumero = mysqli_real_escape_string($conn, filter_input(INPUT_POST,'Puhelinnumero',FILTER_SANITIZE_STRING));
 
-  $Updatequery = "UPDATE Kayttaja SET Etunimi='$etunimi', Sukunimi='$sukunimi', Osoite='$osoite', Puhelinnumero='$puhelinnumero' WHERE idKayttaja='$_POST[edit]'";
+  $Updatequery = "UPDATE Kayttaja SET Etunimi='$etunimi', Sukunimi='$sukunimi', Osoite='$osoite', Puhelinnumero='$puhelinnumero' WHERE idKayttaja='$_GET[edit]'";
   mysqli_query($conn, $Updatequery) or die(mysqli_error($conn));
           echo "Käyttäjä muokattiin onnistuneesti!";
 }
