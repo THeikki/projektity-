@@ -10,15 +10,14 @@
 
     $sqlinsert = "INSERT INTO Kayttaja (idKayttaja, Etunimi, Sukunimi, Osoite, Puhelinnumero)
     VALUES ('$idKayttaja', '$etunimi', '$sukunimi', '$osoite', '$puhelinnumero')";
-    $query_run = mysqli_query($conn, $sqlinsert);
 
-    if($query_run) {
-      echo "Käyttäjä lisättiin onnistuneesti!";
+    if($conn->query($sqlinsert) === TRUE{
+  	echo "Record added Successfully!";
     }
-    else {
-      echo "Käyttäjää ei lisätty!";
+    else
+    {
+    	echo "Error" . sql . "<br>" . $conn->error;
     }
-  }
 ?>
 <html lang="en" dir="ltr">
   <head>
