@@ -26,7 +26,7 @@ if(isset($_POST['btn-update'])) {
 <html lang="en" dir="ltr">
   <head>
     <meta charset="utf-8">
-    <title>lisää_käyttäjä</title>
+    <title>muokkaa_käyttäjä</title>
     <link rel="stylesheet" href="includes/mystyle.css">
   </head>
   <body>

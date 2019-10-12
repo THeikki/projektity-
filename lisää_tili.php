@@ -3,7 +3,6 @@
 <?php
 
   if(isset($_POST['insert'])) {
-
     $idTilit = mysqli_real_escape_string($conn, filter_input(INPUT_POST,'idTilit',FILTER_SANITIZE_STRING));
     $tilin_nimi = mysqli_real_escape_string($conn, filter_input(INPUT_POST,'Tilin_nimi',FILTER_SANITIZE_STRING));
     $tilin_saldo = mysqli_real_escape_string($conn, filter_input(INPUT_POST,'Tilin_saldo',FILTER_SANITIZE_STRING));

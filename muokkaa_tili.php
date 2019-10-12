@@ -26,7 +26,7 @@ if(isset($_POST['btn-update'])) {
 <html lang="en" dir="ltr">
   <head>
     <meta charset="utf-8">
-    <title>lisää_käyttäjä</title>
+    <title>muokkaa_tili</title>
     <link rel="stylesheet" href="includes/mystyle.css">
   </head>
   <body>
@@ -35,9 +35,9 @@ if(isset($_POST['btn-update'])) {
     <div id="box1">
       <form method="post">
         <h2>Muokkaa tilitietoja</h2>
-        <input type="text" name="Tilin_nimi" placeholder="Tilin nimi" value="<?php echo $row['Etunimi']; ?>"><br/><br/>
-        <input type="text" name="Tilin_saldo" placeholder="Tilin saldo" value="<?php echo $row['Sukunimi']; ?>"><br/><br/>
-        <input type="text" name="Tilin_korko" placeholder="Tilin korko" value="<?php echo $row['Osoite']; ?>"><br/><br/>
+        <input type="text" name="Tilin_nimi" placeholder="Tilin nimi" value="<?php echo $row['Tilin_nimi']; ?>"><br/><br/>
+        <input type="text" name="Tilin_saldo" placeholder="Tilin saldo" value="<?php echo $row['Tilin_saldo']; ?>"><br/><br/>
+        <input type="text" name="Tilin_korko" placeholder="Tilin korko" value="<?php echo $row['Tilin_korko']; ?>"><br/><br/>
         <button type="submit" name="btn-update">Muokkaa</button>
       </form>
     </div>
