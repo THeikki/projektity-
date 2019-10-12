@@ -9,10 +9,10 @@
     $osakkeen_arvo = mysqli_real_escape_string($conn, filter_input(INPUT_POST,'Osakkeen_arvo',FILTER_SANITIZE_STRING));
     $idKayttaja = mysqli_real_escape_string($conn, filter_input(INPUT_POST,'idKayttaja',FILTER_SANITIZE_STRING));
 
-   $update = "UPDATE Sijoitukset SET Sijoituskohde='$sijoituskohde', Sijoituksen_summa='$sijoituksen_summa',Osakkeiden_lukumaara='$osakkeiden_lukumaara',Osakkeen_arvo='$osakkeen_arvo' WHERE idSijoitukset=". $_GET['edit'];
-   $up = mysqli_query($conn, $update);
+   $sqlupdate = "UPDATE Sijoitukset SET Sijoituskohde='$sijoituskohde', Sijoituksen_summa='$sijoituksen_summa',Osakkeiden_lukumaara='$osakkeiden_lukumaara',Osakkeen_arvo='$osakkeen_arvo' WHERE idSijoitukset=". $_GET['edit'];
+   $query_run = mysqli_query($conn, $sqlupdate);
 
-   if($up) {
+   if($query_run) {
      echo "Sijoitus muokattiin onnistuneesti!";
    }
    else {
