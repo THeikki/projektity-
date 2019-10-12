@@ -2,7 +2,7 @@
 ?>
 <?php
 if(isset($_GET['edit'])) {
- $sql = "SELECT * FROM data WHERE empid =" . $_GET['edit'];
+ $sql = "SELECT * FROM Kayttaja WHERE idKayttaja =" . $_GET['edit'];
  $result = mysqli_query($conn, $sql);
  $row = mysqli_fetch_array($result);
 }
