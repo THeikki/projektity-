@@ -16,14 +16,13 @@
    $sqlupdate = "UPDATE Kayttaja SET Etunimi='$etunimi', Sukunimi='$sukunimi',Osoite='$osoite',Puhelinnumero='$puhelinnumero' WHERE idKayttaja=". $_GET['edit'];
    $query_run = mysqli_query($conn, $sqlupdate);
 
-   if(!isset($sql)){
-    die ("Error $sql" .mysqli_connect_error());
-    }
-    else
-    {
-    echo "Käyttäjä muokattiin onnistuneesti!"
-    }
- }
+   if($query_run) {
+     echo "Käyttäjä muokattiin onnistuneesti!";
+   }
+   else {
+     echo "Käyttäjää ei muokattu!";
+   }
+  }
 ?>
 <html lang="en" dir="ltr">
   <head>
