@@ -13,7 +13,7 @@
     $lainan_korko = mysqli_real_escape_string($conn, filter_input(INPUT_POST,'Lainan_korko',FILTER_SANITIZE_STRING));
     $idKayttaja = mysqli_real_escape_string($conn, filter_input(INPUT_POST,'idKayttaja',FILTER_SANITIZE_STRING));
 
-   $sqlupdate = "UPDATE Lainat SET Lainan_nimi='$lainan_nimi', Lainan_maara='$lainan_maara', Lainan_korko='$lainan_korko' WHERE idKayttaja=". $_GET['edit'];
+   $sqlupdate = "UPDATE Lainat SET Lainan_nimi='$lainan_nimi', Lainan_maara='$lainan_maara', Lainan_korko='$lainan_korko' WHERE idLainat=". $_GET['edit'];
    $query_run = mysqli_query($conn, $sqlupdate);
 
    if($query_run) {
