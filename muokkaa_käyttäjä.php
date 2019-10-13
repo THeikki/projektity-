@@ -1,11 +1,11 @@
 <?php include "includes/yhteys.php"
 ?>
 <?php
-  if( isset($_GET['edit']))
-  {
-    $idKayttaja = $_GET['edit'];
-    $res= mysqli_query("SELECT * FROM Kayttaja WHERE idKayttaja='$idKayttaja'");
-    $row= mysqli_fetch_array($res);
+  if(isset($_GET['edit'])) {
+  $sql = "SELECT * FROM Kayttaja WHERE idKayttaja =" .$_GET['edit'];
+  $result = mysqli_query($conn, $sql);
+  $row = mysqli_fetch_array($result);
+  }
   }
   if(isset($_POST['btn-update'])) {
    $idKayttaja = mysqli_real_escape_string($conn, filter_input(INPUT_POST,'idKayttaja',FILTER_SANITIZE_STRING));
@@ -17,13 +17,14 @@
    $sqlupdate = "UPDATE Kayttaja SET Etunimi='$etunimi', Sukunimi='$sukunimi',Osoite='$osoite',Puhelinnumero='$puhelinnumero' WHERE idKayttaja=". $_GET['edit'];
    $query_run = mysqli_query($conn, $sqlupdate);
 
-   if($query_run) {
-     echo "Käyttäjä muokattiin onnistuneesti!";
-   }
-   else {
-     echo "Käyttäjää ei muokattu!";
-   }
-  }
+   if(!isset($sql)){
+    die ("Error $sql" .mysqli_connect_error());
+    }
+    else
+    {
+    header("location: disp.php");
+    }
+ }
 ?>
 <html lang="en" dir="ltr">
   <head>
