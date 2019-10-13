@@ -1,12 +1,11 @@
 <?php include "includes/yhteys.php"
 ?>
 <?php
-  if( isset($_GET['edit']))
-  	{
-  		$idSijoitukset = $_GET['edit'];
-  		$res= mysqli_query("SELECT * FROM Sijoitukset WHERE idSijoitukset='$idSijoitukset'");
-  		$row= mysqli_fetch_array($res);
-  	}
+  if(isset($_GET['edit'])) {
+  $sql = "SELECT * FROM Sijoitukset WHERE idSijoitukset =" .$_GET['edit'];
+  $result = mysqli_query($conn, $sql);
+  $row = mysqli_fetch_array($result);
+  }
   if(isset($_POST['btn-update'])) {
     $idSijoitukset = mysqli_real_escape_string($conn, filter_input(INPUT_POST,'idSijoitukset',FILTER_SANITIZE_STRING));
     $sijoituskohde = mysqli_real_escape_string($conn, filter_input(INPUT_POST,'Sijoituskohde',FILTER_SANITIZE_STRING));
