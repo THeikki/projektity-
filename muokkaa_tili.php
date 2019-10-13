@@ -1,6 +1,12 @@
 <?php include "includes/yhteys.php"
 ?>
 <?php
+  if( isset($_GET['edit']))
+  	{
+  		$idTilit = $_GET['edit'];
+  		$res= mysqli_query("SELECT * FROM Tilit WHERE idTilit='$idLainat'");
+  		$row= mysqli_fetch_array($res);
+  	}
   if(isset($_POST['btn-update'])) {
     $idTilit = mysqli_real_escape_string($conn, filter_input(INPUT_POST,'idTilit',FILTER_SANITIZE_STRING));
     $tilin_nimi = mysqli_real_escape_string($conn, filter_input(INPUT_POST,'Tilin_nimi',FILTER_SANITIZE_STRING));

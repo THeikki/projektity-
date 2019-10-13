@@ -1,6 +1,12 @@
 <?php include "includes/yhteys.php"
 ?>
 <?php
+  if( isset($_GET['edit']))
+  {
+    $idLainat = $_GET['edit'];
+    $res= mysqli_query("SELECT * FROM Lainat WHERE idLainat='$idLainat'");
+    $row= mysqli_fetch_array($res);
+  }
   if(isset($_POST['btn-update'])) {
     $idLainat = mysqli_real_escape_string($conn, filter_input(INPUT_POST,'idLainat',FILTER_SANITIZE_STRING));
     $lainan_nimi = mysqli_real_escape_string($conn, filter_input(INPUT_POST,'Lainan_nimi',FILTER_SANITIZE_STRING));
