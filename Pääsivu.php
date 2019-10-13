@@ -1,4 +1,3 @@
-<!DOCTYPE html>
 <html lang="en" dir="ltr">
   <head>
     <meta charset="utf-8">
@@ -16,6 +15,6 @@
     <a href="lisää_käyttäjä.php" class="button1">Lisää käyttäjä</a><br>
     <a href="lisää_tili.php" class="button1">Lisää tili</a><br>
     <a href="lisää_sijoitus.php" class="button1">Lisää sijoitus</a><br>
-    <a href="lisää_laina.php" class="button1">Lisää laina</a><br> 
+    <a href="lisää_laina.php" class="button1">Lisää laina</a><br>
   </body>
 </html>
