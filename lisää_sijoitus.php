@@ -35,9 +35,9 @@
         <form action="lisää_sijoitus.php" method="post">
           <input type="number" name="idSijoitukset" value="" placeholder="id Sijoitus"> <br><br>
           <input type="text" name="Sijoituskohde" value="" placeholder="Sijoituskohde"> <br><br>
-          <input type="text" name="Sijoituksen_summa" value="" placeholder="Sijoituksen määrä"> <br><br>
-          <input type="text" name="Osakkeiden_lukumaara" value="" placeholder="Osakkeiden lukumäärä"> <br><br>
-          <input type="text" name="Osakkeen_arvo" value="" placeholder="Osakkeen arvo"> <br><br>
+          <input type="number" name="Sijoituksen_summa" value="" placeholder="Sijoituksen määrä"> <br><br>
+          <input type="number" name="Osakkeiden_lukumaara" value="" placeholder="Osakkeiden lukumäärä"> <br><br>
+          <input type="number" name="Osakkeen_arvo" value="" placeholder="Osakkeen arvo"> <br><br>
           <input type="number" name="idKayttaja" value="" placeholder="id Käyttäjä"> <br><br>
           <input type="submit" name="insert" value="Tallenna"> <br>
         </form>
