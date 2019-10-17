@@ -34,8 +34,8 @@
         <form action="lisää_tili.php" method="post">
           <input type="number" name="idTilit" value="" placeholder="id Tili"> <br><br>
           <input type="text" name="Tilin_nimi" value="" placeholder="Tilin nimi"> <br><br>
-          <input type="text" name="Tilin_saldo" value="" placeholder="Tilin saldo"> <br><br>
-          <input type="text" name="Tilin_korko" value="" placeholder="Tilin korko"> <br><br>
+          <input type="number" name="Tilin_saldo" value="" placeholder="Tilin saldo"> <br><br>
+          <input type="number" name="Tilin_korko" value="" placeholder="Tilin korko"> <br><br>
           <input type="number" name="idKayttaja" value="" placeholder="id Käyttäjä"> <br><br>
           <input type="submit" name="insert" value="Tallenna"> <br>
         </form>
